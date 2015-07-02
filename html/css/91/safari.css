@@ -48,15 +48,16 @@
 #TagListingRows{
         position: relative;
         top: 15px;
-	margin-bottom: 20px;
+        margin-bottom: 20px;
 }
 #searchsubmit {
-	top: 20px;
+        top: 19px;
+        height: 25px;
 }
 
 .ListingSpacer {
-	height: 10px;
-	margin-bottom: -10px;
+        height: 10px;
+        margin-bottom: -10px;
 }
 .TwitterImage{
         display: inline;
