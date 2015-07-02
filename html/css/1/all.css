@@ -3889,7 +3889,7 @@ input[type="text"].DateInput{
 #cover p{
         font-size: 16px;
 }
-#marilyn_pic{
+#brahmina_pic{
         float: right;
         margin-left: 20px;
         margin-bottom: 20px;
@@ -3930,10 +3930,10 @@ input[type="text"].DateInput{
         width: 480px;
         margin-bottom: 30px;
 }
-.marilyn_avatar{
+.brahmina_avatar{
         height: 50px;
         width: 50px;
-        background: url(/images/marilyn_avatar.jpg);
+        background: url(/images/brahmina_avatar.jpg);
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
         float: left;

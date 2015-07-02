@@ -3878,4 +3878,76 @@ input[type="text"].DateInput{
 
 #FeedbackMessage{
         width: 270px; 
+
+}
+
+
+#cover{
+        font-size: 16px;
+        margin-bottom: 30px;
+}
+#cover p{
+        font-size: 16px;
+}
+#brahmina_pic{
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-top: 3px;
+        width: 30%;
+
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+}
+#cover_tagcloud{
+        float: right;
+        margin-top: 30px;
+        margin-left: 30px;
+}
+#cover_tagcloud div#htmltagcloud{
+        width: 400px;
+        
+}
+.cover_blog_teaser{
+        margin-bottom: 30px;
+}
+#sidebar_blog_teaser_left{
+        float: left;
+        width: 300px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+}
+
+#cover_blog_teaser_left{
+        float: left;
+        width: 480px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+}
+
+#cover_blog_teaser_right{
+        float: right;
+        width: 480px;
+        margin-bottom: 30px;
+}
+.brahmina_avatar{
+        height: 50px;
+        width: 50px;
+        background: url(/images/brahmina_avatar.jpg);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 30px;
+}
+
+.juan_avatar{
+        height: 50px;
+        width: 50px;
+        background: url(/images/juan_avatar.jpg);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 30px;
 }

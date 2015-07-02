@@ -1,0 +1,2 @@
+The DBManager allocates the objects fore each table, each of which is a subclass
+of TableObject. Additional functions may be added in each modules.
