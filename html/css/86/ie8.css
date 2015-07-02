@@ -1,0 +1,142 @@
+/*
+
+#CreateEditTabWindow{
+        left: 1px;
+}
+#SettingsTabWindow{
+        left: 1px;
+}
+
+.ListFormBottomGuest {
+        width:340px;
+        margin-right:11px;
+}
+
+#ListTags{
+	postion: relative;
+	padding-top: 1px;
+}
+.ListTags p {
+	margin-bottom: 12px;
+}
+
+#ListItemListItemStatusID{
+
+        width: 298px;
+}
+#descriptionTipButton{
+        position: relative;
+	top: 17px;
+}
+#DescriptionLabel{
+	top: 15px;
+}
+.ListFormGuest{
+        margin-left: 2px;
+        margin-top:-15px;
+}
+.ListingsListName{
+	top: 0px;
+}
+.ListingsListName:hover{
+	top: 0px;
+}
+#commentTipButton{
+	position: relative;
+	top: 14px;
+	left: 2px;
+}
+#CommentLabel{
+	position: relative;
+	top:14px;
+}
+
+
+
+
+#ToEmail  {
+	border:1px solid #7E949E;
+	color:#7E949E;
+	font-size:12px;
+	margin:0 0 15px;
+	text-align:left;
+	width:200px;
+}
+#ImageImage{
+	margin-bottom: -15px;
+}
+#ImageForm{
+	margin-bottom: -10px;
+}
+.AboutMeRight{
+        width:348px;
+}
+
+*/
+
+#Nav legend {
+        margin-top: -15px;
+	margin-bottom: 5px;
+	width: 186px;
+}
+#Nav {
+        margin-top: 10px;
+}
+
+#Nav ul li.NavCurrent a{
+	color: #7E949E;
+}
+
+#searchsubmit {
+        top:21px;
+}
+.tabMiddle{
+        left:0px;
+}
+
+
+.ListItemTable {
+        position: relative;
+        top: -15px;
+        width: 360px;
+}
+.ListNormalView li {
+        width: 365px;
+}
+#TLOLRows{
+        top:-20px;
+}
+.editable {
+	cursor: hand;
+}
+.ListItemsSummaryImages li { 
+        margin-right: 2px;
+}
+.FloatingBoxInner{
+        text-align: left;
+}
+#bioLabel{
+	margin-top:-28px;
+	position: relative;
+	top: 14px;
+}
+
+.themeColourVisual {
+	margin-top: -1px; 
+}
+#editableListGroups input[type="text"]{
+	background-color:#FFFFD3;
+	border:0 solid #121D52;
+	color:#121D52;
+	font-size:12px;
+	font-weight:normal;
+	width:90%;
+}
+#EditStatusSets input[type="text"]{
+        background-color:#FFFFD3;
+        border:0 solid #121D52;
+        color:#121D52;
+        font-size:12px;
+        font-weight:normal;
+        width:90%;
+}

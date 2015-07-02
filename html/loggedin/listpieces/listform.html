@@ -1,0 +1,52 @@
+<div class="ListFormWrapper" id="ListFormMember">
+    <div class="ListItemFormContainer" id="FormSlider">
+        <div class="ListForm" id="SliderContent">
+            <div id="CommentsContent" class="InsideSlider" style="display: none">
+                <form id="AddListComment" action="<!--SETUP.URL-->" onsubmit="return false">
+                    <br />
+                    <h4>Comments:</h4> <br />
+                    <!--Self.ErrorMessagesAC-->
+                    <div id="ListComments">
+                        <!--GetOutputFromFunc.getListComments-->
+                    </div>
+                    <input type="hidden" name="todo" id="todoLC" value="AddListComment" />
+                    <input type="hidden" name="ListID" id="ListCommentsListID" value="<!--Data.List_ID-->" />
+                    <br />
+                    <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('commentTipButton', 'commentTipWrapper');" id="commentTipButton" />
+                    <label for="Comment" id="CommentLabel">
+                    Comment:
+                    </label>
+                    <textarea id="Comment" name="Comment" rows="5" cols="40"></textarea>
+
+                    <input type="button" class="Button" value="Add Comment" name="ListCommentSubmit" id="commentsubmit" onclick="AddListComment(this.form)" />
+                </form>
+            </div>
+            <div id="EmailContent" class="InsideSlider" style="display: none">
+                <br />
+                <h4>Email List</h4>
+                <div id="EmailList">
+                    <p>
+                    Send the List "<!--Data.List_Name-->" to the address below:
+                    </p>
+                    <br />
+                    <!--ErrorMessages-->
+                    <form name="EmailList" method="post" action="<!--Data.List_ListURL-->" onsubmit="return processForm(this, 'EmailList')">        
+                        <input type="hidden" name="todo" id="EmailTodo" value="EmailList" /> 
+                        <input type="hidden" name="ListID" id="EmailListID" value="<!--Data.List_ID-->" /> 
+                        <label for="ToEmail">Email:</label><input type="text" name="ToEmail" id="ToEmail" class="TextInput" value="<!--ThisUser.Email-->" /><br /><br />
+                        <label for="EmailMessage">Message (optional):</label><textarea name="EmailMessage" id="EmailMessage" rows="5" cols="40"></textarea><br />
+                        <input type="submit" name="submit" id="EmailListSubmit" class="Button" value="Send" />
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="commentTipWrapper" style="display:none">
+    <h3>List Comment</h3>
+    <p>You may use the folowing html tags within the comments:</p>
+    <!--Display.Page.allowedhtml.html-->
+    <input type="button" name="Close" value="Close" id="closeCommentTip" class="Button" onClick='doNothing()' />
+</div>

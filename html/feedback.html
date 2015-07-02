@@ -1,0 +1,23 @@
+
+
+
+<div id="FeedbackForm">
+    <h3>Contact List Central</h3>
+    <p>
+        If you have a question, perhaps it's already been answered in our <a href="/about/faq.html">FAQ</a>. Please check there before
+        sending your question.
+    </p>
+    <!--ErrorMessage-->
+    <form name="AddFeedback" method="post" action="<!--SETUP.URL-->/thankyou.html">
+        <input type="hidden" name="todo" value="AddFeedback" /> 
+        <input type="hidden" name="Feedback.ReportingUserID" value="<!--DB.User.ID.LoggedInUser-->" /> 
+        <input type="hidden" name="Feedback.ProblematicListID" value="<!--CGI.PrblematicListID-->" /> 
+        <input type="hidden" name="Feedback.ProblematicUserID" value="<!--CGI.ProblematicUserID-->" /> 
+        <div><label>This is about:</label>
+            <!--Input.Select.FeedbackType.ID.Name.Feedback_FeedbackTypeID-->  
+        </div>
+        <div><label>Message:</label><textarea name="Feedback.Message"></textarea></div><br />
+        <div><input type="submit" name="submit" value="Send" class="Button" /></div>
+    </form>
+</div>
+

@@ -1,0 +1,97 @@
+<div id="CreateEditFormContainer">
+    <span class="tabLetters" id="CreateEditTabLetters">create & edit</span>
+    <div class="tabTop">
+        <ul class="tabLinks" id="CreateEditTabLinks">
+            <li class="tabsFirst<!--NavOnCreateEditTab.CreateList-->" id="CreateEditNavLI_CreateList"><a href="javascript:switchCreateEdit('CreateList')">Create List</a></li> 
+            <li class="tabs<!--NavOnCreateEditTab.ListGroups-->" id="CreateEditNavLI_ListGroups"><a href="javascript:switchCreateEdit('ListGroups')">List Groups</a></li> 
+            <li class="tabsLast<!--NavOnCreateEditTab.StatusSets-->" id="CreateEditNavLI_StatusSets"><a href="javascript:switchCreateEdit('StatusSets')">Status Sets</a></li>  
+        </ul> 
+        <div class="tabMiddle" id="CreateEditTabWindow">
+           <div class="clear"></div>
+
+<!------------------------------------------------>
+
+        <div id="CreateList" style="<!--DisplayCreateEditTab.CreateList-->">
+           <form id="CreateListForm" action="<!--ThisUser.UserURL-->" method="post">          
+                <b>Create List:</b><br /><br />
+                <!--Self.ErrorMessages-->
+                <input type="hidden" name="todo" value="ListsManager.AddList" />
+                <label for="ListName">List Name:</label><input type="text" id="ListName" name="List.Name" value="" maxlength="100" class="TextInput"  /><br />
+                <label for="ListGroup">List Group:</label><!--Select.ListGroup--> <span>* Create a new List Group via the 'List Groups' tab above.</span><br />
+                <label for="Type">Type:</label><!--Select.ListType-->
+                <label for="Order" id="OrderLabel">Order:</label><select name="List.Ordering" id="ListOrder">
+                <option value="a">Ascending</option>
+                <option value="d">Descending</option>
+                </select>
+                <span>* New items go at top(desc.) or the bottom(asc.) of the list.</span><br />
+                <label for="StatusSet">Status Set:</label><!--Select.StatusSet--> <span>* Create a new Status Set via the 'Status Sets' tab above.</span><br />
+                <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('listDescriptionTipButton', 'listDescriptionTipWrapper');" id="listDescriptionTipButton" />
+                <label for="Description">Description:</label><textarea name="List.Description" id="Description" rows="5"></textarea><br />
+                <input type="submit" value="Create List" id="createlistsubmit" class="Button" name="CreateList" />
+           </form>
+    	</div> 
+
+
+        <div id="ListGroups" style="<!--DisplayCreateEditTab.ListGroups-->">
+            <div id="CreateListGroup">
+                <b>Create List Group:</b><br /><br >
+                <form action="<!--ThisUser.UserURL-->" id="AddListGroup" method="post">        
+                    <div class="clear"></div>
+    				<input type="hidden" name="todo" value="ListsManager.AddListGroup" />
+    				<label for="ListGroup">Group Name:</label><input type="text" id="ListGroup" name="ListGroup.Name" maxlength="80" class="TextInput" />
+    				<input type="submit" value="Create Group" id="createlistgroupsubmit" class="Button" name="CreateListGroup" />
+    			</form>
+            </div>
+            <div id="EditListGroups">
+                <b>Edit List Groups</b> <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('editInPlaceTipButton', 'editInPlaceTipWrapper');" id="editInPlaceTipButton" />
+                <input type="hidden" name="todo" value="ListsManager.EditGroups" />
+                <!--Editor.getEditableListGroups-->
+            </div>
+    	</div>
+
+
+        <div id="StatusSets" style="<!--DisplayCreateEditTab.StatusSets-->">
+            <div id="CreateStatusSet">
+                <b>Create Status Sets</b><br /><br />
+                <form action="<!--ThisUser.UserURL-->" id="AddStatusSet" method="post">        
+                    <div class="clear"></div>
+    				<input type="hidden" name="todo" value="ListsManager.AddStatusSet" />
+    				<label for="StatusSet">Status set: </label><input type="text" id="StatusSet" name="StatusSet" class="Input" maxlength="50" class="TextInput" /><br />
+    				<p>* Separate by commas (Eg. New, Pending, Complete)</p>
+    				<input type="submit" value="Create Set" id="createstatussetsubmit" class="Button" name="CreateStatusSet" />
+    			</form>
+            </div>
+            <div id="EditStatusSets">
+                <b>Edit Status Sets</b><img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('editInPlaceTipButton2', 'editInPlaceTipWrapper');" id="editInPlaceTipButton2" /><br />
+                <!--Editor.getEditableStatusSets-->
+            </div>
+    	</div>
+
+<!------------------------------------------------>
+
+            <div class="clear"></div>
+        </div> <!-- tabMiddle-->
+    <div class="tabBottom"></div>
+    </div><!-- tabTop -->
+</div>
+<div id="CreateEditAd">
+    <!--Adserver.getAdvert.22_page-->
+</div>
+
+<div id="editInPlaceTipWrapper" style="display:none">
+    <h3>Edit in Place</h3>
+    <p>List Central features edit in place functionality for editing your list groups and
+    status sets.</p>
+    <p>Click on the list group or status set you wish to edit. When you have finished 
+    with your edits, you can save them by clicking the 
+    save button(<img src="/images/icons/save.png" alt="Save" />), or by hitting the Ctrl+Alt+S keys
+    together. You can cancel your edits by either clicking the cancel button 
+    (<img src="/images/icons/cancel.png" alt="Cancel" />), or by hitting the escape key (Esc).</p>
+    <input type="button" name="Close" value="Close" id="closeEditTip" class="Button" onClick='doNothing()' />
+</div>
+<div id="listDescriptionTipWrapper" style="display:none">
+    <h3>List description</h3>
+    <p>You may use the folowing html tags within the list's description:</p>
+     <!--Display.Page.allowedhtml.html-->
+    <input type="button" name="Close" value="Close" id="closeBioTip" class="Button" onClick='doNothing()' />
+</div>

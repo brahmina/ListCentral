@@ -1,0 +1,15 @@
+<div id="emaillist">
+    <h4>Email List</h4>
+    <p>
+        Send the List "<!--Self.ListName-->" to the address below:
+    </p><br />
+    <!--ErrorMessages-->
+    <form name="EmailList" method="post" action="<!--SETUP.URL-->/email_list.html" onsubmit="return validateEmailList(this)">        
+		<input type="hidden" name="todo" value="EmailList" /> 
+		<input type="hidden" name="ListID" value="<!--CGI.ListID-->" /> 
+		<label for="ToEmail">Email:</label><input type="text" name="ToEmail" id="ToEmail" class="TextInput" value="<!--ThisUser.Email-->" /><br />
+	        <label for="EmailMessage">Message (optional):</label><textarea name="EmailMessage" id="EmailMessage"></textarea><br />
+		<input type="submit" name="submit" id="EmailListSubmit" class="Button" value="Send" />
+    </form>    
+</div>
+

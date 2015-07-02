@@ -1,0 +1,16 @@
+This email is in response to the message you sent to us via the List Central feedback system 
+on <!--Data.Feedback_ReplyDate-->.
+
+<!--Data.FeedbackReply_Reply-->
+
+What you said:
+
+<!--Data.Feedback_Message-->
+
+We hope that we have addressed your query, if not, please feel free to reply to this email.
+
+Thank you for your feedback! 
+
+<!--Data.AdminUser_Name-->
+
+List Central (<!--SETUP.URL-->)

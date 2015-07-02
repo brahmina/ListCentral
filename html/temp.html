@@ -1,0 +1,939 @@
+    <script src="/js/nicEdit.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    // <![CDATA[    
+        window.addEvent('domready', function() {
+
+            
+             var mySlide55 = new Fx.Slide('Slide55');
+             mySlide55.hide();
+             $('SlideHeader55').addEvent('click', function(e){
+                     e = new Event(e);
+                     mySlide55.toggle();
+                     e.stop();
+             });
+                  
+            
+            Fx.Morph = Fx.Morph.extend({ 
+            	start: function(className){
+            		var to = {};             
+            		$each(document.styleSheets, function(style){
+            			var rules = style.rules || style.cssRules;
+            			$each(rules, function(rule){
+            				if (!rule.selectorText.test('\.' + className + '$')) return;
+            				Fx.CSS.Styles.each(function(style){
+            					if (!rule.style || !rule.style[style]) return;
+            					var ruleStyle = rule.style[style];
+            					to[style] = (style.test(/color/i) && ruleStyle.test(/^rgb/)) ? ruleStyle.rgbToHex() : ruleStyle;
+            				});
+            			});
+            		});
+            		return this.parent(to);
+            	}             
+            });
+             
+            Fx.CSS.Styles = ["backgroundColor", "backgroundPosition", "color", "width", "height", "left", "top", "bottom", "right", "fontSize", "letterSpacing", "lineHeight", "textIndent", "opacity"];
+     
+            Fx.CSS.Styles.extend(Element.Styles.padding);
+            Fx.CSS.Styles.extend(Element.Styles.margin);
+             
+            var myMorph = new Fx.Morph('morpher', {wait: false});
+                     
+        });
+        // ]]>
+        </script>        
+        
+    <div id="Nav">
+        <fieldset class="NavFieldset">
+		<legend><a href="javascript:loadNonListElement('getUsersSpace', )">
+        marilyn's lists</a></legend>
+		<ul>
+			<li id="SlideHeader55" class="NavHeader" onmouseover="changeClass('NavHeaderOver', this)" onmouseout="changeClass('NavHeader', this)">Blogs</li>
+
+<li id="Slide55" class="NavULContainer">
+<ul>
+<li class="Nav" id="ListNav235" onmouseover="changeClass('NavOver', this)" onmouseout="changeClass('Nav', this)" onclick="loadList(235)">Blogs about Blogging</li>
+<li class="Nav" id="ListNav236" onmouseover="changeClass('NavOver', this)" onmouseout="changeClass('Nav', this)" onclick="loadList(236)">Music Blogs</li>
+<li class="Nav" id="ListNav237" onmouseover="changeClass('NavOver', this)" onmouseout="changeClass('Nav', this)" onclick="loadList(237)">Personal Development</li>
+<li class="Nav" id="ListNav238" onmouseover="changeClass('NavOver', this)" onmouseout="changeClass('Nav', this)" onclick="loadList(238)">Web Design Blogs</li>
+
+</ul>
+</li>
+            
+			<li class="NavSpacer">&nbsp;</li>
+            <li class="NavHeader" onmouseout="changeClass('NavHeader', this)" onmouseover="changeClass('NavHeaderOver', this)" 
+            onclick="location.href='/create_and_edit.html'">
+            <a href="/create_and_edit.html"><div>Create & Edit</div></a></li>
+
+            
+            <li class="NavHeader" onmouseout="changeClass('NavHeader', this)" onmouseover="changeClass('NavHeaderOver', this)" 
+            onclick="location.href='/settings.html'">
+            <a href="/settings.html"><div>Settings</div></a></li>
+
+		</ul>
+		</fieldset>
+    </div>
+    <div id="List">
+                        <script type="text/javascript">
+                    thisListID = 232;
+                    ListCreator = 'Marilyn Burgess';                    
+                    ListHasImages = '';
+                    ListHasLinks = '2';
+					ListName = 'Music';                    
+                    StatusSetSelect = new Array();
+                    StatusSetSelect[1] = '';
+                    StatusSetSelect[0] = 'Deleted';
+
+function setAddListItemFormElement(whichElement){
+    //alert("do ajax to get form element " + whichElement);
+
+    if(whichElement == "AmazonForm"){
+        //getAmazonChoices($('ListItemName').value);
+    }else if(whichElement == "CCImageForm"){
+        //getAmazonChoices($('ListItemName').value);
+    }
+    var content = $(whichElement).innerHTML;
+    $('AddListItemFormAdditions').innerHTML += content; 
+    $(whichElement).innerHTML = "";
+
+}
+function disableListItemButton(whichElement){
+    //alert("in disableListItemButton with " + whichElement);
+
+    // Dull out button
+    var ButtonImage = whichElement + "Image";
+
+    var imageSrc = $(ButtonImage).src.replace(".png", "");
+    $(ButtonImage).src = imageSrc + "_inactive.png"; 
+
+    var theButton = whichElement + "Button";
+    $(theButton).removeEvents('click');
+    $(theButton).style.cursor = "not-allowed";
+}
+
+function enableListItemButton(whichElement){
+    //alert("in enableListItemButton with " + whichElement);
+
+    // Dull out button
+    var ButtonImage = whichElement + "Image";
+
+    var imageSrc = $(ButtonImage).src.replace("_inactive", "");
+    $(ButtonImage).src = imageSrc
+
+    
+
+    $(whichElement).addEvent('click', function(e){
+        e.stop();
+        setAddListItemFormElement(whichElement);
+        disableListItemButton(whichElement);
+    });
+
+    $(theButton).style.cursor = "pointer";
+}
+
+function setSliderContent(withWhat){
+  
+    $('AddListItemContent').style.display = 'none';
+    $('CommentsContent').style.display = 'none';
+    $('TagsContent').style.display = 'none';
+    $('EmailContent').style.display = 'none';
+
+    $(withWhat).style.display = 'block';
+
+}
+
+window.addEvent('domready', function() {
+    var status = {
+		'true': 'open',
+		'false': 'close'
+	};
+
+    // Sliders
+	var formSlide = new Fx.Slide('FormSlider').hide();
+	$('AddListItemButton').addEvent('click', function(e){
+        doSlider(e, formSlide, "AddListItemContent");
+	});
+
+	$('CommentsButton').addEvent('click', function(e){
+        doSlider(e, formSlide, "CommentsContent");
+	});
+
+	$('TagsButton').addEvent('click', function(e){
+        doSlider(e, formSlide, "TagsContent");
+	});
+
+    $('EmailButton').addEvent('click', function(e){
+        doSlider(e, formSlide, "EmailContent");
+	});
+
+
+    // Add link elements
+    $('AddLinkButton').addEvent('click', function(e){
+        e.stop();
+        setAddListItemFormElement('AddLink');
+        disableListItemButton('AddLink');
+    });
+    $('AddImageButton').addEvent('click', function(e){
+        e.stop();
+        openWindow('upload_image.html', 'UploadImage','height=486,width=430,status=yes,toolbar=no,scrollbars=yes');
+        setAddListItemFormElement('AddImage');
+
+        // TODO add this on image loaded
+        //disableListItemButton('AddImage');
+    });
+    $('AddDescriptionButton').addEvent('click', function(e){
+        e.stop();
+        setAddListItemFormElement('AddDescription');
+        disableListItemButton('AddDescription');
+    });
+    $('AmazonButton').addEvent('click', function(e){
+        e.stop();
+        setAddListItemFormElement('AddAmazon');
+        disableListItemButton('Amazon');
+    });
+    $('AddEmButton').addEvent('click', function(e){
+        e.stop();
+        setAddListItemFormElement('AddEm');
+        disableListItemButton('AddEm');
+    });
+    $('AddCCButton').addEvent('click', function(e){
+        setAddListItemFormElement('AddCC');
+        disableListItemButton('AddCC');
+    });	
+
+    //new nicEditor({}).panelInstance('ListItemDescription');
+    new nicEditor({iconsPath : '/js/nicEditorIcons.gif', buttonList : ['fontSize','bold','italic','ol', 'ul', 'underline','strikeThrough','subscript','superscript']}).panelInstance('ListItemDescription');
+
+});
+
+var whichTab = "";
+function doSlider(e, formSlide, which){
+    e.stop();
+    // Close slider if open
+    if(formSlide.open == true){
+        // Just close the tab
+        if(which == whichTab){
+            formSlide.toggle();
+            return;
+        }else{
+            formSlide.hide();
+        }
+    }
+
+    setSliderContent(which);
+    whichTab = which;
+    // Open slider
+    formSlide.toggle();
+}
+
+
+ </script>                                
+<style>
+#HeaderIcons a{
+    color: #ffffff;
+}
+#HeaderIcons{
+    float: right;
+    list-style-type: none;
+    margin-right: 25px;
+}
+#HeaderIcons li{
+    float: left;
+    margin: 0 1px 0 0;
+    cursor: pointer;
+}
+#AddListItemIcons{
+    list-style-type: none;
+    margin: 0px 0px 50px -40px;
+}
+#AddListItemIcons li{
+    float: left;
+    margin: 0 1px 0 0;
+}
+#AddListItemIcons li a{
+    cursor: pointer;
+}
+
+.FormWrapper{
+        left:-7px;
+        position:relative;
+        top:-1px;
+        width:436px;
+        float: right;
+}
+.ListItemFormContainer{
+        width:436px;
+}
+
+.ListForm2{
+        background:transparent url(/images/1/ListFormMiddle.png) repeat-y scroll 0 0;
+        margin-left:13px;
+        min-height:100px;
+        width:423px;
+}
+.ListFormBottom2{
+        background:transparent url(/images/1/ListFormBottom.png) no-repeat scroll center bottom;
+        padding-bottom:23px;
+        padding-right:26px;
+        width:423px;
+        position:relative;
+}
+
+#ListComments {
+    margin-bottom:10px;
+    margin-left:0px;
+    margin-top:0;
+    max-height:235px;
+    overflow:auto;
+    width:365px;
+}
+#AddListItemFormAdditions{
+    display: inline;
+}
+#commentTipButton {
+    float:right;
+    left:13px;
+    margin-top:0;
+    position:relative;
+    top:18px;
+}
+#commentsubmit{
+    margin-left: 3px;
+}
+.CommentContent {
+    margin-left:50px;
+    width:300px;
+}
+.CommentUnderLine {
+    padding:10px 0 0;
+    width: auto;
+}
+
+.InsideSlider input[type="text"], textarea {
+        width: 350px;
+}
+.TextInput{
+    width: 250px;
+}
+
+
+textarea#Comment {
+    margin-left:3px;
+    width:350px;
+}
+
+
+.InsideSlider {
+    padding-left: 30px;
+    width: 360px;
+}
+.InsideSlider label{
+        margin-left:1px;
+        text-align:left;
+}
+#deletetagsubmit {
+    bottom:42px;
+}
+</style>
+                <div id="ListNormalView" >      
+                    <div id="ListTopBit">
+
+                         <div class="ListHeader">
+                             <a href="/list/favourite_things/music/77/232/lists.html" class="ListNameList">
+                                Music 
+                            </a>
+                             <ul id="HeaderIcons">
+                                <li><a id="AddListItemButton" title="Add list item"><img src="/images/temp/add.png" alt="Add list item"/></a></li>
+                                 <li><a id="CommentsButton" title="Comments"><img src="/images/temp/comments.png" alt="Show comments"/></a></li> 
+                                 <li><a id="TagsButton" title="Add tags"><img src="/images/temp/tags.png" alt="Add tags"/></a></li> 
+                                 <li><a id="EmailButton" title="Email list"><img src="/images/temp/email.png" alt="Email list"/></a></li> 
+                                 <li><a href="/?todo=DeleteList&ListID=232" onclick="return confirm('Are you sure you are done with this list?');" id="DeleteButton" title="Delete list"><img src="/images/temp/delete_list.png" alt="DeleteList"/></a></li> 
+                             </ul>
+                        </div>
+                    </div>
+                  <div class="FormWrapper">
+                     <div class="ListItemFormContainer" id="FormSlider">
+                        <div class="ListFormBottom2" style="display:block">
+                        <div class="ListForm2" id="SliderContent">
+                            <div id="AddListItemContent" class="InsideSlider" style="display: none"> 
+                                <form id="AddListItem" name="AddListItem" onsubmit="return false">
+                                <br />
+                                <h4>Add list item:</h4>
+                                <br />
+                                    <input type="hidden" name="todo" id="todo" value="AddListItem" />
+                                    <input type="hidden" name="ListDivDisplay" id="ListDivDisplay" value="ListNormalView" />
+                                    <input type="hidden" name="ListItem.ListID" id="ListItem.ListID" value="232" />
+                                    
+                                    <div id="AddListItemFormElements">
+                                        <!--Self.ErrorMessagesALI-->
+                                        <label for="ListItem">List Item:</label><input type="text" id="ListItemName" name="ListItem.Name" maxlength="100" class="TextInput" value="" />
+                                        <!--Data.ListItemStatusSelect-->
+                                    </div>                             
+                        
+                                    <ul id="AddListItemIcons">
+                                        <li><a id="AddLinkButton" title="Add link"><img src="/images/temp/link.png" id="AddLinkImage" alt="Add link"/></a></li>
+                                        <li><a id="AddImageButton" title="Add image"><img src="/images/temp/image.png" id="AddImageImage" alt="Add image"/></a></li> 
+                                        <li><a id="AddDescriptionButton" title="Add description"><img src="/images/temp/description.png" id="AddDescriptionImage" alt="Add description"/></a></li> 
+                                        <li><a id="AmazonButton" title="Add Amazon link"><img src="/images/temp/amazon.png" id="AmazonImage" alt="Add Amazon link"/></a></li> 
+                                        <li><a id="AddEmButton" title="Add embedded content"><img src="/images/temp/em.png" id="AddEmImage" alt="Add embedded content"/></a></li> 
+                                        <li><a id="AddCCButton" title="Add Creative Commons image"><img src="/images/temp/cc.png" id="AddCCImage" alt="Add Creative Commons image"/></a></li>
+                                     </ul>
+                                    <div class="clear"></div>
+                                    <div id="AddListItemFormAdditions">
+                                    </div>
+                                    <input type="button" class="Button" value="Create" id="listitemsubmit" name="CreateListItem" onclick="processForm(this.form, this)" />
+                                </form>
+                            </div>
+                            <div id="CommentsContent" class="InsideSlider" style="display: none"> 
+                                <form id="AddListComment" onsubmit="return false">                                
+                                    <br />                                    
+                                    <h4>Comments:</h4>
+                                    <br />
+                                    <!--Self.ErrorMessagesAC-->
+                                    <div id="ListComments">    
+                                        <!--GetOutputFromFunc.getListComments-->
+                                    </div>
+                                    <input type="hidden" name="todo" id="todoLC" value="AddListComment" />
+                                    <input type="hidden" name="ListID" id="ListCommentsListID" value="258" />
+                                    <br />
+                                    <img src="/images/1/info.png" alt="Help" onclick="showTip('commentTipButton', 'commentTipWrapper');" id="commentTipButton" />
+                                    <label for="Comment" id="CommentLabel">Comment:</label><textarea id="Comment" name="Comment"></textarea>
+                            
+                                    <input type="button" class="Button" value="Add Comment" name="ListCommentSubmit" id="commentsubmit" onclick="AddListComment(this.form)" />
+                                </form>
+                            </div>
+                            <div id="TagsContent" class="InsideSlider" style="display: none"> 
+                                    <form id="AddListTag" onsubmit="return false">
+                                        <br />
+                                        <h4>Tags</h4>
+                                        <br />
+                                        <div class="ListTags" id="ListTags">    
+                                            <!--Data.List_Tags-->
+                                        </div>
+                                        <input type="hidden" name="todo" id="todoLT" value="AddListTag" />
+                                        <input type="hidden" name="ListID" id="ListTagsListID" value="<!--Data.List_ID-->" />
+        				                <br />
+                                        <!--Self.ErrorMessagesAT-->
+        			
+                                        <label for="Tag">Tag:</label><input type="text" id="Tag" name="Tag" class="TextInput" /><br />
+                                        <span id="TagInstructions">* Comma separate to add multiple tags</span>
+                                        <input type="button" value="Add Tag" name="ListTagSubmit" class="Button" id="tagsubmit" onclick="AddListTag(this.form, 'ListTags')" />
+                                    </form>
+        							<form id="DeleteListTags" onsubmit="return false">
+        								<input type="hidden" name="todo" id="todoDLT" value="DeleteListTags" />
+                                        <input type="hidden" name="ListID" id="LTListID" value="<!--Data.List_ID-->" />
+        								<input type="button" value="Delete Tags" class="Button" name="DelteTagsSubmit" id="deletetagsubmit" onclick="DeleteListTags(this.form, 'ListTags')" />
+        							</form>
+                    
+                            </div>
+                            <div id="EmailContent" class="InsideSlider" style="display: none"> 
+                                <br />
+                                <h4>Email List</h4>
+                                <p>
+                                    Send the List "<!--Self.ListName-->" to the address below:
+                                </p><br />
+                                <!--ErrorMessages-->
+                                <form name="EmailList" method="post" action="<!--SETUP.URL-->/email_list.html" onsubmit="return validateEmailList(this)">        
+                                    <input type="hidden" name="todo" value="EmailList" /> 
+                                    <input type="hidden" name="ListID" value="<!--CGI.ListID-->" /> 
+                                    <label for="ToEmail">Email:</label><input type="text" name="ToEmail" id="ToEmail" class="TextInput" value="<!--ThisUser.Email-->" /><br />
+                                        <label for="EmailMessage">Message (optional):</label><textarea name="EmailMessage" id="EmailMessage"></textarea><br />
+                                    <input type="submit" name="submit" id="EmailListSubmit" class="Button" value="Send" />
+                                </form>    
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+     
+                <div id="descriptionTipWrapper" style="display:none">
+                    <div class="FloatingDivTop">
+                        <div class="FloatingDivBottom">
+                            <div id="descriptionTip" class="FloatingDiv">
+                                <b>List item descriptions</b>
+                                <p>You are allowed the folowing html tags within the list item descrrption:</p>
+                                                        <ul>
+
+                            <li>&lt;a&gt; - <a href="#">link</a>
+                            <li>&lt;b&gt; - <b>bold</b>
+                            <li>&lt;big&gt; - <big>bigger</big>
+
+                            <li>&lt;em&gt; - <em>emphasis</em>
+                            <li>&lt;i&gt; - <i>italic</i>
+                            <li>&lt;small&gt; - <small>smaller</small>
+
+                            <li>&lt;strike&gt; - <strike>strike line through</strike>
+                            <li>&lt;strong&gt; - <strong>stronger</strong>
+                            <li>&lt;tt&gt; - <tt>teletype</tt>
+
+                            <li>&lt;underline&gt; - <u>underline</u>
+                        </ul>
+                        <br />
+
+                                <input type="button" name="Close" value="Close" id="closeDescriptionTip" class="Button" onClick='doNothing()' />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="commentTipWrapper" style="display:none">
+                    <div class="FloatingDivTop">
+                        <div class="FloatingDivBottom">
+                            <div id="commentTip" class="FloatingDiv">
+                                <b>List Comment</b>
+                                <p>You are allowed the folowing html tags within the comments:</p>
+
+                                                        <ul>
+                            <li>&lt;a&gt; - <a href="#">link</a>
+                            <li>&lt;b&gt; - <b>bold</b>
+                            <li>&lt;big&gt; - <big>bigger</big>
+
+                            <li>&lt;em&gt; - <em>emphasis</em>
+                            <li>&lt;i&gt; - <i>italic</i>
+                            <li>&lt;small&gt; - <small>smaller</small>
+
+                            <li>&lt;strike&gt; - <strike>strike line through</strike>
+                            <li>&lt;strong&gt; - <strong>stronger</strong>
+                            <li>&lt;tt&gt; - <tt>teletype</tt>
+
+                            <li>&lt;underline&gt; - <u>underline</u>
+                        </ul>
+                        <br />
+
+                                <input type="button" name="Close" value="Close" id="closeCommentTip" class="Button" onClick='doNothing()' />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                    <div id="ListDetails" >
+					                        <div id="ListPointsList">
+                            25<br />points
+                        </div>
+                        <div id="ListRating_232" class="RatingsDiv">
+							
+                  <ul class="unit-rating">
+
+                    <li class='current-rating' style="width:0px;">&nbsp;</li>
+                    <li><a href="javascript:doListRating('1','232')" title="1 out of 5" class="r1-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('2','232')" title="2 out of 5" class="r2-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('3','232')" title="3 out of 5" class="r3-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('4','232')" title="4 out of 5" class="r4-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('5','232')" title="5 out of 5" class="r5-unit" >&nbsp;</a></li>
+                   </ul>
+               
+						</div>
+						<div id="ListDetailsText">
+
+							<p>Created: Sep. 27th at 10:27pm</p>
+                            <p>Well, I believe I am due a rather large piece of humble pie. I made a huge oversight in the last verion of the Kiva Wordpress Widget. It was actually a bit of an oversight, mixed with a mistake, and a little bit of forgetfulness. That’s neither here nor there though, so lets get to the point.
+                            <br /><br />Version 2.8 doesn’t delete its own cache files. This causes the cache directory to grown indefinately, which is really quite a problem! Not to worry though, the new version not only deletes the last cache file as 2.8 should have in the first place, upgrading the plugin will delete all the unessesary files the plugin has created. This is so important that I decided it should get the version number 3.0!</p>
+						</div>
+                        <div class="ListButtons">
+                            <ul class="ShareButtons">
+                                <!-- Digg -->
+                                <li><a href="http://digg.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"><img src="http://digg.com/img/little-digg.gif" width="20" height="20" alt=""></a></li>
+                                <!-- Facebook -->
+
+                                <li><script>function fbs_click() {
+                                                u=location.href;
+                                                t=document.title;
+                                                window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+                                                return false;}
+                                    </script><a href="http://www.facebook.com/share.php?u=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" onclick="return fbs_click()" target="_blank"><img src="http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?8:26981" width="16" height="16" alt="" /></a></li>
+                                <!-- StumbleUpon -->
+                                <li><a href="http://www.stumbleupon.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"> <img border=0 src="http://cdn.stumble-upon.com/images/32x32_su_round.gif" width="16" height="16" alt=""></a></li>
+                                <!-- Twitter -->
+                                <li><a href="http://twitter.com/home?status=Check out this list: Music http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" target="_new"><img src="http://twitter.com/images/favicon.png" width="16" height="16" alt="Tweet this list" /></a></li>
+                                <!-- Delicious -->    
+                                <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> <img src="http://static.delicious.com/img/delicious.gif" alt="Delicious" width="16" height="16" /></a></li>
+                            </ul>
+
+                        </div>
+                        
+
+                        <script type="text/javascript">
+                            function openWindow(theURL,winName,features) { 
+                                window.open(theURL,winName,features);
+                            }
+                        </script>
+
+                    <ul id="ListOptionsNormal" class="ListOptions">
+                        <li><a href="javascript:SwitchToEditMode(1, 232)">Edit</a> | 
+                        <li><a href="javascript:SwitchToReorderMode(1)">Reorder</a> 
+                    </ul>
+
+                    <div style="clear: left"></div>
+                    </div>
+                    <div class="ListContainer">
+                        <h2>&nbsp;</h2>
+                           <ul class="ListNormalView">
+                              <li><a href="http://www.amazon.ca/Mule-Variations-Tom-Waits/dp/B00000IGGA%3FSubscriptionId%3D1JGRS89XPTZD10NSYZ82%26tag%3Dlistcentralca-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00000IGGA" target="_blank">
+Tom Waits</a><br />
+<a href="http://www.amazon.ca/Mule-Variations-Tom-Waits/dp/B00000IGGA%3FSubscriptionId%3D1JGRS89XPTZD10NSYZ82%26tag%3Dlistcentralca-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00000IGGA" 
+    target="_blank" 
+    title="Tom Waits">
+<img src="/usercontent/7/7/marilyn/316M.jpg" 
+    alt="Tom Waits" class="ListImage" /></a>
+<p id="LIDescription943">
+
+Inventive musician & poet</p><div class="clear"></div></li>
+<li><a href="http://www.amazon.ca/Transmissions-Satelli-Flaming-Lips/dp/B000002ML7%3FSubscriptionId%3D1JGRS89XPTZD10NSYZ82%26tag%3Dlistcentralca-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000002ML7" target="_blank">
+The Flaming Lips</a><br />
+<a href="http://www.amazon.ca/Transmissions-Satelli-Flaming-Lips/dp/B000002ML7%3FSubscriptionId%3D1JGRS89XPTZD10NSYZ82%26tag%3Dlistcentralca-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000002ML7" 
+    target="_blank" 
+    title="The Flaming Lips">
+<img src="/usercontent/7/7/marilyn/372M.jpg" 
+    alt="The Flaming Lips" class="ListImage" /></a>
+<p id="LIDescription996">
+The band that has held tight to its childlike wonderment continues to capture new audiences with each disc they release. They all have their place, but Satilitte Transmissions remains, to this day, my favourite</p><div class="clear"></div></li>
+
+                           </ul>                            
+                    </div>           
+                </div>
+                
+                <div id="ListEditView" style="display:none">
+
+                    <div id="ListTopBit">
+            			<div class="ListHeader">
+                            <a href="/list/favourite_things/music/77/232/lists.html" class="ListNameList">
+                            Music</a>
+                        </div>
+                    </div>
+                    
+                 <div id="editDescriptionTipWrapper" style="display:none">
+                    <div class="FloatingDivTop">
+                        <div class="FloatingDivBottom">
+                            <div id="EditDescriptionTip" class="FloatingDiv">
+                                <b>List item descriptions</b>
+                                <p>You are allowed the folowing html tags within the list item descrrption:</p>
+                                                        <ul>
+                
+                                            <li>&lt;a&gt; - <a href="#">link</a>
+                                            <li>&lt;b&gt; - <b>bold</b>
+                                            <li>&lt;big&gt; - <big>bigger</big>
+                
+                                            <li>&lt;em&gt; - <em>emphasis</em>
+                                            <li>&lt;i&gt; - <i>italic</i>
+                                            <li>&lt;small&gt; - <small>smaller</small>
+                
+                                            <li>&lt;strike&gt; - <strike>strike line through</strike>
+                                            <li>&lt;strong&gt; - <strong>stronger</strong>
+                                            <li>&lt;tt&gt; - <tt>teletype</tt>
+                
+                                            <li>&lt;underline&gt; - <u>underline</u>
+                                        </ul>
+                                        <br />
+                
+                                <input type="button" name="Close" value="Close" id="closeEitDescriptionTip" class="Button" onClick='doNothing()' />
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+
+                    <div id="ListDetails" >
+                                               <div id="ListPointsList">
+                            25<br />points
+                        </div>
+                        <div id="ListRating_232" class="RatingsDiv">
+							
+                  <ul class="unit-rating">
+                    <li class='current-rating' style="width:0px;">&nbsp;</li>
+
+                    <li><a href="javascript:doListRating('1','232')" title="1 out of 5" class="r1-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('2','232')" title="2 out of 5" class="r2-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('3','232')" title="3 out of 5" class="r3-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('4','232')" title="4 out of 5" class="r4-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('5','232')" title="5 out of 5" class="r5-unit" >&nbsp;</a></li>
+                   </ul>
+               
+						</div>
+						<div id="ListDetailsText">
+							<p>Created: Sep. 27th at 10:27pm</p>
+
+                            <p><br /></p>
+						</div>
+                        <div class="ListButtons">
+                            <ul class="ShareButtons">
+                                <!-- Digg -->
+                                <li><a href="http://digg.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"><img src="http://digg.com/img/little-digg.gif" width="20" height="20" alt=""></a></li>
+                                <!-- Facebook -->
+                                <li><script>function fbs_click() {
+                                                u=location.href;
+                                                t=document.title;
+                                                window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+                                                return false;}
+                                    </script><a href="http://www.facebook.com/share.php?u=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" onclick="return fbs_click()" target="_blank"><img src="http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?8:26981" width="16" height="16" alt="" /></a></li>
+
+                                <!-- StumbleUpon -->
+                                <li><a href="http://www.stumbleupon.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"> <img border=0 src="http://cdn.stumble-upon.com/images/32x32_su_round.gif" width="16" height="16" alt=""></a></li>
+                                <!-- Twitter -->
+                                <li><a href="http://twitter.com/home?status=Check out this list: Music http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" target="_new"><img src="http://twitter.com/images/favicon.png" width="16" height="16" alt="Tweet this list" /></a></li>
+                                <!-- Delicious -->    
+                                <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> <img src="http://static.delicious.com/img/delicious.gif" alt="Delicious" width="16" height="16" /></a></li>
+                            </ul>
+                        </div>
+
+                        
+
+                        <script type="text/javascript">
+                            function openWindow(theURL,winName,features) { 
+                                window.open(theURL,winName,features);
+                            }
+                        </script>
+
+                        <ul id="ListOptionsEdit" class="ListOptions">
+                            <li><img src="/images/1/info.png" alt="Help" onclick="showTip('editTipButton', 'editTipWrapper');" id="editTipButton" />
+                            <li><a href="javascript:SwitchToEditMode(0, 232)"><b>Done Editing</b></a> 
+                        </ul>
+
+                        <div style="clear: left"></div>
+                    </div>
+                    <div class="ListContainer">
+                        <h2>&nbsp;</h2>
+                           <ul class="ListEditView">
+                              <li id="Row943">
+    <table class="ListItemTable">
+        <tr><td class="ListItemEditImageTD">
+            <img src="/images/edit.gif" 
+                onclick="showEditListItemForm(943, 
+                                              '', 
+                                              '1', 
+                        					  '',
+                        					  '', this);", 
+                                              class="EditListItemIcon" alt="Edit" id="EditButton943" />
+
+        </td>
+	<td class="ListItemEditImageTD">
+	<a class="DeleteButton" href="javascript:deleteListItem(943);"  alt="Delete" />
+	</td>
+        <td id="ListItem943" class="noneditable">
+            <span onmouseout="showAsEditable('ListItem943', true)" onmouseover="showAsEditable('ListItem943', false)" onclick="edit('ListItem943', this, 3)" id="ListItem943Span">Tom Waits</span>
+        </td>
+        </tr>
+
+	<tr><td colspan="2"></td>
+	<td id="ListItem943Description" class="noneditable">
+	    <span onmouseout="showAsEditable('ListItem943Description', true)" onmouseover="showAsEditable('ListItem943Description', false)" onclick="edit('ListItem943Description', this, 5)" id="ListItem943DescriptionSpan">Inventive musician & poet</span>
+	</td>
+	</tr>
+    </table>
+</li>
+
+<li id="Row996">
+
+    <table class="ListItemTable">
+        <tr><td class="ListItemEditImageTD">
+            <img src="/images/edit.gif" 
+                onclick="showEditListItemForm(996, 
+                                              '', 
+                                              '1', 
+                        					  '',
+                        					  '', this);", 
+                                              class="EditListItemIcon" alt="Edit" id="EditButton996" />
+        </td>
+	<td class="ListItemEditImageTD">
+	<a class="DeleteButton" href="javascript:deleteListItem(996);"  alt="Delete" />
+	</td>
+        <td id="ListItem996" class="noneditable">
+            <span onmouseout="showAsEditable('ListItem996', true)" onmouseover="showAsEditable('ListItem996', false)" onclick="edit('ListItem996', this, 3)" id="ListItem996Span">The Flaming Lips</span>
+
+        </td>
+        </tr>
+	<tr><td colspan="2"></td>
+	<td id="ListItem996Description" class="noneditable">
+	    <span onmouseout="showAsEditable('ListItem996Description', true)" onmouseover="showAsEditable('ListItem996Description', false)" onclick="edit('ListItem996Description', this, 5)" id="ListItem996DescriptionSpan">The band that has held tight to its childlike wonderment continues to capture new audiences with each disc they release. They all have their place, but Satilitte Transmissions remains, to this day, my favourite</span>
+	</td>
+	</tr>
+    </table>
+
+</li>
+
+
+                           </ul>                            
+                    </div>                  
+                    <br />   
+                </div>
+
+                <div id="ListReorderView" style="display:none">      
+                    <div id="ListTopBit">
+            			<div class="ListHeader">
+                            <a href="/list/favourite_things/music/77/232/lists.html" class="ListNameList">
+                            Music</a>
+
+                        </div>
+                    </div>
+		    <div id="ListReorderSpaceHolder"></div>
+                    
+                    <div id="ListDetails" >
+                                               <div id="ListPointsList">
+                            25<br />points
+                        </div>
+                        <div id="ListRating_232" class="RatingsDiv">
+							
+                  <ul class="unit-rating">
+
+                    <li class='current-rating' style="width:0px;">&nbsp;</li>
+                    <li><a href="javascript:doListRating('1','232')" title="1 out of 5" class="r1-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('2','232')" title="2 out of 5" class="r2-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('3','232')" title="3 out of 5" class="r3-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('4','232')" title="4 out of 5" class="r4-unit" >&nbsp;</a></li>
+                    <li><a href="javascript:doListRating('5','232')" title="5 out of 5" class="r5-unit" >&nbsp;</a></li>
+                   </ul>
+               
+						</div>
+						<div id="ListDetailsText">
+
+							<p>Created: Sep. 27th at 10:27pm</p>
+                            <p><br /></p>
+						</div>
+                        <div class="ListButtons">
+                            <ul class="ShareButtons">
+                                <!-- Digg -->
+                                <li><a href="http://digg.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"><img src="http://digg.com/img/little-digg.gif" width="20" height="20" alt=""></a></li>
+                                <!-- Facebook -->
+
+                                <li><script>function fbs_click() {
+                                                u=location.href;
+                                                t=document.title;
+                                                window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+                                                return false;}
+                                    </script><a href="http://www.facebook.com/share.php?u=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" onclick="return fbs_click()" target="_blank"><img src="http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?8:26981" width="16" height="16" alt="" /></a></li>
+                                <!-- StumbleUpon -->
+                                <li><a href="http://www.stumbleupon.com/submit?url=http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html&title=Music" target="_new"> <img border=0 src="http://cdn.stumble-upon.com/images/32x32_su_round.gif" width="16" height="16" alt=""></a></li>
+                                <!-- Twitter -->
+                                <li><a href="http://twitter.com/home?status=Check out this list: Music http://go-list-yourself.com/list/favourite_things/music/77/232/lists.html" target="_new"><img src="http://twitter.com/images/favicon.png" width="16" height="16" alt="Tweet this list" /></a></li>
+                                <!-- Delicious -->    
+                                <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> <img src="http://static.delicious.com/img/delicious.gif" alt="Delicious" width="16" height="16" /></a></li>
+                            </ul>
+
+                        </div>
+                        
+
+                        <script type="text/javascript">
+                            function openWindow(theURL,winName,features) { 
+                                window.open(theURL,winName,features);
+                            }
+                        </script>
+
+                        <ul id="ListOptionsReorder" class="ListOptions">
+                            <li><a href="javascript:SwitchToReorderMode(0)"><b>Done Reordering</b></a> 
+                        </ul>
+
+                        <div style="clear: left"></div>
+                    </div>
+                    <div class="ListContainer">
+                        <h2>&nbsp;</h2>
+                               <ul class="ListReorderView" id="Sortable1">
+                                 <li class="sortable" id="Sortable943">
+Tom Waits
+</li>
+<li class="sortable" id="Sortable996">
+The Flaming Lips
+</li>
+
+                              </ul>                            
+                    </div>                  
+                    <br />
+                </div> 
+                <script type="text/javascript">
+                    var sortable1 = new Sortables($('Sortable1'), {
+                                     constrain: true,
+                                     clone: true,
+                                     revert: true
+                                 });
+                                 SortableListArray['Sortable1'] = sortable1;
+                                
+                </script>
+                 <div id="editTipWrapper" style="display:none">
+                    <div class="FloatingDivTop">
+                        <div class="FloatingDivBottom">
+                            <div id="editTip" class="FloatingDiv">
+
+                                <b>Edit list</b>
+                                <p>List Central features edit in place functionality for all list items
+                                and list item descriptions. By switching to edit mode you are able to click 
+                                on any of your list's items and item descriptions to enable the edit in place
+                                feature for that piece of text.</p>
+                                <p>When you have finished with your edits, you can save them by clicking the 
+                                save button(<img src="/images/save.png" class="ExImg" alt="Save" />), or by hitting the Ctrl+Alt+S keys
+                                together. 
+                                You can cancel your edits by either clicking the cancel button 
+                                (<img src="/images/cancel.png" class="ExImg" alt="Cancel" />), or by hitting the escape key (Esc).</p>
+                                <p>In addition to edit in place, you can edit your list items via a popup form you can 
+                                access by clicking on the edit button(<img src="/images/edit.gif" alt="Edit" />). From 
+                                this edit form you can change the item's link and image, in addition to the item itself
+                                and it's description.</p>
+                                <input type="button" name="Close" value="Close" id="closeEditTip" class="Button" onClick='doNothing()' />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </div>  
+    
+<style>
+#AddListItemFormAdditions{
+    margin-bottom:25px;
+}
+#AddListItemFormAdditions label{
+    
+}
+#AddListItemFormAdditions input[type="text"], textarea{
+    width: 280px;
+}
+#AddListItemFormAdditions.TextInput{
+    width: 280px;
+}
+#DescriptionWYSIWYGWrapper{
+    margin-bottom:20px;
+}
+#DescriptionLabel{
+
+}
+</style>
+    <div id="AddLink" style="display: none"> 
+        <br />
+            <label for="Link">Link:</label><br />
+            <input type="text" maxlength="200" value="http://" name="ListItem.Link" id="ListItemLink" />
+        </form>    
+    </div>
+    <div id="AddImage" > 
+        <br />
+        <label for="Amazon">Iamge:</label><br />
+        <div id="ImageImage" style="display:none">
+            <input type='hidden' name='ListItem.ImageID' id="UploadedImageID" value="" />
+            <label for="EditImageForm">Image:</label><img src="" id='UploadedImage2' />
+            <a href="javascript:cancelImageUploaded(0)" id="RemoveImageLink">Remove Image</a><br />
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="AddAmazon" style="display: none"> 
+        <br />
+        <label for="Amazon">Amazon:</label><br />
+        <div id="AmazonChoice">
+        
+        </div>
+    </div>
+    <div id="AddEm" style="display: none"> 
+        <br />
+        <label for="EmbedCode">Embed code:</label><br />
+        <textarea name="ListItem.Embed" id="EmbedCode"></textarea>
+    </div>
+    <div id="AddCC" style="display: none"> 
+        <br />
+        <label for="CCImage">Creative Commons image:</label><br />
+        <div id="CreavidCommonsChoice">
+        
+        </div>
+    </div>
+    <div id="AddDescription" style="display: none"> 
+        <br />
+        <label for="Description" id="DescriptionLabel">Description:</label><br />
+        <div id="DescriptionWYSIWYGWrapper">
+            <textarea name="ListItem.Description" id="ListItemDescription"></textarea>
+        </div>
+    </div>

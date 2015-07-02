@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" href="/css/<!--Self.ThemeID-->/mb.css" type="text/css" media="screen" />  
+    <!--GetOutputFromFunc.getCSSLinksMultibox-->
+    <script type="text/javascript" src="/js/Lists.js"></script>
+    <script type="text/javascript" src="/js/mootools.js"></script>
+</head>
+<body>
+    <div class="MultiBoxInner" id="CCImageChoicesDiv">
+    <!--Display.Page.loading.html-->
+    </div>
+    
+    <script language="JavaScript" type="text/javascript">
+        scriptsURL = "<!--URL-->";
+        themeID = <!--Self.ThemeID-->;
+    
+        var ListItemValue = "<!--CGI.ListItem.Name-->";
+        if(ListItemValue == ""){
+            var action = "<!--CGI.action-->";
+            var ListItemInput = action + "ListItemName";
+            ListItemValue = parent.document.getElementById(ListItemInput).value;
+        }
+        var ListID = parent.document.getElementById('ListItemListID').value;
+        var page = "<!--CGI.page-->";
+        if(page == ""){
+            page = 1;
+        }
+        var action = "<!--CGI.action-->";
+        
+        var url = scriptsURL + "/?" + "todo=GetCCImageChoices&ListItem.Name=" + ListItemValue + "&ListID=" + ListID +
+                    "&page=" + page + "&action=" + action + "&ajax=1";
+        doServerRequest(url, "CCImageChoicesDiv");
+    </script>
+</body>
+</html>

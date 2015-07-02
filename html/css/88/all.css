@@ -1,0 +1,3881 @@
+/* List Central main.css */
+
+* {
+        margin: 0;
+}
+html, body {
+        background-color: #D8FF86;
+        font-family: Arial; 
+        font-size: 12px;
+         
+        color: #2F3827; 
+        width: 100%;
+        height: 100%;
+}
+.wrapper {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -38px; 
+}
+.footer, .push {
+        height: 38px;
+}
+
+
+#header {
+        height: 100px;
+        background: #3B5921;
+}
+#headerSmall {
+        height: 70px;
+        background: #3B5921;
+} 
+#headerImage {
+        height: 70px;
+        background: #3B5921;
+}            
+#headerInner{
+        text-align: left;
+        width: 1004px;   
+}
+#headerInner a img{
+        float: left;   
+}
+#headerInnerSmall{
+        text-align: left;
+        width: 410px;    
+}
+#headerInnerImage{
+        text-align: left;
+        width: 800px;    
+}
+.AccentBar1 {
+        height: 4px;
+        background: #2F3827;
+        clear: both;
+        font-size: 0px;
+}
+.AccentBar2 {
+        height: 4px;
+        background: #1B434D;
+        clear: both;
+        font-size: 0px;
+} 	
+#upperLinks{
+        color:#D8FF86;
+        font-size:18px;
+        font-weight:normal;
+        text-align:right;     
+        padding: 10px 0px;   
+        float: right;
+        width: 250px;
+}
+#upperLinks a{
+        color: #D8FF86;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: normal;
+        text-transform:lowercase;
+}
+#upperLinks a:hover{
+        color: #D8FF86;
+        font-size: 18px;
+        text-decoration: underline;
+        font-weight: normal;
+        text-transform:lowercase;
+}
+#header img{
+        padding: 10px 0px;
+}
+#headerSmall img{
+        padding: 10px 0px;
+        width: 200px;
+}
+#headerImage img{
+        padding: 10px 0px;
+        width: 200px;
+}
+#main{  
+        padding-top: 15px;
+        text-align: left;
+        width: 1004px;
+}
+#mainSmall{  
+        padding-top: 10px;
+        text-align: left;
+        width: 400px;
+}
+#mainImage{  
+        padding-top: 10px;
+        text-align: left;
+        width: 800px;
+        min-height: 552px;
+}
+.FullImage{
+        max-width:800px;
+        width:auto;
+}
+#content{ 
+    
+}
+#contentSmall{ 
+    
+}
+
+#footer{
+        height: 22px;            
+        background: #3B5921;
+        text-align: left;
+        clear: both;
+}
+#footerInner{
+        width: 1004px;
+        color: #D8FF86;
+        padding: 5px;
+}
+#footerInnerSmall{
+        width: 400px;
+        color: #D8FF86;
+        padding: 6px;
+}
+#footerInnerImage{
+        width: 800px;
+        color: #D8FF86;
+        padding: 6px;
+}
+#footerInner a {
+        color: #D8FF86;
+        text-decoration: none;
+        font-size: 10px
+}
+#footerInner a:hover {
+        color: #D8FF86;
+        text-decoration: underline;
+        font-size: 10px
+}
+
+h1{
+        background:#3B5921 none repeat scroll 0 0;
+        border-left: 10px solid #2F3827;
+        border-right: 10px solid #1B434D;
+        color:#D8FF86;
+        font-size:14px;
+        line-height:12px;
+        margin-bottom:0;
+        padding:0.5em;
+}
+h1.ListNameH1{
+        border-left: 0px solid #2F3827;
+        border-right: 0px solid #1B434D;
+        color:#D8FF86;
+}
+
+h1 span{
+        color:#D8FF86;
+        font-size:14px;
+}
+h1 span a{
+        color:#D8FF86;
+        font-size:12px;
+        text-decoration: none;
+
+}
+h1 span a:hover{
+        color:#D8FF86;
+        font-size:12px;
+        text-decoration: none;
+}
+h2{
+        background:#3B5921 none repeat scroll 0% 0%;
+        border-bottom:4px solid #2F3827;
+        border-left:5px solid #1B434D;
+        color:#D8FF86;
+        font-size:14px;
+        line-height:14px;
+        margin:5px 0 10px;
+        padding: 2px 2px 0 10px
+}
+
+.FakeH2{
+        background:#3B5921 none repeat scroll 0% 0%;
+        border-bottom:4px solid #2F3827;
+        border-left:5px solid #1B434D;
+        color:#D8FF86;
+        font-size:14px;
+        line-height:14px;
+        padding: 2px 2px 0 10px;
+	font-weight:bold;
+}
+
+h3{
+        font-size: 18px;
+        font-weight: bold;
+        color: #2F3827;
+        margin: 15px 0;
+}
+.TopH3{
+        margin: 0 0 15px 0;
+}
+h4{
+        font-size: 18px;
+}
+b {
+        font-size: 12px;
+        font-weight: bold;
+}
+p {
+        font-size: 12px;
+        margin: 12px 0;
+}
+a{
+        color:#3B5921;
+        text-decoration: none;
+        font-weight: bold;
+
+}
+a:hover{
+        color:#3B5921;
+        text-decoration: underline;
+        font-weight: bold;
+}
+.error {
+        color: red;
+}       
+.error a {
+        color: red;
+        text-decoration: underline;
+}
+.FormDiv p.error{
+        margin: -5px 10px 10px;
+}
+.FormDiv p.error{
+        margin: 0px;
+}
+
+.InvisibleTableTD {
+        vertical-align: top;
+        margin: 2em;
+        padding: 3em;
+}
+.InvisibleTable{
+        margin: 0;
+        padding: 0;
+}
+
+a img {
+    border: 0px solid #D8FF86;
+}
+
+
+/* Forms */
+form {
+        border: 0px solid #3B5921;
+        background: transparent  none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:0px;
+        padding:0px;
+}
+input[type="text"], input[type="password"], textarea, select {
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        border: 1px #2F3827 solid;
+        color:#2F3827;
+        width: 200px;
+        background: #D8FF86;
+}
+
+textarea{
+        height: 80px;
+        font-family:inherit;
+}
+
+
+label {
+        display:block;
+        float:left;
+        margin:0 5px 0 5px; 
+        color: #2F3827;
+        text-align:right;    
+        width: 38%;
+        clear: both;
+}
+form fieldset {
+        margin-bottom: 10px;
+        border-top: 2px solid #3B5921;
+        border-bottom: 0px solid #3B5921;
+        border-left: 0px solid #3B5921;
+        border-right: 0px solid #3B5921;
+        
+}
+form legend {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 5px;
+        border-bottom: 0px solid #3B5921;
+}
+form fieldset ol {
+        margin: 0;
+        padding: 0;
+}
+form fieldset li {
+        list-style: none;
+        padding: 5px;
+        margin: 0;
+}
+
+.FloatingFieldset_Is_this_in_use {
+        border-left: 1px solid #2F3827; /* The big border 1d687a */
+        border-right: 1px solid #2F3827;
+        border-top: 1px solid #2F3827;
+        border-bottom: 1px solid #2F3827;
+        float: none;
+        font-family: Arial; 
+        font-size: 10px;
+        background-color: #7AE4FF;
+        padding:0.5em;
+        width: 26em;
+}
+
+
+/* ---------------------- SIGNUP ----------------------- */
+#signup {
+        width: 400px;
+        padding: 0em 1em 1em 2em;
+}
+#signup label {
+        width: 130px;
+}
+#signupsubmit {
+        margin-left: 140px;
+}
+#signup form {
+        width: 390px;
+}
+#recaptcha{
+        margin-bottom:20px;
+        margin-left:30px;
+        margin-top:20px;
+}
+
+#signup input[type="text"], #signup input[type="password"], #signup textarea, #signup select{
+        background: #7AE4FF;
+}
+
+/* ---------------------- ADD ITEM ----------------------- */
+#AddItem label {
+        width: 64px;
+        clear: both
+}
+#uploadimagesubmit {
+        margin:-3px 15px 20px;
+	position:relative;
+	top:5px;
+}
+#AddItem form {
+        background:#7AE4FF none repeat scroll 0 0;
+        border:0 solid #2F3827;
+        margin-left:12px;
+        margin-top:-2px;
+        padding:7px;
+        width:298px;
+}
+
+#AddItem label#ImageLabel{
+        width: 101px;
+        margin-bottom:20px;
+	margin-top:5px;
+}
+
+
+/* ---------------------- EDIT LIST DETAILS ----------------------- */
+#EditListDetails label {
+        width: 65px;
+        clear: none;
+}
+#editlistcancel {
+        margin-left: 50px;
+}
+#EditListDetails{
+        margin-top: -1px;
+}
+#EditListDetails div.ListForm{
+        
+}
+#EditListDetails form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:0 0 0 12px;
+        padding:0px;
+        width:300px;
+}
+#EditListDetails select#Images {
+        width: 73px;
+        float: left;
+}
+#EditListDetails select#Links {
+        width: 73px;
+}
+#EditListDetails label#LinksLabel {
+        width: 44px;
+}
+#EditListDetails select#ListItemStatus {
+        width: 120px;
+}
+#EditListDetails label#ListItemStatusLabel {
+        width: 135px;
+}
+#EditListFormInner{
+        margin-left: 5px;
+}
+
+/* ---------------------- ADD COMMENT ----------------------- */
+#AddComment form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin-left:12px;
+        margin-top:-2px;
+        padding:7px;
+        width:296px;
+}
+#AddComment label {
+        width: 67px;
+}
+
+/* ---------------------- ADD TAG ----------------------- */
+
+
+#AddTag form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin-left:12px;
+        margin-top:-2px;
+        padding:7px;
+        width:296px;
+}
+
+#deletetagsubmit {
+        margin: 4px 0 0;
+        float: right;
+        position: relative;
+        bottom:42px;
+}
+
+#AddTag label {
+        width: 40px;
+}
+
+
+/* ---------------------- Create List ----------------------- */
+#CreateList {
+        float: left;
+        margin:10px;
+        width:660px;
+}
+#CreateList textarea#Description{
+        width: 200px;
+        margin:0 0 15px;
+}
+
+#ListItemDescriptionEdit{
+        margin:0 0 15px;
+}
+#CreateList label {
+        width: 65px;
+        clear: none;
+}
+#CreateList form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:-20px 10px 0;
+        padding:0px;
+}
+
+#CreateList input[type="text"]#ListName{
+        width: 223px;
+}
+#CreateList textarea#Description{
+        width: 223px;
+}
+#CreateList select#ListGroup {
+        width: 223px;
+}
+#CreateList select#Public {
+        width: 223px;
+}
+#CreateList select#StatusSet {
+        width: 223px;
+}
+
+#CreateList select#ListType {
+        width: 84px;
+        float: left;
+}
+#CreateList select#ListOrder {
+        width: 85px;
+}
+#CreateList label#OrderLabel {
+        width: 44px;
+}
+#CreateList select#ListItemStatus {
+        width: 120px;
+}
+#CreateList label#ListItemStatusLabel {
+        width: 116px;
+}
+
+/* ---------------------- CREATE LIST GROUP ----------------------- */
+#CreateListGroup {
+        float: left;
+        margin:1em;
+        width:300px;
+}
+#CreateListGroup label {
+        width: 75px;
+}
+#CreateListGroup form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:0px;
+        padding:0px;
+}
+
+/* ---------------------- CREATE STATUS SET ----------------------- */
+#CreateStatusSet {
+        float: left;
+        margin:40px 1em;
+        width:300px;
+}
+#CreateStatusSet label {
+        width:60px;
+}
+#CreateStatusSet form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:0px;
+        padding:0px;
+}
+
+#CreateRight{
+        float: right;
+        width: 400px
+}
+
+/* ---------------------- EDIT LIST ITEM ----------------------- */
+#EditListItem label {
+        width: 65px;
+}
+#EditListItem label#EditImageLabel{
+        width: 100px;
+}
+
+#editlistitemsubmit {
+        margin-left: 10px;
+}
+#editlistitemcancel {
+        margin-left: 74px;
+}
+#EditListItem form {
+        background: #7AE4FF none repeat scroll 0 0;
+        border: 0px solid #2F3827;
+        margin:0px;
+        padding:0px;
+}
+
+
+/* ---------------------- EMAIL LIST ----------------------- */
+#emaillist label {
+        width: 60px;
+}
+#emaillist form {
+        width: 280px;
+}
+
+/* ---------------------- FORGOT PASSWORD ----------------------- */
+#forgotpassword {
+        width: 370px;
+        padding: 0em 1em 1em 2em;
+}
+#forgotpassword label {
+        width: 32px;
+}
+#forgotpassword form {
+        width: 280px;
+}
+#forgotpassword input[type="text"] {
+        background: #7AE4FF;
+        width: 228px;
+}
+#EmbeddedLogin{
+        float: right;
+        margin-right: 100px;
+}
+
+/* ---------------------- SEARCH ----------------------- */
+#search {
+        float:right;
+        position:relative;
+        top:6px;
+        left: 10px;
+}
+#search form {
+        border: 0px solid #3B5921;
+        background: none;
+        margin:0px 5px 0px 0px;
+        padding:0px;
+        width: 201px;
+        height: 0px;
+}
+
+#query {
+        background: #D8FF86 none repeat scroll 0% 0%;
+        color: #2F3827;
+        height: 18px;
+        padding: 3px 4px 0pt;
+        width: 160px;
+        border: 2px #2F3827 solid;
+        position:relative;
+        top: 12px;
+}
+#queryLabel {
+        position:absolute;
+        visibility:hidden;
+}
+
+#searchsubmit {
+        height:25px;
+        position:relative;
+        right:4px;
+        top:18px;
+}
+
+/* ---------------------- UPLOAD IMAGE ----------------------- */
+#UploadForm {
+        width: 390px;
+        padding: 0em 1em 1em 1em;
+}
+#UploadForm label {
+        width: 100px;
+}
+#UploadForm form {
+        width: 380px;
+        padding-top: 1em;
+}
+
+#RemoveImageLink {
+        float:right;
+        margin-bottom:10px;
+        position:relative;
+        right:8px;
+        top:-3px;
+}
+#UploadedImage{
+        max-width: 300px;
+        border: 1px #2F3827 solid;
+}
+#UploadedImage2{
+        max-width: 294px;
+        border: 1px #2F3827 solid;
+        margin-bottom: 3px;
+        margin-right:22px;
+}
+#UploadedImage3{
+        width: 150px;
+        border: 1px #2F3827 solid;
+        margin-bottom: 3px;
+}
+#UploadedAvatar{
+        width: 100px;
+        border: 1px #2F3827 solid;
+        margin-bottom: 3px;
+}       
+#EditUploadedImage{
+        width: 300px;
+        border: 1px #2F3827 solid;
+}
+.EditUploadedImage2{
+        width: 200px;
+        border: 1px #2F3827 solid;
+        margin-bottom: 3px;
+}
+#EditUploadedImage3{
+        width: 150px;
+        border: 1px #2F3827 solid;
+        margin-bottom: 3px;
+}
+#RemoveEditImageLink {
+        float: right;
+        margin-bottom: 1em;
+        position: relative;
+        right: 25px;
+}
+
+
+/* ---------------------- FORGOT PASSWORD ----------------------- */
+#AddFeedback {
+        width: 370px;
+}
+#AddFeedback label {
+        width: 100px;
+}
+#AddFeedback form {
+        width: 320px;
+}
+#AddFeedback input[type="submit"] {
+        margin-left: 30px;
+}
+
+/* ---------------------- USER SETTING ----------------------- */
+#BasicInfo{
+        width: 640px;
+        margin-left:20px;
+        margin-top:-12px;
+}
+#BasicInfo label {
+        width: 78px;
+}
+#BasicInfo label#PasswordVerifyLabel{
+        width: 210px;
+}
+#BasicInfoLeft{
+        float: left;
+        margin-bottom: 20px;
+}
+#BasicInfoRight {
+        float: right;
+        margin-right:20px;
+}
+#basicinfoedit {
+        margin-left: 130px;
+        float: left;
+}
+#deactivateaccount {
+        margin-left: 160px;
+}
+#Deactivate{
+        width: 370px;
+        margin-bottom: 20px;
+}
+#Deactivate input[type="text"], #Deactivate textarea{
+        background: #7AE4FF;
+        width: 200px;
+}
+
+#BasicInfo form {
+        width: auto;
+}
+
+#AboutMe{
+        
+        margin-left:10px;
+        margin-top:-12px;
+}
+#AboutMe label {
+        width: 60px;
+}
+#aboutmeedit {
+        margin-left: 40px;
+}
+#AboutMe form {
+        width: auto;
+}
+#AboutMe textarea {
+        width: 280px;
+}
+.AboutMeLeft{
+        width:390px;
+}
+.AboutMeRight{
+        width:342px;
+}
+#Avatar{
+        width: 640px;
+        margin-left:40px;
+        margin-top:-12px;
+}
+#Avatar form {
+        width: auto;
+}
+
+#Theme {
+        width: 640px;
+        margin-left:20px;
+        margin-top:-12px;
+}
+#Theme label {
+        width: 70px;
+        margin-bottom:29px;
+}
+#Theme form {
+        width: auto;
+}
+#Emailing {
+        width: 640px;
+        margin-left:20px;
+        margin-top:-12px;
+}
+#Emailing label {
+        width:292px;
+        margin-bottom:15px;
+}
+#Emailing select {
+        width: 70px;
+        margin-bottom:26px;
+}
+#Emailing form {
+        width: auto;
+}
+#Privacy {
+        width: 640px;
+        margin-left:20px;
+        margin-top:-12px;
+}
+#Privacy label {
+        width: 170px;
+}
+#Privacy form {
+        width: auto;
+}
+#Privacy select {
+        width: 70px;
+}
+
+#EditGravatarDiv {
+        float: left;
+        padding-left: 3em;
+        padding-bottom:20px;
+}
+#EditAvatarDiv{
+        float: right;
+        padding-right: 8em;
+	width:150px;
+}
+#EditAvatarSubmitDiv {
+        clear:both;
+}
+#EditAvatarDiv div#ImageFormElement{
+        width: 147px;
+}
+#FormLCAvatar{
+
+}
+#FormGravatar{
+
+}
+.FormAvatar#UploadedImage2 {
+        border:1px solid #2F3827;
+        margin:20px;    
+}
+.FormAvatar {
+        border:1px solid #2F3827;
+        margin:20px;    
+}
+#SettingsFormContainer{
+        margin-left: 30px;
+        margin-top: -8px;
+}
+#SettingsFormContainer ul.tabLinks {
+        position:relative;
+        bottom:19px;     
+}
+#SettingsTabWindow {
+	height: 390px;
+        margin-right:1px;
+        left: 1px;
+}
+#SettingsTabLetters{
+        top: 3px;
+}
+#CreateEditTabLetters{
+        top: 3px;
+}
+#CreateEditFormContainer{
+        margin-left: 30px;
+        margin-top: -8px;
+        position: relative;
+}
+#CreateEditFormContainer ul.tabLinks {
+        position:relative;
+        bottom:19px;     
+}
+#CreateEditTabWindow {
+	min-height: 390px;
+        margin-right:1px;
+        left: 1px;
+}
+#EditListGroups{
+        float: right;
+        width: 280px;
+        margin-left: 20px;
+        margin-top:-20px;
+        margin-right:20px;
+}
+#CreateListGroup{
+        float: left;
+        width: 300px;
+        margin-top:-20px;
+        margin-right:20px;
+        margin-left:20px;
+}
+#EditStatusSets{
+        float: right;
+        width:  280px;
+        margin-top:-20px;
+        margin-left: 20px;
+        margin-right:20px;
+}
+#CreateStatusSet{
+        float: left;
+        width: 300px;
+        margin-top:-20px;
+        margin-left:20px;
+        margin-right:20px;
+}
+.Button{ /*input[type="button"], input[type="submit"] {*/
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -223px -124px;
+        width: 110px;
+        height: 24px;
+        color: #D8FF86;
+        border: 0px;
+        padding: 0px;
+	margin-bottom:15px;
+        margin-top: 15px;
+}
+select.Birthday{
+        float:left;
+        margin:0 3px;
+        position:relative;
+        right:3px;
+        width:auto;
+}
+
+#ThemeVisualization {
+        border:1px solid #2F3827;
+        height:100px;
+        margin:10px 80px 20px;
+        width:500px;
+}
+.themeColourVisual{
+        width: 100px;
+        height: 100px;
+        float: left;
+}
+
+/* ---------------------- LOGIN ----------------------- */
+#loginwrapper{
+        opacity:0;
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        z-index: 3;
+}
+#login{
+        text-decoration:none;
+        width:235px;
+}
+#login  p {
+        margin: 10px;
+}
+
+#login label {
+        margin-left: 0px;
+}
+#loginsubmit{
+        float: left;
+        margin:10px 0;
+}
+#logincancel {
+        margin: 10px 0 10px 10px;
+}
+#login input#rememberme {
+        width: auto;
+        margin-right: 10px;
+}
+#login form fieldset {
+        margin-bottom: 0px;
+        border: 0px solid #3B5921;        
+}
+
+#login input[type="text"], #login input[type="password"] {
+        width:226px;
+}
+
+.FloatingBox{
+        background: #D8FF86;
+        padding: 2px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+}
+
+.FloatingBoxInner{
+        background: #7AE4FF;
+        
+        border-left: 10px solid #2F3827;
+        border-right: 10px solid #1B434D;
+        border-top: 10px solid #3B5921;
+        border-bottom: 10px solid #3B5921;
+
+        -moz-border-radius: 5px;
+
+
+        /* angles look funny  -webkit-border-radius: 5px; */
+
+        padding: 10px 20px 20px 20px;
+}
+#EditListItem{
+        width: 320px;
+        margin-bottom:-15px;
+}
+
+
+.FloatingBoxInner.TextInput{
+        width: 294px;
+}
+.FloatingBoxInner label{
+        margin-left:1px;
+        text-align:left;
+        width:auto;
+}
+
+
+
+#ListMember div.ListFormBottomGuest{
+        left: 5px;
+}
+
+
+
+
+#ReasonForLeavingForm{
+        width: 300px;
+        margin-left: 30px;
+}
+#ReasonForLeavingForm label {
+        width: 50px;
+}
+#EditGravatarDiv label {
+        margin-left:1px;
+        width:84px;
+}
+
+#BoardForm {
+        margin-left: 4px;
+}
+
+
+textarea#ListItemDescription{
+        
+}
+#descriptionTipButton{
+        float: right;
+        margin-top: 1px;
+}
+#ImageFormElement{
+	min-height:40px;
+	width:300px;
+}
+
+#editTipButton{
+        margin-right:2px;
+}
+#listDescriptionTipButton{
+        float: right;
+        margin-right:320px;
+        margin-top:2px;
+}
+
+#CommentLabel{
+        margin-top:-18px;
+}
+#commentTipButton{
+        float:right;
+        left:15px;
+        position:relative;
+        top:16px;
+}
+#editDescriptionTipButton{
+        left:227px;
+        position:relative;
+        top:16px;
+}
+#bioTipButton{
+        float:right;
+        left: -3px;
+        margin-left:-2px;
+        position:relative;
+        top:2px;
+}
+#PopUpTip{
+        width: 320px;
+        left:35%;
+        position:fixed;
+        top:105px;
+}
+
+#Bio{
+        margin-left:71px
+}
+#bioLabel{
+        margin-top:-16px
+}
+#PrivacyBlurb{
+        float: right;
+}
+#editInPlaceTipButton{
+        left:2px;
+        position:relative;
+        top:2px;
+}
+#editInPlaceTipButton2{
+        left:2px;
+        position:relative;
+        top:2px;
+}
+
+/* listings */ 
+
+
+/* Where the css for the listings of lists shall go */
+.ListNameList{
+	color:#D8FF86;
+	font-size:18px;
+	font-weight:normal;
+}
+.ListNameList:hover{
+	color:#D8FF86;
+	font-size:18px;
+	font-weight:normal;
+}
+.ListingsMain {
+        margin-left:55px;
+        position:relative;
+        top:-15px;
+        width:620px;
+}
+.ListPoints {
+        padding-right:10px;
+        text-align:right;
+        width: 60px;
+        float:left;
+}
+.ListingLeft {
+        width:72px;
+        float: left;
+        margin-left:10px;
+}
+.ListingsListPoints  {
+        -moz-border-radius:5px 5px 5px 5px;
+        -webkit-border-radius:5px;
+        
+        background:-moz-linear-gradient(center top, #FFFFFF, #BDEAFF) repeat scroll 0 0 transparent;
+        background:-webkit-gradient(linear,center bottom,center top,from(#FFFFFF),to(#BDEAFF));
+        
+        border: 2px solid #1D687A;
+        height:50px;
+        margin-top:-45px;
+        padding-left:3px;
+        width:50px;
+}
+.ListingsListPoints p {
+        color:#121D52;
+        font-size:14px;
+        font-weight:bold;
+        position:relative;
+        text-align:center;
+        top:-3px;
+        width:46px;
+}
+.ListingListNameOverImage{
+        bottom:15px;
+        left:12px;
+        margin-bottom:-15px;
+        overflow:hidden;
+        position:relative;
+	margin-right:12px;
+        height: 16px;
+}
+
+.PrivateList{
+        position: relative;
+        top:-20px;
+}
+
+.ListSummaryTop {
+        border-bottom:3px solid #2F3827;
+        padding:2px 10px;
+        width:95%;
+}
+.ListSummaryMain {
+        width: 95%;
+        padding:2px 10px;
+}
+.ListingsListNameDiv{
+        height:20px;
+        overflow:hidden;
+        width:518px;
+}
+.ListingsListName {
+        color:#121D52;
+        font-size:16px;
+        font-weight:bold;
+        position:relative;
+        right:-5px;
+        top: 2px;
+}
+.ListingsListName:hover {
+        color:#3B5921;
+        font-size:16px;
+        font-weight:bold;
+        position:relative;
+        right:-5px;
+        top: 2px;
+}
+
+.ListingsListName:visited{
+        color:#3B5921;
+        font-size:16px;
+        font-weight:bold;
+        position:relative;
+        right:-5px;
+        top: 2px;
+}
+.ListItemsSummary{
+	float:left;
+        list-style-image: url(/images/88/ListImage.png);
+        list-style-position:outside;
+        margin-left:15px;
+        width:170px;
+        padding:0;
+        margin-bottom:5px;
+        margin-top:5px;
+}
+.ListItemsSummary li {
+        margin: 5px;
+}
+.MiniAvatarListings {
+	float: right;
+        margin: 5px 0 5px 5px;
+        position:relative;
+        right:40px;
+        top: 0;
+}
+.MiniAvatarAbout {
+	float: left;
+        margin: 5px 0 5px 5px;
+        position:relative;
+        right:40px;
+}
+.AboutAvatar{
+        float:left;
+        margin-bottom:34px;
+        margin-left:20px;
+        margin-right:45px;
+}
+.BlogTeaserAvatar{
+        float:left;
+        margin-bottom:20px;
+        margin-right:50px;
+}       
+.BlogTeaser{
+        list-style-type: none;
+}
+.BlogTeaser li {
+        margin-left: -25px;
+}
+#Twitter{
+        float: right;
+        width: 180px;
+}
+
+.TwitterImage{
+        width: 180px;
+        height:113px;
+        margin-bottom: 10px;
+}
+#AboutText {
+        margin-top: -15px;
+        width:580px;
+}       
+#HomeContent{
+	float: left;
+        width:688px;
+        margin-top: 5px;
+}
+#HomeContentRight{
+	float: right;
+}
+.ListItemsSummaryImages{
+        list-style-type: none;
+        list-style-position: inside;
+        padding:5px 0px 0;
+        margin-left: 3px;
+        float:left;
+}
+.ListItemsSummaryImages li {
+        background:transparent url(/images/88/ListImage.png) no-repeat scroll 0 0;
+        margin-left:2px;
+        margin-right:10px;
+        margin-top:10px;
+        max-width:189px;
+        padding-top:9px;
+}
+.ListItemsSummaryImagesDiv{
+	text-align: center;
+}
+.ListingsImage{
+        border: 1px #2F3827 solid;
+        margin:2px 0;
+
+        max-width: 160px;
+        max-height: 160px;
+}
+.ListingDetailsP {
+        margin-left:15px;
+        margin-top: 5px;
+}
+a:hover img.ListingsImage{
+        border: 1px #2F3827 solid;
+        margin:2px 0;
+        text-decoration:none;
+}
+.ListingTags {
+        margin-left:15px;
+        overflow:hidden;
+        text-align: left;
+}
+.ListingTags p{
+        margin-top:2px;
+        text-align:right;
+        width:60px;
+        position: relative;
+        left: 10px;
+}
+.ListingHeader{
+        color: #2F3827;
+        font-size: 18px;
+}
+
+.ListingTopHeader{
+        font-size: 18px;
+        float: left;
+}
+.SearchResultsCount{
+        left:18px;
+        position:relative;
+        top:13px;
+}
+.TagResultsCount{
+        left:7px;
+        position:relative;
+        top:17px;
+}
+
+/* List Central lists.css */
+#ListComments{
+        position: relative;
+        display:inline; /* Looks choppy without this */
+        margin-bottom:10px;
+        margin-left:0px;
+        margin-top:0;
+        max-height:310px;
+        overflow:auto;
+        width:315px;
+}
+#ListCommentsGuest{
+        margin-bottom:3px;
+        margin-left:35px;
+        margin-top:2px;
+        max-height:235px;
+        overflow: auto;
+        width: 285px;
+        position: relative;
+}
+#Nav {
+        width: 180px;
+        float: left;
+        padding-right: 30px;
+        margin-bottom:40px;
+}
+
+#Nav a {
+        font-size: 14px;
+}
+#Nav a:hover {
+        font-size: 14px;
+}
+
+#Nav ul {
+        list-style: none;
+        list-style-position: outside;
+        margin: 0em;
+        padding: 0em;
+        border: none;
+        width: 180px;
+}
+#Nav ul li {
+        margin: 0em;
+}
+#Nav ul li a {
+        font-size: 12px;
+        color: #D8FF86;
+        display: block;
+        padding: 0em 2em 0em 0em;
+        font-weight: normal;
+        text-decoration: none;
+}
+#Nav ul li.NavCurrent a {
+        font-size: 12px;
+        color: #2F3827;
+        display: block;
+        padding: 0em 2em 0em 0em;
+        font-weight: normal;
+        text-decoration: none;
+}
+#Nav ul li a:hover {
+        font-size: 12px;
+        color: #2F3827;
+        display: block;
+        padding: 0em 2em 0em 0em;
+        font-weight: normal;
+        text-decoration: none;
+}
+
+#List {
+        float: right;
+        width: 792px;
+        margin-top:3px;
+        margin-bottom:300px;
+}
+#List input.button {
+        width: 12em;
+        margin: 0.4em 0.4em;
+        float: left;
+}
+#ListMember {
+        float: left;
+        width: 794px;
+        margin-top:0px;
+}
+#Nav fieldset {
+        border: 0px solid #3B5921; /* The big border */
+        float: none;
+        font-family: Arial; 
+        font-size: 12px;
+        background-color: #7AE4FF;
+        width: 180px;
+
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+}
+#Nav legend {
+        color: #2F3827; /* The color of the words in the shout box*/
+        background: #D8FF86 url(/images/88/legendBackground.png) repeat-x scroll center;
+        border: 0em solid #3B5921; /* The color of the border of the shout box*/
+        width: 179px;
+        font-weight: bold;
+}
+#Nav fieldset span input { /* Checkboxes and radios */
+        width: 1em;
+}
+/* List Navigation */
+.NavHeader {        
+        border-left: 1em solid #2F3827;
+        border-right: 1em solid #1B434D;
+        background-color: #3B5921;
+        border-top: 1px solid #2F3827;
+        font-size: 12px;
+        color: #D8FF86;
+        display: block;
+        padding: 3px 2px 2px;
+        width: 152px;
+        text-decoration: none;
+        cursor: pointer;
+}
+.NavHeaderOver {
+        border-left: 1em solid #2F3827;
+        border-right: 1em solid #3B5921;
+        background-color: #1B434D;
+        border-top: 1px solid #2F3827;
+        font-size: 12px;
+        color: #2F3827;
+        display: block;
+        padding: 3px 2px 2px;
+        width: 152px;
+        text-decoration: none;
+        cursor: pointer;
+}
+.Nav {        
+        border-left: 1em solid #1B434D;
+        border-right: 1em solid #1B434D;
+        background-color: #3B5921;
+        border-top: 1px solid #2F3827;
+        font-size: 12px;
+        color: #D8FF86;
+        display: block;
+        padding: 3px 2px 2px;
+        width: 152px;
+        text-decoration: none;
+        cursor: pointer;
+}
+.NavCurrent {        
+        border-left: 1em solid #1B434D;
+        border-right: 1em solid #3B5921;
+        background-color: #1B434D;
+        border-top: 1px solid #2F3827;        
+        font-size: 12px;
+        color: #2F3827;
+        display: block;
+        padding: 3px 2px 2px;
+        width: 152px;
+        
+        text-decoration: none;
+        cursor: pointer;
+}
+.NavOver {
+        border-left: 1em solid #1B434D;
+        border-right: 1em solid #3B5921;
+        background-color: #1B434D;
+        border-top: 1px solid #2F3827;        
+        font-size: 12px;
+        color: #2F3827;
+        display: block;
+        padding: 3px 2px 2px;
+        width: 152px;
+        
+        text-decoration: none;
+        cursor: pointer;
+}
+.NavSpacer {
+        display: block;
+        padding: 0.2em 0em 0em 0em;
+        border: 0px solid #2F3827;
+        background-color: #7AE4FF;
+        color: #D8FF86;
+        text-decoration: none;
+        width: auto;
+}
+.NavInput{
+        color: #2F3827; /* Color of the typing in the text box */
+        background: #D8FF86;  /* Background of the input */
+        border: 0.1em solid #2F3827; /* Border of the input */
+        padding: 0.1em 0.1em;       
+        font-family: Arial; 
+        font-size: 10px;
+        margin: 0.4em 0.6em 0.4em 0.6em;
+        float: none;
+}
+.FloatFormInput{
+        color: #2F3827; /* Color of the typing in the text box */
+        background: #D8FF86; /* Background of the input */
+        border: 0.1em solid #2F3827; /* Border of the input */
+        padding: 0.1em 0.1em;       
+        font-family: Arial; 
+        font-size: 10px;
+        margin: 0.4em 0.6em 0.4em 0.6em;
+        float: none;
+        width: 20em;
+}
+.SeachFieldset{
+        border-left: 1px solid #2F3827; /* The big border 1d687a */
+        border-right: 1px solid #2F3827;
+        border-top: 1px solid #2F3827;
+        border-bottom: 1px solid #2F3827;
+        float: none;
+        font-family: Arial; 
+        font-size: 10px;
+        background-color: #7AE4FF;
+        padding:0.5em;
+        width: 16em;
+}
+.NavFieldset {
+        border-left: 1px solid #2F3827; /* The big border 1d687a */
+        border-right: 1px solid #2F3827;
+        border-top: 1px solid #2F3827;
+        border-bottom: 1px solid #2F3827;
+        float: none;
+        font-family: Arial; 
+        font-size: 10px;
+        background-color: #7AE4FF;
+        padding:0.5em;
+        /*margin-bottom: 3em;*/
+}
+.ThinSpacer{
+        height: 1px;
+        background: #2F3827;
+}
+.NavLinks:link {
+       text-decoration: none; 
+       color: white;
+}
+.NavLinks:hover { 
+        text-decoration: none; 
+        color:#2F3827;
+}
+.NavULContainer{
+        border-top: 0px solid #2F3827;
+}
+.ListTags p {
+        text-align: center;
+        margin: 10px 40px;
+}      
+#ListTagsContent{
+        text-align: center;
+}
+
+.ListDetailsTagsTable{
+        left:-3px;
+        position:relative;
+}
+
+p.NoComments{
+        text-align: center;
+        margin-top:15px;
+        margin-bottom:30px;
+}
+.CommenterLink:hover {
+        color:#3B5921;
+        font-size:10px;
+        text-decoration:underline;
+}
+.CommenterLink:visited {
+        color:#2F3827;
+        font-size:10px;
+        text-decoration:underline;
+}
+.CommenterLink {
+        color:#2F3827;
+        font-size:10px;
+        text-decoration:underline;
+}
+.TagLink:hover {
+        color:#3B5921;
+        font-size:12px;
+        text-decoration:underline;
+}
+.TagLink:visited {
+        color:#2F3827;
+        font-size:12px;
+        text-decoration:none;
+}
+.TagLink {
+        color:#2F3827;
+        font-size:12px;
+        text-decoration:none;
+}
+
+.EditListItemLabel {
+        text-align: right;
+        vertical-align: top;
+}
+.EditListItemInput select {
+        text-align: left;
+        margin: 0 0.5em 0.5em 0.5em;
+        width: 200px;
+        border: 0.1em solid #3B5921; 
+}
+.EditListItemInput input {
+        text-align: left;
+        margin: 0.5em;
+        width: 200px;
+        border: 0.1em solid #3B5921; 
+}
+.DyanmicFormTextarea{
+        border: 0.1em solid #3B5921; 
+        margin: 0.5em;
+        width: 200px;
+        height: 67px;
+        font-size: 10px;
+        font-family: Arial;
+}
+
+.EditListItemIcon{
+        background: transparent url(/images/icons/actionSprite.png) no-repeat scroll 0 -123px;
+        border-style:hidden;
+        cursor:pointer;
+        margin-top:3px;
+        height: 16px;
+        width: 16px;
+}
+.EditListItemIcon:hover{
+        background: transparent url(/images/icons/actionSprite.png) no-repeat scroll -18px -123px;
+        cursor: pointer;
+        margin-top:3px;
+        height: 16px;
+        width: 16px;
+}
+
+.ListName{
+        float: left;
+        margin-left: 0.5em;
+}
+.ListNormalView {
+        list-style-type:none;       
+        padding: 0 0px;
+        margin-bottom:15px;
+        margin-left:20px;
+        list-style-position: outside;
+}
+.Bullets{
+        list-style-type: none;
+        list-style-image: url(/images/88/ListImage.png);
+}
+.Letters{
+        list-style-type: lower-alpha;
+}
+.Numbers{
+        list-style-type: decimal;
+}
+.ListNormalView li {
+        color: #2F3827;
+        font-size: 14px;
+        margin-bottom:10px;
+        font-weight: bold;
+}
+.ListNormalView li ul {
+        margin-bottom:5px;
+        font-weight: normal;
+}
+.ListNormalView li ul li{
+        font-size:12px;
+        font-weight:normal;
+        margin-bottom:2px;
+}
+.ListNormalView li span p{
+        font-weight:normal;
+}
+.ListReorderView {
+        list-style: none;
+        margin-left:-40px;
+}
+.ListEditView {
+        list-style: none;
+        margin-left:-40px;
+}
+.LinkListItem {
+        color: #2F3827;
+        text-decoration: underline;       
+}
+.LinkListItem:hover{
+        color: #3B5921;
+        text-decoration: underline;
+}
+.LinkListItem:visited {
+        color: #2F3827;
+        text-decoration: underline;
+}
+ 
+li.sortable {
+	margin: 6px;
+        padding: 10px;
+
+	color: #000;
+        background-color: #1B434D;
+        border: #2F3827 1px solid;
+
+	list-style: none;
+        cursor: move;
+}
+
+.ListForm{
+        -moz-border-radius-bottomleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+
+        /* Makes it look funny
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px; */
+
+        background:#7AE4FF none repeat scroll 0 0;
+        border-bottom:10px solid #3B5921;
+        border-left:10px solid #2F3827;
+        border-right:10px solid #1B434D;
+        margin-left:13px;
+        min-height:100px;
+        width:338px;
+}
+
+
+.ListFormDiv {
+        border-left: 10px solid #2F3827;
+        border-right: 10px solid #1B434D;
+        background-color: #D8FF86;
+        /*border-top: 1em solid #2F3827;*/
+        border-bottom: 10px solid #3B5921;
+        color: #2F3827;
+        display: block;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        width: 300px;
+        min-height:106px;
+        text-decoration: none;
+        margin-right: 10px;
+	margin-top:-2px;
+}
+
+
+.FormDiv {
+        border-left: 1em solid #3B5921;
+        border-right: 1em solid #3B5921;
+        background-color: #D8FF86;
+        border-top: 1em solid #2F3827;
+        border-bottom: 1em solid #2F3827;
+        color: #2F3827;
+        display: block;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        width: 280px;
+        text-decoration: none;
+        margin: 1em;
+}
+.FormDiv  p {
+        margin: 10px;
+}
+.EditingListItemTextarea{
+        background-color: #ffffd3;
+        border: #2F3827 0px solid;
+        color: #2F3827;
+        font-size: 12px;
+        font-weight: normal;
+        height: 45px;
+        width:330px;
+        margin-bottom: 5px;
+        position:relative;
+}
+.EditingDescriptionTextarea{
+        background-color: #ffffd3;
+        border: #2F3827 0px solid;
+        color: #2F3827;
+        font-size: 12px;
+        font-weight: normal;
+        height:100px;
+	width: 100%;
+        margin-bottom: 5px;
+}
+.EditingTextInput{
+        background-color: #ffffd3;
+        border: #2F3827 0px solid;
+        color: #2F3827;
+        font-size: 12px;
+        font-weight: normal;
+	width: 93%;
+}
+
+.ListItemEditImageTD{
+        width: 14px;
+        vertical-align: text-top;
+}
+.editableUL {
+        list-style: none;
+        margin: 1em;
+        padding: 0em;
+}
+.noneditable {
+        /*font-size: 12px; Taken off to let list name be 14px */
+        color: #2F3827;
+}
+.editable {
+        font-size: 12px;  
+        color: #2F3827;
+        background-color: #ffffd3;
+	cursor: url(/images/icons/hand-pencil.cur), url(../../../../../images/icons/hand-pencil.cur), default;
+} 
+.editing {
+        border: #2F3827 1px solid;
+        font-size: 12px;
+        color: #2F3827;
+        background-color: #ffffd3;
+	max-width: 362px;
+        padding: 0px;
+}
+
+#editableStatusSets.noneditable {
+        
+}
+#editableStatusSets.editable {
+        
+}
+#editableStatusSets.editing {
+        
+}
+#AvatarImageImage{
+        left:-28px;
+        position:relative;
+        top:-14px;
+}
+.cancelSaveButton{
+        margin: 0 0 2px 3px;
+}
+.deleteLGSS{
+        float: right;
+        margin-top:-13px;
+        width:14px;
+}
+
+.ListOptions{
+        float:right;
+        top:-28px;
+        left: -8px;
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        position:relative;
+        text-align:right;
+}
+.ListOptions li{
+        float: left;
+        margin: 0 0 0 2px;
+}
+.Comment {
+        background: #7AE4FF;
+        border-bottom: #2F3827 0px solid;
+        padding: 7px 3px 3px 3px;
+}
+.CommentAvatarWrapper{
+        position: relative;
+}
+.CommentUnderLine{
+        padding:10px 0 0;
+        width: auto;
+}
+.CommentContent{
+        margin-left:50px;
+        width:240px;
+}
+
+.ListFavs {
+        width: 40px;
+        height: 50px;
+        float: left;
+        padding: 5px;
+        
+        margin: 0 10px 10px 12px;
+        
+        background: #1B434D;
+        border-top: 5px solid #2F3827;
+        border-bottom: 5px solid #2F3827;
+        border-left: 5px solid #3B5921;
+        border-right: 5px solid #3B5921;
+
+}
+.ListFavs span {
+        font-family: Arial;
+        font-size:12px;
+        color: #2F3827;
+}
+
+.ListFavs span.count {
+        font-size: 26px;
+        font-family: Georgia;
+        position: relative;
+        bottom: 6px;
+}
+.ListFavs span.on {
+        left:-2px;
+        position:relative;
+        top:-3px;
+
+}
+.ListFavs p.lists {
+        position: relative;
+        right: 10px;
+        bottom: 4px;
+}
+
+.ListContainer{
+        margin: -5px 0 20px 10px;
+        position: relative;
+}
+.ListContainer span{
+        font-size:14px;
+        line-height:26px;
+}
+#ListDetails{
+        margin-bottom:10px;
+        margin-right:10px;
+        margin-top:-7px;
+}
+.EditListItemWrapper{
+        float: left;
+        width: 15px;
+        height: 15px;
+}
+.Delete3ListItemWrapper{
+        float: left;
+        width: 15px;
+        height: 15px;
+}
+/* Pity hack for the one case */
+#CommentFormLabel {
+        margin:0 1em 0 60px;
+}
+#CommentFormLabel2 {
+        margin:0 1em 0 60px;
+}
+
+#EditGroups{
+        float: left;
+        margin: 1em;
+}    
+.EditableListGroupDiv{
+        margin-top:5px;
+}
+
+#EditStatusSet{
+        float: right;
+        margin: 0 1em;
+}
+.EditableStatusSetDiv{
+        margin-top:5px;
+}
+#StatusSetLabel{
+        width: 70px;
+}
+.ListImage{
+        margin: 0 0px 2px 0;
+        max-width:366px;
+        max-height:366px;
+        width:auto;
+        cursor: pointer;
+        float:none;
+}
+
+.EditUnderLine{
+	width:256px;
+        margin-bottom:8px;
+        height: 3px;
+}
+
+#ListDetailsText{
+        padding-left:85px;
+}
+
+.ShareButtons {
+        list-style-type: none;
+        margin: 20px 0 5px 60px;
+}
+.ShareButtons li{
+        float: left;
+        margin: 2px 4px 2px 0;
+}
+.ListButtons{
+        margin-bottom:50px;
+        margin-left:-24px;
+        margin-top:-5px;
+}
+
+.ListContainer p {
+        margin: 2px 0px 8px 2px; 
+        font-weight:normal;
+}
+
+.HeaderTopContainer{
+    width: 762px;
+    margin-top:5px;
+}
+.HeaderLongTop{
+    background: #3B5921;
+    border-left: #2F3827 10px solid;
+    border-right: #1B434D 10px solid;
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-topright:5px;
+
+        /* webkit looks funny
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px; */
+
+    color: #D8FF86;
+    font-size: 18px;
+    padding:2px 5px 0;
+
+    width: 100%;
+    min-height: 24px;
+}
+.ListDetailsTopBorder{
+    background:#2F3827;
+    height: 3px;
+    width: 100%;
+
+    border-left:20px solid #2F3827;
+    border-right:10px solid #1B434D;
+}
+.ListPointsOutter{
+    background: #2F3827;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+
+
+    float:left;
+
+    width: 77px;
+    height: 72px;
+}
+.ListPointsMiddle{
+    background: #3B5921;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+
+    margin-left:9px;
+
+    width: 65px;
+    height: 69px;
+}
+.ListPointsInner{
+    background: #7AE4FF;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+
+    margin-left:4px;
+
+    width: 58px;
+    height: 66px;
+
+    float:left;    
+}
+.ListPointsInner p{
+    color:#2F3827;
+    font-size:18px;
+    text-align:center;
+    margin:8px 0;
+}
+#TagInstructions{
+        margin-left: 30px;
+}
+
+
+.CommentsOlderLink{
+        float: right;
+	margin-bottom:-10px;
+        margin-right:24px;
+}
+.CommentsNewerLink{
+        float:left;
+	margin-bottom: -10px;
+	margin-left: 5px;
+}
+#ListAdvertRight{
+
+}
+.MoreButtonContainer {
+        height:22px;
+        padding-left:200px;
+        padding-top:30px;
+        width:300px;
+}
+.MoreButton{
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -213px -4px;
+        color:transparent;
+        padding:20px 62px;
+}
+
+.MoreButton:hover{
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -213px -56px;
+        color:transparent;
+        padding:20px 62px;
+}  
+
+/* Star Ratings */
+.ListingsRating {
+        display:block;
+        float:right;
+        height:16px;
+        margin:5px 0px 0 0;
+        overflow:hidden;
+        width:90px;
+        z-index:0;
+}
+.RatingsDiv {
+        float:right;
+        height:27px;
+        margin:10px 0px;
+        overflow:hidden;
+        position:relative;
+        top:-3px;
+        width:90px;
+        left:17px;
+        z-index:0;
+
+        display: block;
+}
+.RatingsText{
+        font-size: 10px;
+        line-height: 10px;
+        vertical-align: bottom;
+        padding-left: 5px;
+}
+
+.unit-rating{
+        list-style:none;
+        margin: 0px;
+        padding: 0px;
+        width: 90px;
+        height: 18px;
+        background: url(/images/88/StarRating.gif) top left repeat-x;		
+        float: left;
+        position: relative;
+}
+
+.unit-rating li{
+        padding:0px;
+        margin:0px;
+        /*\*/
+        float: left;
+        /* */
+}
+.unit-rating li a{
+        display:inline;
+        width: 18px;
+        height: 18px;
+        text-decoration: none;
+        z-index: 3;
+        position: absolute;
+        padding: 0px;
+}
+.unit-rating li a:hover{
+        background: url(/images/88/StarRating.gif) left center;
+        z-index: 2;
+        left: 0px;
+}
+
+.unit-rating a.r1-unit{left: 0px;}
+.unit-rating a.r1-unit:hover{width: 18px;}
+
+.unit-rating a.r2-unit{left: 18px;}
+.unit-rating a.r2-unit:hover{width: 36px;}
+
+.unit-rating a.r3-unit{left: 36px;}
+.unit-rating a.r3-unit:hover{width: 54px;}
+
+.unit-rating a.r4-unit{left: 54px;}	
+.unit-rating a.r4-unit:hover{width: 72px;}
+
+.unit-rating a.r5-unit{left: 72px;}
+.unit-rating a.r5-unit:hover{width: 90px;}
+
+.unit-rating li.current-rating{
+        background: url(/images/88/StarRating.gif) left bottom;
+        position: absolute;
+        height: 18px;
+        display: block;
+        z-index: 1;
+}
+
+.DeleteButton{
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -415px -13px;
+        float:right;
+        height:15px;
+        position:relative;
+        top:4px;
+        width:15px;
+}
+.DeleteButton:hover{
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -437px -11px;
+        float:right;
+        height:15px;
+        position:relative;
+        top:4px;
+        width:15px;
+}
+.Delete{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -415px -34px;
+        float:right;
+        height:14px;
+        position:relative;
+        top:4px;
+        width:14px;
+}
+.Delete:hover{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -437px -33px;
+        float:right;
+        height:14px;
+        position:relative;
+        top:4px;
+        width:14px;
+}
+
+.DeleteTransparent{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/deleteTransparent.png) no-repeat scroll 0px 0px;
+        float:right;
+        height:15px;
+        position:relative;
+        left: -1px;
+        top:2px;
+        width:14px;
+}
+.DeleteTransparent:hover{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/deleteTransparent.png) no-repeat scroll -21px 0px;
+        float:right;
+        height:15px;
+        position:relative;
+        left: -1px;
+        top:2px;
+        width:14px;
+}
+
+.DeleteSlider{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -415px -34px;
+        float:left;
+        height:14px;
+        left:2px;
+        position:relative;
+        top:1px;
+        width:14px;
+}
+.DeleteSlider:hover{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -437px -33px;
+        float:left;
+        height:14px;
+        position:relative;
+        top:1px;
+        width:14px;
+}
+.DeleteComment{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -415px -34px;
+        float:right;
+        height:14px;
+        left:2px;
+        position:relative;
+        top:4px;
+        width:14px;
+}
+.DeleteComment:hover{ /* for delete buttons on 5th color */
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -437px -33px;
+        float:right;
+        height:14px;
+        position:relative;
+        top:4px;
+        width:14px;
+}
+.ListItemFormContainer {
+        float: right;
+        background: transparent none repeat scroll 0%;
+        border: 0px solid #3B5921;
+        padding: 0px 0px 4px 0px;
+        margin-right: -11px;
+        margin-left:5px;
+        position: relative;
+        width:373px;
+}
+#Board {
+        width: 600px;
+        margin-top:10px;
+}
+
+.BoardOlderLink{
+        float: right;
+	margin-bottom:20px;
+	margin-right: 10px;
+}
+.BoardNewerLink{
+        float:left;
+	margin-bottom:20px;
+	margin-left: 10px;
+}
+.Board {
+        background: #D8FF86;
+        padding: 10px 10px 2px;
+}
+.BoardPostUnderLine{
+	padding:10px 0 0;
+	width:580px;
+}
+.BoardMessageContent{
+        margin-left: 50px;
+}
+#Left{
+        float: right;
+        width: 300px;
+        margin-top: 5px;
+}
+.Pagination {
+        clear:left;
+        font-size:85%;
+        margin:40px 0;
+        padding:1em;
+        width:auto;
+}
+
+.Pagination span.dots {
+        padding: 3px 3px 3px 1px;;
+        font-size: 16px;
+
+}
+
+.Pagination span.current{ 
+        background:#2F3827 none repeat scroll 0 0;
+        border:0 solid #2F3827;
+        color:#D8FF86;
+        font-weight:bold;
+        margin:2px;
+        padding:7px 6px;
+        position:relative;
+}
+.Pagination a { 
+        margin:2px;
+        padding:4px;
+        border:1px solid #2F3827;
+        text-decoration: none;
+}
+.Pagination a:hover { 
+        margin:2px;
+        padding:4px;
+        border:1px solid #2F3827;
+        text-decoration: underline;
+}
+
+.FailDiv {
+        float:left;
+}
+.FailImage {
+        margin: 0 20px 20px 0;
+        width: 370px;
+}
+.FailImageMini {
+        margin: 0 20px 0 0;
+        width: 170px;
+}
+
+
+.CaptionText{
+        padding:2px;
+        text-align:center;
+}
+
+.hidden {
+	display: none;
+}
+.UsernameLink{
+	font-weight: bold;
+}
+#UserSpace{
+        float: left;
+        margin-top:5px;
+}
+#UserSpaceTop{
+        width: 600px;
+        min-height: 110px;
+}
+#BoardInput{
+        -moz-border-radius:15px;
+        -webkit-border-radius:15px;
+        background:#7AE4FF none repeat scroll 0 0;
+        border:1px solid #2F3827;
+        height:60px;
+        margin-bottom:5px;
+        margin-left:4px;
+}
+#BoardSubmit{
+        -moz-border-radius-bottomright:15px;
+        -moz-border-radius-topright:15px;
+        -webkit-border-top-right-radius:15px;
+        -webkit-border-bottom-right-radius:15px;
+        background:#3B5921 none repeat scroll 0 0;
+        border:1px solid #2F3827;
+        color:#D8FF86;
+        cursor:pointer;
+        float:right;
+        font-size:18px;
+        height:62px;
+        position:relative;
+        width:60px;
+        margin-right:-1px;
+        top: -1px;
+}
+.BoardMessage{
+        float: left;
+        width: 500px;
+        height: 42px;
+        border: white;
+        position: relative;
+        top: 6px;
+        left: 10px;
+        background: #7AE4FF;
+        border:0 solid #7AE4FF;
+}
+.clear {
+    clear: both;
+    margin: 0;
+    padding:0;
+    height: 0;
+}
+.clearLeft {
+    clear: left;
+    margin: 0;
+    padding:0;
+    height: 0;
+}
+
+#AboutUser{
+    float: left;
+    margin: 0 10px 10px;
+    width: 280px;
+}
+#UserWebPresence{
+    float:right;
+    width:178px;
+    text-align:right;
+    margin: 0 10px 10px;
+}
+.UserWebPresence{
+    margin:0;
+    padding:0px;
+
+    list-style-type: none;
+	list-style-position: outside;
+}
+#UserStats{
+    margin: 0px 10px 10px 110px;
+}
+.RoundMiniAvatarWrapper{
+    position: relative;
+}
+.RoundAvatarLarge {
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        background: #D8FF86;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #2F3827;
+
+        float: left;
+}
+
+.RoundMiniAvatar {
+    position:relative;
+    top: 0;
+}
+.MiniAvatarImage {
+    position:absolute;
+    width:40px;
+    height:40px;
+    z-index:0;
+ }
+.MiniRoundCorners {
+    position:absolute;
+    width:40px;
+    height:40px;
+    z-index:1;
+    display:block;
+}
+.MiniAvatarImageSidebar {
+    position:absolute;
+    width:30px;
+    height:30px;
+    z-index:0;
+ }
+.MiniRoundCornersSidebar {
+    position:absolute;
+    width:30px;
+    height:30px;
+    z-index:1;
+}
+.Spinner {
+        max-width: 300px;
+        max-height: 200px;
+        margin-bottom: 400px;
+}
+.ListFormSpinner {
+        max-width: 300px;
+        max-height: 200px;
+        margin: 10px;
+}
+.TightSpinner {
+        max-width: 300px;
+        max-height: 200px;
+        margin: 0px 0 5px 0;
+}
+#RecentLists{
+        margin-bottom: 10px;
+}
+.RecentLists{
+        list-style-type: none;
+        margin-left:-35px;
+        margin-top: 0px;
+        width:140px;
+        float: left;
+}
+#TagCloud{
+        margin-top:10px;
+}
+.ListPointsSmall{
+        background:transparent url(/images/88/themeSprite.png) no-repeat scroll -368px -40px;
+        height:30px;
+        padding-top:9px;
+        text-align:center;
+        width:31px;
+        float:left;
+        margin-right:5px;
+        margin-bottom:5px;
+        color: #D8FF86;
+}
+.TopUsers{
+        left:-10px;
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        margin:-20px -38px;
+        position:relative;
+        width:330px;
+}
+.TopUsers li{
+        float:left;
+        height:50px;
+        margin:0 0 0 26px;
+        width:130px;
+        display:block;
+}
+.TopUserDetails {
+        margin-left: 33px;
+}
+.MiniAvatarTopUsers{
+        display:inline-block;
+}
+.RecentComments{
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        margin-left:10px;
+        margin-right:10px;
+}
+#RecentComments p{
+        margin: 5px 0;
+}
+.RecentComment{
+        margin-bottom: 20px;
+}
+.MiniAvatarRecentComments{
+        left:-35px;
+        position:relative;
+        top:4px;
+}
+#TLOLTabLetters{
+        
+}
+#TLOLTabBottom{
+        margin-top: -50px;
+}
+#TLOLRows{
+        position:relative;
+        top:10px;
+}
+#TLOL ul.tabLinks{
+        position:relative;
+        bottom:19px;
+}
+
+#TLOL{
+        margin-top:-16px;
+}
+
+#TagListingTabLetters{
+        top: 8px;
+}
+#TagListingTabBottom{
+        margin-top: -15px;
+}
+#TagListingRows{
+        margin-top: 7px;
+        padding-top:5px;
+}
+#TagListing ul.tabLinks{
+        position:relative;
+        bottom:19px;
+}
+
+#TagListing{
+        margin-top:-17px;
+}
+
+#SearchListingTabLetters{
+        top: 13px;
+}
+#SearchListingTabBottom{
+        margin-top: -15px;
+}
+#SearchListingRows{
+        margin-top: 10px;
+}
+#SearchListing ul.tabLinks{
+        position:relative;
+        bottom:19px;
+}
+
+#SearchListing{
+        margin-top:-20px;
+}
+
+.tabTop{
+    background: url(/images/88/tabsTopLeft.png) no-repeat left top; 
+    width: 687px;
+    height: auto;
+    min-height: 127px;
+    margin-bottom:15px;
+}
+.tabLetters{
+    font-size:18px;
+    text-transform:lowercase;
+    font-weight:bold;
+    margin-left:15px;
+    position:relative;
+    top: 17px;
+}
+
+.listingMiddle{
+        background:none repeat scroll 0 0 #FFFFFF;
+        border-top:2px solid #121D52;
+        left:1px;
+        min-height:120px;
+        padding-top:0;
+        position:relative;
+        top:16px;
+}
+
+/* If IE 6 -> left: 0; */
+.tabMiddle{
+    background:  url(/images/88/tabsMiddle.png) repeat-y center;
+    position:relative;
+    left:1px;
+    top: 16px;
+    min-height: 120px;
+    padding-top:0;
+}
+.tabBottom{
+    background:  url(/images/88/tabsBottom.png) no-repeat scroll 0 0;
+    height:40px;
+    margin-left:1px;
+    width:688px;
+    margin-top:-10px;
+}
+
+.tabLinks{
+        float:right;
+        list-style-type:none;
+        margin:2px 0;
+}
+.tabLinks li{
+        width: 83px;
+        height: 23px;
+        text-align: center;
+        padding-top: 5px;
+        float: left;
+}
+.tabLinks li a, .tabLinks li a:hover{
+        height:23px;
+        padding-top:5px;
+        font-weight: normal;
+        width:83px;
+        display:block;
+}
+.tabs a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -16px -50px;
+        color: #D8FF86;   
+}
+.tabs a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -50px;
+        color: #2F3827;
+}
+.tabsOn a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -50px;
+        color: #2F3827; 
+}
+.tabsOn a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -50px;
+        color: #2F3827;
+}
+
+.tabsFirst a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -15px -10px;
+        color: #D8FF86;
+}
+.tabsFirst a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -106px -10px;
+        color: #2F3827;
+}
+.tabsFirstOn a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -106px -10px;
+        color: #2F3827;
+}
+.tabsFirstOn a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -106px -10px;
+        color: #2F3827;
+}
+.tabsLast a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -14px -88px;
+        color: #D8FF86;
+}
+.tabsLast a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -88px;
+        color: #2F3827;
+}
+.tabsLastOn a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -88px;
+        color: #2F3827;
+}
+.tabsLastOn a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -107px -88px;
+        color: #2F3827;
+}
+.tabsSingle a{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -61px -126px;
+        color: #2F3827;
+}
+.tabsSingleOn a:hover{
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -106px -10px;
+        color: #2F3827;
+}
+#TagListingMiddle{
+        top: 14px;
+        padding:0 0 1px;
+}
+#SearchListingMiddle{
+        top: 14px;
+        padding:0 0 1px;
+        background: #7AE4FF;
+}
+#AdvancedSearchForm{
+        margin:0 80px 20px;
+        width:500px;
+}
+.RecentSearches{
+        list-style-image: url(/images/88/ListImage.png);
+        margin-left:-15px;
+        margin-top:10px;
+}
+.Arrow{
+        float:left;
+        margin-bottom:12px;
+        margin-left:20px;
+}
+.RecentSearchResults{
+        bottom:10px;
+        left:10px;
+        position:relative;
+        top:7px;
+}
+#notify label {
+        width: 130px;
+}
+#notifysubmit{
+        margin-left: 50px;
+}
+#Welcome{
+        width: 600px;
+        padding: 0px 0px 20px;
+        margin-top:5px;
+}
+.ListingSpacer {
+	font-size:0;
+	height:1px; 
+	line-height:0px; 
+	width:10px;
+}
+
+#GravatarEmailLabel{
+        position: relative;
+        right:143px;
+        top:10px;
+}
+
+#AddFeedback input[type="text"] {
+        background: #7AE4FF;
+}
+#AddFeedback textarea{
+        background: #7AE4FF;
+        width: 200px;
+}
+#AddFeedback select {
+        background: #7AE4FF;
+}
+
+.UnderAboutNav{
+        margin-top: 10px;
+        margin-left: 20px;
+}
+.UnderAboutNav img{
+        width: 140px;
+}
+div#PreloadedImages {   
+        position: absolute;
+        overflow: hidden;
+        left: -9999px; 
+        top: -9999px;
+        height: 1px;
+        width: 1px;
+}
+#edituploadimagesubmit{
+}
+#ListItemListItemStatusID{
+        margin-right: 9px;
+        width: 294px;
+}
+#AmazonChooseButton select#ListItemListItemStatusID{
+        margin-right: 7px;
+}
+#AvatarOr{
+        float:left;
+        padding-left:12px;
+}
+#SignUpNoScript{
+        color: red;
+}
+#SignupForm{
+        float: left;
+}
+#SignupBetaPromo{
+        float: right;
+}
+#BoardMessages{
+        margin-bottom: 20px;
+}       
+.Notice{
+        background:#7AE4FF;
+        border-left: 10px solid #2F3827;
+        border-right: 10px solid #1B434D;
+        border-top: 10px solid #3B5921;
+        border-bottom: 10px solid #3B5921;
+
+        -moz-border-radius: 5px;
+        /* webkit looks funny */
+
+        margin-top:20px;
+        padding:10px 35px;
+        width:370px;
+}
+#BetaNotice{
+        float: right;
+}
+
+.HeaderIcons{
+        -moz-border-radius:5px;
+        -webkit-border-radius: 5px;
+        
+        background: #D8FF86 none repeat scroll 0 0;
+        float:right;
+        height:17px;
+        list-style-position:outside;
+        list-style-type:none;
+        margin-right:0;
+        margin-top:4px;
+        overflow:hidden;
+        padding: 1px 0px 0px 4px;
+}
+.HeaderIcons li{
+        cursor:pointer;
+        float:left;
+        
+        margin: 1px 3px 0 0;       
+}
+.HeaderIcons a{
+        background: url(/images/icons/actionSprite.png) no-repeat;
+        
+        padding:0 6px;
+        color: transparent;
+}
+.HeaderIcons a span{
+        display: none;
+}
+
+#HeaderIconsOwner{
+        width:120px;  
+}
+#HeaderIconsMember{
+        width:60px;  
+}
+#HeaderIconsGuest{
+        width:40px;  
+}
+#AddListItemButton a{
+    background-position: 0px 0px;
+}
+#AddListItemButton a:hover{
+    background-position: -18px 0px;
+}
+#CommentsButton a{
+    background-position: 0px -36px;
+}
+#CommentsButton a:hover{
+    background-position: -18px -36px;
+}
+#TagsButton a{
+    background-position: 0px -108px;
+}
+#TagsButton a:hover{
+    background-position: -18px -108px;
+}
+#EditListButton a{
+    background-position:  0px -54px;
+}
+#EditListButton a:hover{
+    background-position: -18px -54px;
+}
+#EmailButton a{
+    background-position: 0px -72px;
+}
+#EmailButton a:hover{
+    background-position: -18px -72px;
+}
+#DeleteButton a{
+    background-position: 0px -18px;
+}
+#DeleteButton a:hover{
+    background-position: -18px -18px;
+}
+#ReportButton a{
+    background-position: 0px -90px;
+}
+#ReportButton a:hover{
+    background-position: -18px -90px;
+}
+.ListItemIcons{
+        list-style-type: none;
+        margin: 5px 0 30px -35px;
+}
+.ListItemIcons li{
+        cursor:pointer;
+        float: left;
+        margin: 0 5px 0 0;
+}
+.ListItemIcons li a{
+        background:url(/images/icons/listItemSprite.png) no-repeat;
+        margin:0 -3px;
+        padding:10px 25px 0 0;
+        color: transparent;
+}
+
+#AddListItemIcons{
+        float:left;
+}
+#AddListItemExtrasIcons{
+        float:right;
+        margin-right:-3px;
+}
+#AddLinkButton.active a{
+    background-position: 0px 0px;
+}
+#AddLinkButton.inactive a{
+    background-position: 0px 0px;
+}
+#AddLinkButton.active a:hover{
+    background-position: -60px 0px;
+}
+#AddLinkButton.inactive a:hover{
+    background-position: -60px 0px;
+}
+#AddDescriptionButton.active a{
+    background-position: 0px -30px;
+}
+#AddDescriptionButton.active a:hover{
+    background-position: -60px -30px;
+}
+#AddDescriptionButton.inactive a{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+#AddDescriptionButton.inactive a:hover{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+
+
+#AddDateButton.active a{
+    background-position: 0px -60px;
+}
+#AddDateButton.active a:hover{
+    background-position: -60px -60px;
+}
+#AddDateButton.inactive a{
+    background-position: 0px -60px;
+}
+#AddDateButton.inactive a:hover{
+    background-position: -60px -60px;
+}
+
+#AddAmazonButton.active a{
+    background-position: 0px -90px;
+}
+#AddAmazonButton.active a:hover{
+    background-position: -60px -90px;
+}
+#AddAmazonButton.inactive a{
+    background-position: 0px -90px;
+}
+#AddAmazonButton.inactive a:hover{
+    background-position: -60px -90px;
+}
+
+#AddImageButton.active a{
+    background-position: 0px -120px;
+}
+#AddImageButton.active a:hover{
+    background-position: -60px -120px;
+}
+#AddImageButton.inactive a{
+    background-position: 0px -120px;
+}
+#AddImageButton.inactive a:hover{
+    background-position: -60px -120px;
+}
+
+#AddEmButton.active a{
+    background-position: 0px -150px;
+}
+#AddEmButton.active a:hover{
+    background-position: -60px -150px;
+}
+#AddEmButton.inactive a{
+    background-position: 0px -150px;
+}
+#AddEmButton.inactive a:hover{
+    background-position: -60px -150px;
+}
+
+#AddCCImageButton.active a{
+    background-position: 0px -180px;
+}
+#AddCCImageButton.active a:hover{
+    background-position: -60px -180px;
+}
+#AddCCImageButton.inactive a{
+    background-position: 0px -180px;
+}
+#AddCCImageButton.inactive a:hover{
+    background-position: -60px -180px;
+}
+
+#EditLinkButton a{
+    background-position: 0px 0px;
+}
+#EditLinkButton a:hover{
+    background-position: -60px 0px;
+}
+#EditDescriptionButton a{
+    background-position: 0px -30px;
+}
+#EditDescriptionButton a:hover{
+    background-position: -60px -30px;
+}
+#EditDateButton a{
+    background-position: 0px -60px;
+}
+#EditDateButton a:hover{
+    background-position: -60px -60px;
+}
+#EditAmazonButton a{
+    background-position: 0px -90px;
+}
+#EditAmazonButton a:hover{
+    background-position: -60px -90px;
+}
+#EditImageButton a{
+    background-position: 0px -120px;
+}
+#EditImageButton a:hover{
+    background-position: -60px -120px;
+}
+#EditEmButton a{
+    background-position: 0px -150px;
+}
+#EditEmButton a:hover{
+    background-position: -60px -150px;
+}
+#EditCCImageButton a{
+    background-position: 0px -180px;
+}
+#EditCCImageButton a:hover{
+    background-position: -60px -180px;
+}
+#EditListItemIcons{
+        float:left;
+        margin-top:10px;
+}
+#EditListItemExtrasIcons{
+/* Must be like this because of optional side scroll bar */
+        float:left;
+        margin-left:94px;
+        margin-top:10px;
+}
+
+#AddLinkButton.inactive a{
+    background-position: -30px 0px;
+    cursor: not-allowed;
+}
+#AddLinkButton.inactive a:hover{
+    background-position: -30px 0px;
+    cursor: not-allowed;
+}
+#AddDescriptionButton.inactive a{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+#AddDescriptionButton.inactive a:hover{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+#AddDateButton.inactive a{
+    background-position: -30px -60px;
+    cursor: not-allowed;
+}
+#AddDateButton.inactive a:hover{
+    background-position: -30px -60px;
+    cursor: not-allowed;
+}
+#AddAmazonButton.inactive a{
+    background-position: -30px -90px;
+    cursor: not-allowed;
+}
+#AddAmazonButton.inactive a:hover{
+    background-position: -30px -90px;
+    cursor: not-allowed;
+}
+#AddImageButton.inactive a{
+    background-position: -30px -120px;
+    cursor: not-allowed;
+}
+#AddImageButton.inactive a:hover{
+    background-position: -30px -120px;
+    cursor: not-allowed;
+}
+#AddEmButton.inactive a{
+    background-position: -30px -150px;
+    cursor: not-allowed;
+}
+#AddEmButton.inactive a:hover{
+    background-position: -30px -150px;
+    cursor: not-allowed;
+}
+#AddCCImageButton.inactive a{
+    background-position: -30px -180px;
+    cursor: not-allowed;
+}
+#AddCCImageButton.inactive a:hover{
+    background-position: -30px -180px;
+    cursor: not-allowed;
+}
+#EditLinkButton.inactive a{
+    background-position: -30px 0px;
+    cursor: not-allowed;
+}
+#EditLinkButton.inactive a:hover{
+    background-position: -30px 0px;
+    cursor: not-allowed;
+}
+#EditDescriptionButton.inactive a{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+#EditDescriptionButton.inactive a:hover{
+    background-position: -30px -30px;
+    cursor: not-allowed;
+}
+#EditDateButton.inactive a{
+    background-position: -30px -60px;
+    cursor: not-allowed;
+}
+#EditDateButton.inactive a:hover{
+    background-position: -30px -60px;
+    cursor: not-allowed;
+}
+#EditAmazonButton.inactive a{
+    background-position: -30px -90px;
+    cursor: not-allowed;
+}
+#EditAmazonButton.inactive a:hover{
+    background-position: -30px -90px;
+    cursor: not-allowed;
+}
+#EditImageButton.inactive a{
+    background-position: -30px -120px;
+    cursor: not-allowed;
+}
+#EditImageButton.inactive a:hover{
+    background-position: -30px -120px;
+    cursor: not-allowed;
+}
+#EditEmButton.inactive a{
+    background-position: -30px -150px;
+    cursor: not-allowed;
+}
+#EditEmButton.inactive a:hover{
+    background-position: -30px -150px;
+    cursor: not-allowed;
+}
+#EditCCImageButton.inactive a{
+    background-position: -30px -180px;
+    cursor: not-allowed;
+}
+#EditCCImageButton.inactive a:hover{
+    background-position: -30px -180px;
+    cursor: not-allowed;
+}
+
+.ListContainer span.CCImageCredit{
+        font-size: 12px;
+}
+.ListFormWrapper{
+        -moz-border-radius-bottomleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        background:#D8FF86 none repeat scroll 0 0;
+        float:right;
+        
+        position:relative;
+        top:3px;
+        z-index:2;
+}
+#ListFormOwner{
+        background:none repeat scroll 0 0 #D8FF86;
+        left:34px;
+        padding-right:13px;
+        width:354px;
+}
+#ListFormMember{
+        left:21px;
+        width: 361px;
+        background: #D8FF86;
+}
+#ListFormGuest{
+        left:33px;
+        width:354px;
+        padding-bottom:3px;
+        padding-right:12px;
+        background: #D8FF86;
+}
+
+#commentsubmit{
+        
+}
+.InsideSlider input[type="text"], .InsideSlider textarea {
+        width: 294px;
+        margin-bottom:10px;
+}
+.InsideSlider.TextInput{
+        width: 294px;
+}
+.InsideSlider {
+        padding-left: 20px;
+        width: 300px;
+}
+.InsideSlider label{
+        margin-left:1px;
+        text-align:left;
+        width:auto;
+}
+
+#AddListItemFormAdditions{
+        margin-bottom:5px;
+        position:relative;
+        top:-10px;
+}
+
+#AddListItemFormAdditions.TextInput{
+        width: 280px;
+}
+#EditListItemFormElements{
+        position:relative;
+
+        max-height:280px;
+        overflow-x:hidden;
+        overflow-y:auto;
+        width:328px;
+}
+
+
+#EditListItemFormAdditions.TextInput{
+        width: 280px;
+}
+#DescriptionWYSIWYGWrapper{
+        position:relative;
+ 
+        margin-bottom:20px;
+}
+
+
+
+#listitemsubmit{
+        margin-top: 0px;
+}
+.nicEdit-main{
+        background: #D8FF86;
+}
+
+/* Date Picker */
+input[type="text"].DateInput{
+        width: 130px;
+}
+.DateDiv{
+        float:left;
+}
+#AddDateDiv div.DateSelectDiv{
+        float: right;
+        width:145px;
+}
+#EditDateDiv div.DateSelectDiv{
+        float: right;
+        width:152px;
+}
+.DateEmail{
+        width: 140px;
+        margin-right: 6px;
+}
+#AddDateEmail{
+        width: 126px;
+}
+#EditDateEmail{
+        width: 126px;
+}
+
+#More div.Loading{
+        margin-right: 370px;
+}
+.Loading{
+        background:#D8FF86 none repeat scroll 0 0;
+        height:90px;
+        padding:20px;
+        width:245px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        -moz-border-radius:5px;
+        -webkit-border-radius: 5px;
+}
+.Loading p{
+        font-size:18px;
+}
+
+.LoadingBig{
+        background:#D8FF86 none repeat scroll 0 0;
+        height:90px;
+        padding:20px;
+        width:270px;
+        -moz-border-radius:5px;
+        -webkit-border-radius: 5px;
+        position: relative;
+        left: -150px;
+}
+.LoadingBig p{
+        font-size:18px;
+}
+
+
+.LoadingLogo{
+        float: left;
+}
+.AjaxLoader{
+        position:relative;
+        top:5px;
+}
+
+.ListItemElement{
+        margin-bottom:15px;
+}
+#AddDateDiv{
+        margin-bottom: 10px;
+}
+
+.ExtraImage{
+        max-height: 294px;
+        max-width: 294px;
+        margin-bottom:15px;
+}
+
+.lildelete{
+        float:left;
+        left:3px;
+        position:relative;
+        top:2px;
+}
+
+.ListItemExtraLabel{
+        color:#2F3827;
+        float:left;
+        text-align:left;
+        width:auto;
+}
+
+#AddDescriptionDiv{
+        margin-bottom:15px;
+}
+
+#EditListName{
+        margin-bottom:15px;
+}
+#EditListContent{
+        display: inline-block;
+}
+
+#EditListContent label {
+        width:65px;
+}
+#FloatBoxWrapper{
+        position:relative;
+        z-index:3;     
+}
+
+.FloatBoxHandle{
+        background:transparent url(/images/88/themeSprite.png) no-repeat -451px -88px;
+        cursor:move;
+        float:right;
+        height:30px;
+        margin:15px 15px 0 0;
+        width:30px;
+}
+#LinkAdd{
+        float: left;
+}
+#LinkCancel{
+        float: right;
+}
+#LinkInput{
+        width: 247px;
+}
+#LinkText{
+        width: 247px;
+}
+#EditListItemFormAdditions input[type="text"], #EditListItemFormElements textarea, #EditListItemFormElements select{
+        width: 294px;
+}
+#EditListItemFormElements input[type="text"], #EditListItemFormElements textarea, #EditListItemFormElements select {
+        width: 294px;
+        margin-bottom:10px;
+}
+#EditListContent input[type="text"], #EditListContent textarea, #EditListContent select{
+        width: 294px;
+}
+#EditListContent select#ListItemStatus{
+        width: 150px;
+}
+#EditListContent label#ListItemStatusLabel {
+        width: 139px;
+}
+
+#EditListContent div.LeftInput {
+        width: 150px;
+        float:left;
+}
+#EditListContent div.LeftInput select{
+        width: 133px;
+}
+#EditListContent div.RightInput {
+        float:right;
+        padding-left:7px;
+        width:138px;
+}
+#EditListContent div.RightInput select{
+        width: 133px;
+}
+#EditListItemFormAdditions input[type="text"].DateInput{
+        width: 130px;
+}
+#cke_editor{
+        margin-bottom:10px;
+}
+.Editor{
+        width: 294px;
+}
+#EditListItemForm{
+        position: fixed;
+        top: 55px;
+        left: 35%;
+}
+#LinkBox{
+        position: fixed;
+        top: 160px;
+        left: 45%;
+        width:310px;
+}
+.zAdjust{
+        position: relative; /*or absolute*/
+        z-index: 0;
+        width:360px;
+}
+#EditDescriptionDiv{
+        margin-bottom: 20px;
+}
+#CommentsContent{
+        margin-bottom: 10px;
+}
+.Publishable{
+        position:relative;
+        top:-3px;
+}
+.PublishLink{
+        font-size: 12px;
+        position:relative;
+        top:-2px;
+}
+#login label.RememberMeLabel{
+        float:right;
+        margin-right:132px;
+        width:auto;
+}
+#Messages{
+        width: 594px;
+}
+.MessagesList{
+        list-style-type: none;
+        list-style-position: inside;
+}
+.MessagesList li{
+        padding-bottom:15px;
+}
+.MessageIcon{
+        margin-top: 5px;
+        position:relative;
+        top:7px;
+}
+.MessageHeading{
+        background: url(/images/88/Underline.png) no-repeat scroll 0 15px;
+        font-size:14px;
+        font-weight:bold;
+        height:19px;
+}
+#FeedbackForm{
+        width: 370px;
+}
+#FeedbackForm textarea, #FeedbackForm select {
+        background: #7AE4FF;
+}
+#FeedbackForm label{
+        width: 75px;
+}       
+
+.AllTags{
+        float: right;
+}
+.ListItemDiv{
+        width: 365px;
+        margin-top:-22px;
+}
+.ListItemTop{
+
+}
+.ListItemExtras{
+        margin:10px 0;
+}
+
+.ListItemEditButton{
+        float:left;
+        width:16px;
+        margin-top:5px;
+}
+.ListItemDeleteButton{
+        float:left;
+        width:16px;
+        margin-top:5px;
+        margin-right:2px;
+}
+.ListItemName{
+        left:2px;
+        position:relative;
+        top:3px;
+        margin-left:30px;
+        font-weight:bold;
+        line-height: 25px;
+        font-size: 14px;
+}
+
+.New{
+        font-size:10px;
+        font-style:italic;
+        font-variant:small-caps;
+        font-weight:bold;
+        vertical-align:super;
+}
+.MessageNotice{
+        border-left:2px solid #2F3827;
+        float:right;
+        margin-right:-14px;
+        padding-left:5px;
+        width:88px;
+}
+#LinkBox{
+        z-index:7;
+}
+#cke_AddEditor{
+        margin-bottom: 20px;
+}
+#cke_EditEditor{
+        margin-bottom: 20px;
+}
+#PromoBlurb h3 {
+        margin: 0 0 15px 0;
+}
+#Welcome h3{
+        margin: 0 0 15px 0;
+}
+.AboutScreenShot{
+    float: right;
+    margin: 0px 0px 10px 10px;
+}
+.AboutUL{
+    list-style-image:url("/images/88/ListImage.png");
+    list-style-type:none;
+}
+.AboutUL li{
+    margin-bottom: 10px;
+}
+.HelpListings{
+    list-style-image:url("/images/88/ListImage.png");
+    list-style-type:none;
+
+    font-size: 14px;
+}
+.HelpListings li{
+    margin-bottom: 10px;
+}
+#HelpVideo{
+    float: right;
+    margin: 0 0 10px 10px;
+}       
+.ReturnToHelp{
+        font-size: 14px;
+}
+.lilComment{
+        position:relative;
+        top: 1px;
+        left: -1px;
+}
+.listingLinks{
+        list-style-type: none;
+        float:right;
+        position: relative;
+        left: 1px
+}
+.listingLinks li {
+        float:left;
+}
+.listingLinks li a {
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-topright:5px;
+        -webkit-border-top-left-radius:5px;
+        -webkit-border-top-right-radius:5px;
+        background:none repeat scroll 0 0 #1D687A;
+        border:2px solid #121D52;
+        display: block;
+        height:30px;
+        line-height:20px;
+        position:relative;
+        text-align:center;
+        top:-7px;
+        width:60px;
+        color: #D8FF86;
+        font-weight: bold;
+}
+.listingLinks li a:hover {
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-topright:5px;
+        -webkit-border-top-left-radius:5px;
+        -webkit-border-top-right-radius:5px;
+        background:none repeat scroll 0 0 #1B434D;
+        border:2px solid #121D52;
+        display: block;
+        height:30px;
+        line-height:20px;
+        position:relative;
+        text-align:center;
+        top:-7px;
+        width:60px;
+        color:#2F3827;
+        font-weight:bold;
+}
+.listingLinks li a.On {
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-topright:5px;
+        -webkit-border-top-left-radius:5px;
+        -webkit-border-top-right-radius:5px;
+        background:none repeat scroll 0 0 #1B434D;
+        border:2px solid #121D52;
+        display: block;
+        height:30px;
+        line-height:20px;
+        position:relative;
+        text-align:center;
+        top:-7px;
+        width:60px;
+        color:#2F3827;
+        font-weight:bold;
+}
+.ListingsSummaryA{
+        background: #D8FF86;
+        border-bottom: #2F3827 2px solid;
+        padding-top:10px;
+        position: relative;
+}
+.ListingsSummaryB{
+        background: #7AE4FF;
+        border-bottom: #2F3827 2px solid;
+        padding-top:10px;
+        position: relative;
+}
+.ListingsHeader {
+        border-bottom: 2px solid #3B5921;
+        height:22px;
+        line-height:16px;
+        margin: 15px 0px 15px 65px;
+        overflow:hidden;
+        padding-left:3px;
+        width:608px;
+}
+
+#3DTagCloud{
+        z-index: 20;
+}
+
+#feedbacklink{
+        display:block;
+        height:23px;
+        float: right;
+        padding:5px 0 0 7px;
+        width:62px;
+        background: #3B5921;
+        color: #D8FF86;
+        border: 2px solid #2F3827;
+        position:relative;
+        top:2px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+}
+#feedbacklink:hover{
+        display:block;
+        height:23px;
+        float: right;
+        padding:5px 0 0 7px;
+        width:62px;
+        background: #1B434D;
+        color: #2F3827;
+        border: 2px solid #2F3827;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+}
+#feedback_tab {
+        bottom:0;
+        position:fixed;
+        right:50px;
+}
+#feedback_tab #feedback_tab_rel {
+        clear:both;
+        float:left;
+        position:relative;
+        top:24px;
+        width:346px;
+        z-index: 99;
+}
+#FeedbackSlider {
+        -moz-border-radius-topleft:5px;
+        -webkit-border-top-left-radius: 5px;
+        background:none repeat scroll 0 0 #F8F8FF;
+        border:2px solid #121D52;
+        clear:both;
+        float:left;
+        height:0;
+        overflow:hidden;
+        padding:10px 35px;
+        position:relative;
+        width: 272px;
+}
+
+#FeedbackMessage{
+        width: 270px; 
+}

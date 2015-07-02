@@ -1,0 +1,39 @@
+<div class="ListItemFormContainer">
+    <div class="ListFormBottom" id="EditListDetails" style="display:block">
+        <div class="ListForm">
+        <form method="post" id="EditListDetailsForm" action="<!--SETUP.URL-->/lists.html">
+            <ul class="ListFormLinksOne">
+                <li class="ListFormTabOne"><a href="#">Edit List Details</a></li>
+            </ul>
+            <div class="clear"></div>
+            <div id="EditListFormInner">
+                <input type="hidden" name="todo" id="todoedit" value="EditListDetails" />
+                <input type="hidden" name="ListDivDisplay" id="ListDivDisplay" value="ListEditView" />
+                <input type="hidden" name="ListID" id="ListID" value="<!--Data.List_ID-->" />
+                <br />
+                <!--ErrorMessages-->
+                <label for="ListName">List Name:</label><input type="text" id="ListName" name="List.Name" value="<!--Data.List_Name-->" maxlength="100"  class="TextInput" />
+                <label for="ListGroup">List Group:</label><!--Select.ListGroup-->            
+                <label for="Images" id="ImagesLabel">Images:</label><!--Select.Images-->
+                <label for="Links" id="LinksLabel">Links:</label><!--Select.Links-->            
+                <label for="Public">Privacy:</label><!--Select.Public-->       
+                <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('editDescriptionTipButton', 'editDescriptionTipWrapper');" id="editDescriptionTipButton" />
+                <label for="ListItemDescriptionEdit" id="DescriptionLabelEdit">Description:</label><textarea name="List.Description" id="ListItemDescriptionEdit" rows="5" cols="40"><!--Data.List_Description--></textarea>
+                <!--Select.ListItemStatus-->
+                <input type="submit" value="Edit" id="editlistsubmit" name="EditListDetails"class="Button" />
+                <input type="button" value="Cancel" id="editlistcancel" name="EditListDetails" class="Button" onclick="javascript:SwitchToEditMode(0, <!--Data.List_ID-->)" />
+            </div>
+          </form>
+        </div>
+    </div> 
+</div>
+
+
+<div class="FloatingBox" id="editDescriptionTipWrapper" style="display:none">
+    <div class="FloatingBoxInner">
+        <b>List item descriptions</b>
+        <p>You may use the folowing html tags within the list item descrrption:</p>
+        <!--Display.Page.allowedhtml.html-->
+        <input type="button" name="Close" value="Close" id="closeEitDescriptionTip" class="Button" onClick='doNothing()' />
+    </div>
+</div>

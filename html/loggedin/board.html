@@ -1,0 +1,19 @@
+<div id="Board">
+	<!--Self.ErrorMessages-->
+	<form name="WriteOnUsersBoard" method="post" id="BoardForm" action="<!--ListOwner.UserURL-->">
+		<input type="hidden" name="todo" id="todoB" value="PostOnBoard" />
+		<input type="hidden" name="Board.UserID" id="UserIDB" value="<!--CGI.UserID-->" />
+
+		<div id="BoardInput">
+		<textarea name="Board.Message" class="BoardMessage" id="BoardMessageInput" onblur="clearBoardMessage()" onfocus="clearBoardMessage()" rows="4" cols="80">Write Something...</textarea>
+		<input name="PostButton" value="Post" id="BoardSubmit" type="submit" />
+		</div>
+	</form>
+    <script language="JavaScript">setBoardMessage();</script>
+    <div class="clear"></div>
+    <div id="BoardMessages">
+	<!--Self.BoardMessages-->
+	<!--Self.BoardNewerLink-->
+	<!--Self.BoardOlderLink-->    
+    </div>
+</div>

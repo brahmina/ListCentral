@@ -1,0 +1,49 @@
+                        <div class="ListDetails">
+                            <div class="ListDetailsTopBorder"></div>
+                            <div class="ListPointsOutter">
+                                <div class="ListPointsMiddle">
+                                    <div class="ListPointsInner">
+                                        <p>
+                                         <!--List.ListPoints-->
+                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ListRating_<!--List.ID-->" class="RatingsDiv">
+    							<!--ListRating-->
+    						</div>
+    						<div id="ListDetailsText">
+    							<p>Created: <!--List.CreateDateFormatted--></p>
+                                <p><!--List.DescriptionParagraph--></p>
+                                <table class="ListDetailsTagsTable">
+                                    <tr><td>Tags:</td><td><!--List.Tags--></td></tr>
+                                </table>                                 
+    						</div>
+                            <div class="ListButtons">
+                                <ul class="ShareButtons">
+                                    <!-- Digg -->
+                                    <li><a href="http://digg.com/submit?url=<!--SETUP.URL--><!--List.ListURL-->&amp;title=<!--List.Name-->" target="_new"><img src="http://digg.com/img/little-digg.gif" width="20" height="20" alt=""/></a></li>
+                                    <!-- Facebook -->
+                                    <li><script type="text/javascript">function fbs_click() {
+                                                    u=location.href;
+                                                    t=document.title;
+                                                    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&amp;t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+                                                    return false;}
+                                        </script><a href="http://www.facebook.com/share.php?u=<!--SETUP.URL--><!--List.ListURL-->" onclick="return fbs_click()" target="_blank"><img src="http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?8:26981" width="16" height="16" alt="" /></a></li>
+                                    <!-- StumbleUpon -->
+                                    <li><a href="http://www.stumbleupon.com/submit?url=<!--SETUP.URL--><!--List.ListURL-->&amp;title=<!--List.Name-->" target="_new"> <img border="0" src="http://cdn.stumble-upon.com/images/32x32_su_round.gif" width="16" height="16" alt="" /></a></li>
+                                    <!-- Twitter -->
+                                    <li><a href="http://twitter.com/home?status=Check out this list: <!--List.Name--> <!--SETUP.URL--><!--List.ListURL-->" target="_new"><img src="http://twitter.com/images/favicon.png" width="16" height="16" alt="Tweet this list" /></a></li>
+                                    <!-- Delicious -->    
+                                    <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> <img src="http://static.delicious.com/img/delicious.gif" alt="Delicious" width="16" height="16" /></a></li>
+                                </ul>
+                            </div>
+
+    
+                            <script type="text/javascript" language="JavaScript">
+                                function openWindow(theURL,winName,features) { 
+                                    window.open(theURL,winName,features);
+                                }
+                            </script>
+                        </div>

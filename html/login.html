@@ -1,0 +1,20 @@
+        <script language="JavaScript">
+            $('loginwrapper').set('opacity', 0);
+        </script>
+        <div class="FloatingBox">
+            <div id="login" class="FloatingBoxInner">
+                <form method="post" name="login" onsubmit="return validateForm(this);" action="/login.html">
+                  <h3>Login to List Central</h3>
+                  <input type="hidden" name="todo" value="Login" />
+                  <!--Self.LoginErrorMessages-->
+                  <label for ="Users.Username">Username or Email:</label><br /><input type="text" name="Users.Username" value="" class="TextInput" id="Username" tabindex="1" maxlength="20" /><br /> 
+                  <label for ="Users.Password">Password:</label><br /><input type="password" name="Users.Password" value="" class="TextInput" id="Password" tabindex="2" maxlength="30" />
+                  <br />
+                  <input type="checkbox" name="RememberMe" id="RememberMe" tabindex="3" /><label class="RememberMeLabel" for="RememberMe">Remember me</label><br />
+                  <input type="submit" name="Submit" value="Login" class="Button" id="loginsubmit" tabindex="4" />  
+                  <input type="button" name="Cancel" value="Cancel" id="logincancel" class="Button" tabindex="5" onclick="javascript:hideLogin()" /><br />    
+                
+                  <a href="/forgotpassword.html">Forgot Password?</a>
+                </form>
+            </div>
+        </div>

@@ -1,0 +1,14 @@
+Hi <!--Data.User_Name-->!
+
+You requested to have your password reset via the List Central "Forgot Password" form. We have reset your password. Your details are:
+
+Username: <!--Data.User_Username-->
+Password: <!--Data.User_Password-->
+
+Please use this to login, and then reset your password via the List Central Settings.
+
+If you are still unable to login, feel free to contact us via our Contact Form (<!--SETUP.URL-->/contact.html).
+
+Thank you!
+
+List Central (<!--SETUP.URL-->)

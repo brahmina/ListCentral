@@ -1,0 +1,661 @@
+textarea {
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+        border: 1px solid #7f9db9;
+}
+#EditListDetails{
+        margin-top: 1px;
+        margin-right: 2px;
+}
+.ListFormLinksOne{               
+        position:relative;
+        left: -6px;
+        top: 0px;
+        width:330px;
+}
+#EditListDetails div.ListForm {
+        margin-left: 12px;
+}
+#EditListDetails form {
+        background: transparent none repeat scroll 0 0;
+        border: 0px solid #121d52;
+
+        
+        padding-left: 6px;
+        width: 280px;
+}
+#EditListFormInner{
+        margin-top: -10px;
+}
+#EditListDetails label {
+        clear:both;
+        width:65px;
+}
+#EditListDetails input.TextInput {
+        width: 180px;
+}
+#EditListDetails select {
+        width: 184px;
+}
+#EditListDetails label#ImagesLabel {
+        clear: both;
+}
+#EditListDetails label#LinksLabel {
+        clear: none;
+        width:36px;
+}
+#EditListDetails select#Images {
+        width:68px;
+}
+#EditListDetails select#Links {
+        width:68px;
+}
+#EditListDetails label#StatusSetLabel{
+        margin-top: -15px;
+}
+
+#EditListDetails select#ListItemStatus {
+        margin-left: 66px;
+        margin-top: 15px;
+}
+
+#ListItemDescriptionEdit{
+        width: 180px;
+        margin-left: 65px;
+        margin-bottom: 5px;
+}
+#DescriptionLabelEdit{
+        position: relative;
+        top: -94px;
+}
+#editlistcancel{
+        margin-left: 30px;
+}
+#editDescriptionTipButton{
+        left: 272px;
+        top: -72px;
+        float: none;
+}
+#searchsubmit {
+        height:25px;
+        position:relative;
+        right:5px;
+        top:16px;
+}
+.ListItemTable{
+        width: 425px;
+}
+
+.ListingsListPoints {
+        margin: 0px;
+}
+.ListingsListPoints p{
+        padding-top:0px;
+}
+#ImageFormElement{
+        margin-top: -15px;
+}
+
+
+.Pagination a { 
+        margin:4px;
+        padding:4px;
+        border:1px solid #121d52;
+        text-decoration: none;
+        align: center;
+}
+.Pagination a:hover { 
+        margin:4px;
+        padding:4px;
+        border:1px solid #121d52;
+        text-decoration: underline;
+}
+
+.Pagination span.current {
+        margin:4px 10px;
+        padding:7px 6px;
+}
+
+.RecentLists{
+        list-style-type: none;
+        margin-left:0px;
+        width:140px;
+        float: left;
+}
+.TopUsers{
+        left: 0px;
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        margin:-20px 0px;
+        position:relative;
+        width:330px;
+}
+.TopUsers li{
+        height: 50px;
+        width: 100px;
+        float: left;
+        margin: 5px 0 5px 2px;
+}
+.tabTop{
+        min-height: 30em;
+        margin-top: 10px;
+}
+
+.tabMiddle{
+        left:-44px;
+        position:relative;
+        top: -22px;
+        width:688px;
+	padding-left: 10px;
+}
+#TLOLTabBottom{
+        margin-top: -30px;
+}
+.NavHeader {        
+        width: 140px;
+}
+.NavHeaderOver {
+        width: 140px;
+}
+.Nav {        
+        width: 140px;
+}
+.NavCurrent {        
+        width: 140px;
+}
+.NavOver {
+        width: 140px;
+        margin-top: 10px;        
+}
+#Nav {
+        margin-top: 8px;
+        padding-right: 10px;
+}
+#Nav legend {
+        margin-top: -10px;
+        padding-left: 5px;
+        margin-left: -7px;
+        width: auto;
+        background-image: none;
+        background-color: #f8f8ff
+}
+#Nav fieldset {
+	width: 160px;
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-right: 0px;
+}
+
+#ListPointsList {
+        margin-top: 5px;
+}
+.ListHeader {
+        margin-bottom: 0px;
+}
+
+.RatingsDiv {
+        margin:10px 2px 4px 4px;
+}
+
+.ListNormalView {
+        margin-left:-2px;
+}
+#TagInstructions{
+        margin-top: 10px;
+}
+#DeleteListTags{
+        position: relative;
+        top: 53px;
+        left: 10px;
+}
+#ListTags {
+        margin: -10px 0px 0px;
+}
+#AddItem label#ImageLabel {
+        margin-top: 18px;
+}
+#uploadimagesubmit{
+        margin-top: 12px;       
+}
+textarea#ListItemDescription {
+        margin-left: -2px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+}
+#DescriptionLabel {
+        margin-top: 0px;
+}
+.ListEditView {
+        margin-left:0px;
+}
+
+
+#loginsubmit {
+        margin: 10px 0 0 -20px;;
+}
+
+#Password {
+        margin-left: -20px;
+}
+
+#Left{
+        overflow: hidden;
+        margin-top: 8px;
+}
+#TLOLRows{
+        left: 20px;
+}
+#HomeContent {
+        overflow: hidden;
+}
+.ListItemsSummaryImages {
+        margin-left: 0px;
+        
+}
+.ListItemsSummaryImages li {
+        margin-left: -5px;
+        margin-right: -5px;
+        left: -5px;
+        position: relative;
+}
+.ListingLeft {
+        float: left;
+        margin: -30px 0px 0px 20px;
+        width:66px;
+}
+.ListingsMain {
+        width:592px;
+        float: right;
+        margin-top: -40px;
+        margin-right: 18px;
+}
+.ListingsSummary {
+        margin:-10px 0 30px 5px;
+}
+.ListingTags {
+        display: none;
+}
+#TagListingTabMiddle {
+        top: -24px;
+        margin-bottom: -10px;
+}
+
+#TagListingRows div.ListingsMain{
+        margin-left: 112px;
+}
+
+#TagListingRows div.ListingsHeader{
+        position: relative;
+        left: 20px;
+}
+#TagListingRows div.#ListingLeft {
+        margin: -20px 0px 0px 20px;
+}
+
+
+#SearchListingTabMiddle{
+        top: -23px;
+        margin-bottom: -10px;
+}
+#SearchListingTabBottom{
+        margin-top: -25px;
+}
+#SearchListingRows div.ListingsMain{
+        margin-left: 112px;
+}
+
+#SearchListingRows div.ListingsHeader{
+        position: relative;
+        left: 20px;
+}
+#SearchListingRows div.#ListingLeft {
+        margin: -20px 0px 0px 20px;
+}
+
+.RecentSearches {
+        margin-left: 40px;
+}
+.FloatingDiv {
+        margin-left: 10px;
+}
+#Username{
+        margin-left: -20px;
+}       
+
+#AboutUser {
+        margin:0 10px 10px 54px;
+}
+#UserStats {
+        margin:0 10px 10px 110px;
+}
+
+#AddFeedback input.TextInput {
+        background: #f8f8ff;
+        
+}
+.TextInput {
+        font-size:12px;
+        margin: 0 0 15px 0px;
+        text-align:left;
+        border: 1px solid #7f9db9;
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+        
+}
+
+.SelectInput {
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+}
+#ListItemLink{
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        border: 1px solid #7f9db9;
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+}
+#ListItemListItemStatusID{
+        font-size:12px;
+        margin: 0 0 15px 0px;
+        text-align:left;
+        border: 1px solid #7f9db9;
+        color:#121d52;
+        width: 183px;
+        background: #ffffff;
+}
+#Description {
+        font-size:12px;       
+        text-align:left;
+        border: 1px solid #7f9db9;
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+        margin-bottom: 10px;
+}
+#StatusSet{
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        
+        color:#121d52;
+        width: 180px;
+        background: #ffffff;
+}
+#CreateListGroup  {
+        width: 302px;
+}
+#CreateList label {
+        width: 60px;
+        clear: none;
+}
+#CreateEditTabLetters{
+        top: 12px;
+}
+#CreateEditFormContainer{
+        position: relative;
+        top: -10px;
+}
+#CreateEditFormContainer ul.tabLinks {
+        bottom:0px;     
+        left: 0px;
+        top: -19px;
+}
+#CreateEditTabWindow {
+        left: -11px;
+        top: -22px;
+        margin-bottom: -22px;
+        padding-top: 0px;
+}
+#ListGroup{
+        width: 190px;
+}
+#ListGroups{
+        padding-top: 30px;
+}
+#StatusSets{
+        padding-top: 30px;
+}
+#CreateList{       
+        
+}
+#CreateListForm{
+        margin-top: 40px;       
+        background: blue;
+}
+#CreateListForm span {
+        position: relative;
+        top: -18px;
+}
+#CreateListForm select {
+        position: relative;
+        left: 6px;
+}
+#CreateListForm input {
+        position: relative;
+        left: 6px;
+}
+#CreateList select#Images {
+        width: 63px;
+}
+#CreateList select#Links {
+        width: 63px;
+}
+
+
+#SettingsTabLetters{
+        top: -2px;
+}
+#SettingsTabWindow {
+	left:-5px;
+        margin-bottom: -22px;
+        padding-top: 0px;
+
+        top : -22px;
+}
+#ThemeVisualization {
+        margin: 0px 0px 30px;
+}
+
+
+.ListForm{
+        margin-left: 14px;
+        padding-left: 0px;
+        margin-right: 0px;
+}
+.ListFormBottom{
+        margin-right: 0px;
+        padding-left: 0px;
+        left: 6px;
+        width: 310px;
+}
+.ListFormLinks {
+        top: 40px;
+        left: 0px;
+        margin-right: -10px;
+}
+
+.ListFormLinksGuest{
+        position:relative;
+        left: 12px;
+        top: 0px;
+}
+.ListFormGuest{
+        margin-left: 1px;
+        position: relative;
+        margin-top: -12px;
+        padding-bottom: 20px;
+        padding: top: 20px;
+}
+.ListFormBottomGuest{
+        margin-left: 0px;
+        width: 239px;
+        left: -1px;
+}
+#ListMember div.ListFormBottomGuest{
+        margin-left: 1px;
+        margin-right: 0px;
+}
+
+.ListItemFormContainer {
+        margin-top: -2px;
+        padding: 0px;
+        position: relative;
+        
+}
+#ListMember div#ListComments{
+        margin-top: 20px;
+}
+#AddItem form {      
+        margin-right:17px;
+        background: transparent;
+        padding: 0px;
+        margin-top: -40px;
+}
+#AddComment form {   
+        margin-right:17px;
+        background: transparent;
+        padding: 0px;
+        margin-top: -40px;
+}
+#AddTag form {       
+        margin-right:17px;
+        background: transparent;
+        padding: 0px;
+        margin-top: -40px;
+}
+#ListItemName{
+        margin:0px 0px 5px 0px;
+        width: 180px;
+
+}
+#Comment{
+        margin-top: -30px;
+        margin-bottom: 10px;
+}
+.EditingTextInput {
+        width: 90%;
+        float: left;
+        margin-left: 0px;
+}
+#Bio{
+        margin-left:78px;
+        margin-top: -17px;
+}
+#bioLabel{
+        margin-top: 0px
+}
+#AvatarOr {
+        padding-left: 0px;
+}
+.ListReorderView {
+        margin-left: 10px;
+}
+#AmazonChooseButton {
+        margin:20px 20px 30px 10px;
+}
+#ImageImage{
+        margin-top: 10px;
+}
+#ImageImage img{
+        width: 180px;
+}
+.EditUploadedImage2{
+        width: 180px;
+}
+#ListItemStatusID{
+        font-size:12px;
+        margin:0 0 15px 0;
+        text-align:left;
+        color:#121d52;
+        width: 183px;
+        background: #ffffff;
+}
+#BoardInput {
+        position: relative;
+}
+
+.Notice{
+        top: -660px;
+}
+
+#UploadedImage{
+        width: expression( document.body.clientWidth > 300 ? "300px" : "auto" ); /* sets max-width for IE */
+}
+#UploadedImage2{
+        width: expression( document.body.clientWidth < 200 ? "200px" : "auto" ); /* sets max-width for IE */
+}
+
+.ListItemsSummaryImages li {
+        width: expression( document.body.clientWidth > 166 ? "166px" : "auto" ); /* sets max-width for IE */
+}
+#ListComments{
+        height: expression( this.scrollHeight > 285 ? "285px" : "auto" ); /* sets max-height for IE */
+}
+#ListCommentsGuest{
+        height: expression( this.scrollHeight > 285 ? "285px" : "auto" ); /* sets max-height for IE */
+}
+.ListFormDiv {
+        height: expression( this.scrollHeight < 106 ? "106px" : "auto" ); /* sets min-height for IE */
+}
+
+.ListImage{
+        width: expression( document.body.clientWidth < 412 ? "412px" : "auto" ); /* sets max-width for IE */
+}
+#mainImage{
+        height: expression( this.scrollHeight < 552 ? "552px" : "auto" ); /* sets min-height for IE */
+}
+
+
+.Spinner {
+        width: expression( document.body.clientWidth > 300 ? "300px" : "auto" ); /* sets max-width for IE */
+        height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); /* sets max-height for IE */
+}
+.ListForm{
+        height: expression( this.scrollHeight < 100 ? "100px" : "auto" ); /* sets min-height for IE */
+}
+.ListFormGuest{
+        height: expression( this.scrollHeight < 83 ? "83px" : "auto" ); /* sets min-height for IE */
+}
+#UserSpaceTop{
+        height: expression( this.scrollHeight < 110 ? "110px" : "auto" ); /* sets min-height for IE */
+}
+.tabTop{
+        height: expression( this.scrollHeight < 360 ? "360px" : "auto" ); /* sets min-height for IE */
+}
+.tabMiddle{
+        height: expression( this.scrollHeight < 120 ? "120px" : "auto" ); /* sets min-height for IE */
+}
+
+.ListingListNameOverImage{
+	width: expression( document.body.clientWidth > 166 ? "166px" : "auto" ); /* sets max-width for IE */
+}
+#CreateEditTabWindow {
+        height: expression( this.scrollHeight < 390 ? "390px" : "auto" ); /* sets min-height for IE */
+}
+
+.ListingsImage{
+        maax-width: 160px;
+        max-height: 160px;
+        width: expression( document.body.clientWidth > 160 ? "160px" : "auto" ); /* sets max-width for IE */
+        height: expression( this.scrollHeight < 160 ? "160px" : "auto" ); /* sets min-height for IE */
+}
+.editable {
+	cursor: hand;
+}
+
+
+.ListingsListPoints  {
+        background: #BDEAFF;
+} 

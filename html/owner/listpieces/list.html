@@ -1,0 +1,99 @@
+<script language="JavaScript" type="text/javascript">             
+    thisListID = <!--Self.ListID-->;
+    ListCreator = '<!--Self.ListCreator-->';                    
+    ListHasImages = '<!--Self.Images-->';
+    ListHasLinks = '<!--Self.Links-->';
+    ListName = '<!--Self.ListNameQ-->';   
+    ThemeColor3 = '<!--Self.ThemeColor3-->';
+    <!--Self.ListItemStatusSetJSArray-->
+    
+    window.addEvent('domready', function() {
+        initOwner();
+
+        imagesMultibox = new multiBox('imgs', {
+            overlay: new overlay()
+        });
+    });
+</script> 
+                <div id="ListNormalView" <!--ListDivDisplay.ListNormalView-->>      
+                    <div class="HeaderTopContainer">
+                        <div class="ListHeaderContainer">
+                            <div class="HeaderLongTop">                               
+                                 <ul id="HeaderIconsOwner" class="HeaderIcons">
+                                     <li title="Add list item" id="AddListItemButton"><a>&nbsp;</a></li>
+                                     <li title="Comments" id="CommentsButton"><a>&nbsp;</a></li> 
+                                     <li title="Add tags" id="TagsButton"><a>&nbsp;</a></li> 
+                                     <li title="Edit list" id="EditListButton"><a>&nbsp;</a></li> 
+                                     <li title="Email list" id="EmailButton"><a>&nbsp;</a></li> 
+                                     <li title="Delete list" id="DeleteButton"><a href="/?todo=DeleteList&amp;ListID=<!--Self.ListID-->">&nbsp;</a></li> 
+                                 </ul>
+                                 <a href="<!--Self.ListURL-->" class="ListNameList">
+                                    <!--Self.Name--> 
+                                </a>
+                            </div>
+                        </div>
+                        <!--Self.ListForm-->
+                        <!--Display.ListElement.listdetails.html-->
+
+                        <ul id="ListOptionsNormalRef" class="ListOptions">
+                            <li><img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('editTipButton', 'editTipWrapper');" id="editTipButtonReg" /></li>
+                            <li><a href="javascript:SwitchToReorderMode(1)">Reorder</a> </li>
+                        </ul>
+                    </div>
+                   
+                    <div style="clear: left"></div>
+                
+                    <div class="ListContainer">
+                        <!--Self.ListsNormal-->                            
+                    </div>                   
+                </div>
+
+                <div id="ListReorderView" <!--ListDivDisplay.ListReorderView-->>      
+
+                    <div class="HeaderTopContainer">
+                        <div class="ListHeaderContainer">
+                            <div class="HeaderLongTop">                               
+                                 <ul id="HeaderIconsOwner" class="HeaderIcons">
+                                     <li title="Add list item" id="AddListItemButton"><a>&nbsp;</a></li>
+                                     <li title="Comments" id="CommentsButton"><a>&nbsp;</a></li> 
+                                     <li title="Add tags" id="TagsButton"><a>&nbsp;</a></li> 
+                                     <li title="Edit list" id="EditListButton"><a>&nbsp;</a></li> 
+                                     <li title="Email list" id="EmailButton"><a>&nbsp;</a></li> 
+                                     <li title="Delete list" id="DeleteButton"><a href="/?todo=DeleteList&amp;ListID=<!--Self.ListID-->">&nbsp;</a></li> 
+                                 </ul>
+                                 <a href="<!--Self.ListURL-->" class="ListNameList">
+                                    <!--Self.Name--> 
+                                </a>
+                            </div>
+                        </div>
+                        <!--Display.ListElement.listdetails.html-->                    
+                    </div>
+                    <ul id="ListOptionsNormalReorg" class="ListOptions">
+                        <li><img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('editTipButton', 'editTipWrapper');" id="editTipButtonReorg" /></li>
+                        <li><a href="javascript:SwitchToReorderMode(0)">Done reorder</a></li>
+                    </ul>
+		            <div id="ListReorderSpaceHolder"></div>
+
+                    <div class="ListContainer">
+                        <!--Self.ListsReorder-->                            
+                    </div>                  
+                    <br />
+                </div> 
+                <script type="text/javascript">
+                    <!--Self.ListsReorderJS-->
+                </script>
+                <div id="editTipWrapper" style="display:none">
+                    <h3>Edit list</h3>
+                    <p>List Central features edit in place functionality for list items, that do not have links
+                    associated with them, and list item descriptions. Click on any of your list's items and item 
+                    descriptions to edit.</p>
+                    <p>When you have finished with your edits, you can save them by clicking the 
+                    save button(<img src="/images/icons/save.png" class="ExImg" alt="Save" />), or by hitting the Ctrl+Alt+S keys
+                    together. You can cancel your edits by either clicking the cancel button 
+                    (<img src="/images/icons/cancel.png" class="ExImg" alt="Cancel" />), or by hitting the escape key (Esc).</p>
+                    <p>If the list item has an associated link, you can still edit the list item
+                    by clicking on the edit button(<img src="/images/icons/edit.png" class="ExImg" alt="Edit" />) to
+                    the left of the list item. This will display a form that enables you to edit any aspect of 
+                    that particular list item.</p>
+                    <input type="button" name="Close" value="Close" id="closeEditTip" class="Button" onclick="doNothing()" />
+                </div>

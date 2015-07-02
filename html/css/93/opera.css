@@ -1,0 +1,154 @@
+
+#TLOLRows{
+        top:-22px;
+}
+
+#TLOLTabLetters { 
+        top: 7px;
+}
+#TagListingRows{
+        position: relative;     
+        top: -30px;
+}
+#searchsubmit {
+	top: 20px;
+}
+#ListItemListItemStatusID{
+        width: 204px;
+        margin-right: 10px;
+}
+#editDescriptionTipButton{
+        left: 5px;
+        top:20px;
+}
+#ListPointsList{
+     margin-top: -3px;   
+}
+#ListDetailsText{
+        margin-top: -15px;
+}
+.ListingSpacer {
+	height: 10px;
+	margin-bottom: -10px;
+}
+.TwitterImage{
+        display: inline;
+}
+
+#ListDetailsText {
+	margin-left:0px;
+	margin-top: 12px;
+}
+#ListReorderSpaceHolder{
+	width: 300px;
+	background: #C0C0C0;
+	float: right;
+}
+
+#Nav fieldset {
+        background-color: #C0C0C0;
+}
+#Nav legend {
+        background: #C0C0C0;
+}
+.NavSpacer {
+        background-color:#C0C0C0;
+}
+textarea#ListItemDescription{
+        margin-top: -15px;
+}
+textarea#Comment {
+        margin-top: -15px;
+}
+.ListOptions{
+        position: relative;
+        top: -10px;
+}
+.EditingTextInput {
+        width: 90%;
+        float: left;
+}
+#CreateListForm span {
+        position: relative;
+        top: -18px;
+}
+#Bio {
+        margin-top: -14px;
+}
+#EditListDetails label {
+        clear:both;
+        width:65px;
+}
+#EditListDetails label#ImagesLabel {
+        clear: both;
+}
+#EditListDetails label#LinksLabel {
+        clear: none;
+}
+
+
+/* border-radius */
+.FloatingBox{
+        border-radius: 5px;
+}
+
+.FloatingBoxInner{
+        border-radius: 5px;
+}
+#Nav fieldset {
+        border-radius: 5px;
+}
+.ListForm{
+        border-radius-bottomleft: 5px;
+        border-radius-bottomright: 5px;
+}
+.HeaderLongTop{
+    border-radius-topleft:5px;
+    border-radius-topright:5px;
+}
+.ListPointsOutter{
+    border-radius-bottomleft:5px;
+    border-radius-bottomright:5px;
+}
+.ListPointsMiddle{
+    border-radius:4px;
+
+}
+.ListPointsInner{
+    border-radius:3px;
+}
+#BoardInput{
+        border-radius:15px;
+}
+#BoardSubmit{
+        border-radius-bottomright:15px;
+        border-radius-topright:15px;
+}
+.RoundAvatarLarge {
+        border-radius: 15px;
+}
+.Notice{
+        border-radius: 5px;
+}
+.HeaderIcons{
+        border-radius:5px;
+}
+.ListFormWrapper{
+        border-radius-bottomleft:5px;
+        border-radius-bottomright:5px;
+}
+.Loading{
+        border-radius: 5px;
+}
+.LoadingBig{
+        border-radius:5px;
+}
+
+.ListingsListPoints  {
+        background: #BDEAFF;
+        border-radius:5px;
+}
+.listingLinks li{
+        border-radius:5px;
+}
+

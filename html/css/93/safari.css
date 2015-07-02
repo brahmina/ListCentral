@@ -1,0 +1,144 @@
+#SearchListing{
+        margin-top: -8px;
+}
+#SearchListingTabLetters{
+        top: 3px;
+}
+.SearchResultsCount{
+        top: 3px;
+}
+
+#TagListing{
+        margin-top: -8px;
+}
+#TagListingTabLetters{
+        top: -2px;
+}
+.TagResultsCount{
+        top: 0px;
+}
+.RecentSearchResults{
+        /*left: 10px;*/
+}
+.tabTop{
+        position: relative;
+        top: -10px;
+}
+.tabMiddle{
+        padding-top: 30px;
+}
+.ListItemTable{
+        margin-top: -15px;
+}
+.ListNormalView li {
+        margin-bottom: 15px;
+}
+.tabMiddle {
+	left: 0px;
+}
+#TLOL{
+        margin-top: 2px;
+}
+#TLOLRows{
+        top:-24px;
+}
+#TLOLTabLetters{
+        top: -5px;
+}
+#TagListingRows{
+        position: relative;
+        top: 15px;
+	margin-bottom: 20px;
+}
+#searchsubmit {
+	top: 20px;
+}
+
+.ListingSpacer {
+	height: 10px;
+	margin-bottom: -10px;
+}
+.TwitterImage{
+        display: inline;
+}
+#CreateEditFormContainer {
+        margin-top:4px;
+}
+#CreateEditTabLetters{
+        top: -8px;
+}
+#SettingsFormContainer {
+        margin-top:4px;
+}
+#SettingsTabLetters{
+        top: -8px;
+}
+#listDescriptionTipButton{
+        margin-right: 318px;
+}
+#ListItemListItemStatusID{
+        margin-right: 7px;
+}
+
+.ListItemDiv{
+        margin-top: -24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.ListItemFormContainer {
+        margin-right: -3px;
+}
+.ListFormGuest{
+        margin-left: 3px;
+}
+.ListFormBottom {
+        position: relative;
+        left: 8px;
+}
+.ListFormBottomGuest{
+        left: 5px;
+}
+#ListMember div .ListItemFormContainer {
+        margin-right: -3px;
+}
+#ListItemListItemStatusID{
+        width: 204px;
+        margin-right: 10px;
+}
+#AmazonChoicesDiv select#ListItemListItemStatusID{
+        margin-right: 0px;
+}
+#editDescriptionTipButton{
+        left: 5px;
+}
+
+#ListFormOwner{
+        left:29px;
+        width: 362px;
+
+        float: right;
+}
+#ListFormGuest{
+        left:41px;
+        width: 362px;
+}
+#ListFormMember{
+        left:29px;
+        width: 362px;
+}
+*/

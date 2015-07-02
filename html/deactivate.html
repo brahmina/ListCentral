@@ -1,0 +1,24 @@
+<div id="Deactivate">
+    <h3>Deactivate Account</h3>
+    <p>Your account has been deactivated. We have maintained your account information so that you can 
+    easily restore your account, should you desire to do so. To re-activate your account, or to request 
+    that we permanantly delete your account information, as per our privacy policy, please contact us 
+    via the <a href="/contact.html">Contact form</a>.</p>
+    
+    <p>We're sad to see you go, and hope that you decide to return.</p>
+    
+    <p>If you have a moment, we would appreciate if you would share with us why you have decided to leave 
+    List Central via the contact form below:</p>
+    
+    <br /><br />
+    <div id="ReasonForLeavingForm">
+        <!--ErrorMessage-->
+        <form name="AddFeedback" method="post" action="<!--SETUP.URL-->">
+            <input type="hidden" name="todo" value="AddFeedback" /> 
+            <input type="hidden" name="Feedback.FeedbackTypeID" value="11" />  
+            <!--ContactEmail-->
+            <div><label>Reason for leaving:</label><textarea name="Feedback.Message" rows="6" cols="45"></textarea></div><br />
+            <div><input type="submit" name="submit" value="Send" id="submit" class="Button" /></div>
+        </form>
+    </div>
+</div>

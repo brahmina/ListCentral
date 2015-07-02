@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.listcentral\.me [NC]
+RewriteRule ^(.*)$ http://listcentral.me/$1 [L,R=301]
+

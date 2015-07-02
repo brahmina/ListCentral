@@ -1,0 +1,15 @@
+A list sent to you from List Central <!--Data.EmailFrom-->
+
+Personal message:
+<!--Data.Message-->
+
+<!--Data.List_Name--> 
+   in <!--Data.List_ListGroup--> 
+   by <!--Data.ListCreator_Username-->
+
+<!--Data.ListBodyTXT-->
+
+View this List on List Central: <!--Data.List_Name--> 
+[<!--Data.List_URL-->]!
+
+Sent from List Central - <!--SETUP.URL-->

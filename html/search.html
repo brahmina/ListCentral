@@ -1,0 +1,47 @@
+<div id="Left">
+    <div id="TopSquareAd">
+        <!--Adserver.getAdvert.3_Page-->
+    </div>
+    <div id="RecentSearches">
+        <!--GetOutputFromFunc.getRecentSearches-->
+    </div>
+    <div id="MiddleSquareAd">
+        <!--Adserver.getAdvert.13_Page-->
+    </div>
+    <div id="TagCloud">
+        <!--GetOutputFromFunc.get3DTagCloud-->
+    </div>
+    
+</div>
+
+<div id="HomeContent">
+    <div id="SearchListing">
+    <span class="tabLetters" id="SearchListingTabLetters">search results for: "<!--CGI.Query-->"</span> 
+    <span class="SearchResultsCount"><!--Self.ResultsCount--></span>
+    <div class="listing">
+        <ul class="listingLinks">
+            <li><a href="">results</a></li> 
+        </ul> 
+        <div class="listingMiddle" id="SearchListingMiddle">
+            <div class="ListingSpacer"></div>  
+            <!--ErrorMessages-->
+            <form name="AdvancedSearch" method="post" id="AdvancedSearchForm" action="/search.html">
+                <input type="hidden" name="todo" value="SearchLists" />
+                <input type="text" name="Query" value="<!--CGI.Query-->" />
+                <input type="submit" name="Submit"  class="Button" value="Search Again" />
+            </form>
+            <!--Self.SearchResultsRows-->
+        </div>
+    </div>
+    <center>
+        <!--Self.Pagenation-->
+    </center>
+    </div>
+    <br />
+
+</div>
+
+
+<div id="HomeBottomHorizontalAd">
+    <!--Adserver.getAdvert.19_page-->
+</div>

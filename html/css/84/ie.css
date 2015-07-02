@@ -1,0 +1,54 @@
+#UploadedImage{
+        width: expression( document.body.clientWidth > 300 ? "300px" : "auto" ); /* sets max-width for IE */
+}
+#UploadedImage2{
+        width: expression( document.body.clientWidth > 200 ? "200px" : "auto" ); /* sets max-width for IE */
+}
+.ListItemsSummaryImages li {
+        width: expression( document.body.clientWidth > 166 ? "166px" : "auto" ); /* sets max-width for IE */
+}
+#ListComments{
+        height: expression( this.scrollHeight > 285 ? "285px" : "auto" ); /* sets max-height for IE */
+}
+#ListCommentsGuest{
+        height: expression( this.scrollHeight > 285 ? "285px" : "auto" ); /* sets max-height for IE */
+}
+.ListFormDiv {
+        height: expression( this.scrollHeight < 106 ? "106px" : "auto" ); /* sets min-height for IE */
+}
+.ListImage{
+        width: expression( document.body.clientWidth < 412 ? "412px" : "auto" ); /* sets max-width for IE */
+}
+#mainImage{
+        height: expression( this.scrollHeight < 552 ? "552px" : "auto" ); /* sets min-height for IE */
+}
+#content{ 
+        height: expression( this.scrollHeight < 656 ? "656px" : "auto" ); /* sets min-height for IE */
+}
+.Spinner {
+        width: expression( document.body.clientWidth > 300 ? "300px" : "auto" ); /* sets max-width for IE */
+        height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); /* sets max-height for IE */
+}
+#CreateEditTabWindow {
+        height: expression( this.scrollHeight < 390 ? "390px" : "auto" ); /* sets min-height for IE */
+}
+.ListForm{
+        height: expression( this.scrollHeight < 100 ? "100px" : "auto" ); /* sets min-height for IE */
+}
+.ListFormGuest{
+        height: expression( this.scrollHeight < 83 ? "83px" : "auto" ); /* sets min-height for IE */
+}
+#UserSpaceTop{
+        height: expression( this.scrollHeight < 110 ? "110px" : "auto" ); /* sets min-height for IE */
+}
+.tabTop{
+        height: expression( this.scrollHeight < 360 ? "360px" : "auto" ); /* sets min-height for IE */
+}
+.tabMiddle{
+        height: expression( this.scrollHeight < 120 ? "120px" : "auto" ); /* sets min-height for IE */
+}
+
+.ListingListNameOverImage{
+	width: expression( document.body.clientWidth > 166 ? "166px" : "auto" ); /* sets max-width for IE */
+}
+

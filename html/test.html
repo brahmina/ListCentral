@@ -1,0 +1,788 @@
+LAYER 1 ON TOP:<br />
+<div style="position:relative; font-size:50px; z-index:2;">LAYER 1</div>
+<div style="position:relative; top:-50px; left:5ox; color:red; font-size:80px; z-index:1">LAYER 2</div>
+
+LAYER 2 ON TOP:<br />
+<div style="position:relative; font-size:50px; z-index:3;">LAYER 1</div>
+<div style="position:relative; top:-50px; left:5px; color:red; font-size:80px; z-index:4">LAYER 2</div>
+
+<br /><br /><br /><br /><br /><br /><br />
+
+<script>
+function encode64(input) {
+    var keyStr = "ABCDEFGHIJKLMNOP" +
+    "QRSTUVWXYZabcdef" +
+    "ghijklmnopqrstuv" +
+    "wxyz0123456789+/" +
+    "=";
+    input = escape(input);
+    var output = "";
+    var chr1, chr2, chr3 = "";
+    var enc1, enc2, enc3, enc4 = "";
+    var i = 0;
+    
+    do {
+    chr1 = input.charCodeAt(i++);
+    chr2 = input.charCodeAt(i++);
+    chr3 = input.charCodeAt(i++);
+    
+    enc1 = chr1 >> 2;
+    enc2 = ((chr1 & 3));// <> 4);
+    enc3 = ((chr2 & 15));// <> 6);
+    enc4 = chr3 & 63;
+    
+    if (isNaN(chr2)) {
+    enc3 = enc4 = 64;
+    } else if (isNaN(chr3)) {
+    enc4 = 64;
+    }
+    
+    output = output +
+    keyStr.charAt(enc1) +
+    keyStr.charAt(enc2) +
+    keyStr.charAt(enc3) +
+    keyStr.charAt(enc4);
+    chr1 = chr2 = chr3 = "";
+    enc1 = enc2 = enc3 = enc4 = "";
+    } while (i < input.length);
+    
+    return output;
+}
+encode64('kahsiowqjd829ijdashgbfiu');
+</script>
+
+Hiya!
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<style>
+#innerDivID{
+    position: relative;
+    z-index: 10;
+}
+.pushbehind{
+    position: relative;
+    z-index: 0;
+}
+</style>
+
+<div id='innerDivID'><div class='FloatingBox'>
+    <div class='FloatBoxHandle' id='FloatBoxHandle'></div>
+    <div class='FloatingBoxInner'>
+        Some stuff here
+    </div>
+</div></div>
+<div class="pushbehind">
+    <object width="425" height="344">
+        <param name="movie" value="http://www.youtube.com/v/yXjHARlf6gs&hl=en_GB&fs=1&"></param>
+        <param name="allowFullScreen" value="true"></param>
+        <param name="allowscriptaccess" value="always"></param>
+        <param name="wmode" value="transparent"> </param>
+        <embed wmode="transparent" src="http://www.youtube.com/v/yXjHARlf6gs&hl=en_GB&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed>
+    </object>
+</div>
+
+
+<script>
+
+new Drag.Move('innerDivID', {handle: 'FloatBoxHandle'});
+</script>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<style>
+
+#outter{
+    width: 561px;
+    height: 461px;
+}
+#inner{
+    width: 550px;
+    height: 450px;
+}
+.tabsNavUnderline{
+    background:#BDEAFF none repeat scroll 0 0;
+    float:right;
+    height:3px;
+    left:50px;
+    position:relative;
+    top:-3px;
+    width:6px;
+}
+.tabsWrapper{
+    background: #121d52;    
+    -moz-border-radius:5px;
+    padding:1px;
+}
+.tabsMain{
+    background: #f8f8ff;    
+    border: 3px solid #bdeaff;
+    -moz-border-radius:5px;
+    margin: 3px;
+    width: 100%;
+    height: 100%;
+}
+.tabNav{
+    float:right;
+    left:6px;
+    list-style-type:none;
+    margin:2px 0;
+    position:relative;
+    top:-22px;
+}
+
+.tabNav li{
+    float:left;
+    height:13px;
+    padding:5px 1px 3px 2px;
+    text-align:center;
+    width:83px;
+}
+.tabNav li a, .tabNav li a:hover{
+    display:block;
+    font-weight:normal;
+    height:16px;
+    margin:-3px 0 0 0;
+    padding-top:2px;
+    width:81px;
+}
+
+.ztabsFirst{
+    background: #bdeaff;
+    padding-left:1px;
+
+    border-top: 3px solid #121d52;
+    border-right: 3px solid #121d52;
+    border-bottom: 3px solid #bdeaff;
+    border-left: 3px solid #121d52;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+    -moz-border-radius-bottomLeft: 8px;
+}
+.ztabsFirst a{
+    background: #1d687a;
+    color: #ffffff;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+    -moz-border-radius-bottomLeft: 8px;
+}
+.ztabsFirst a:hover{
+    background: #f8f8ff;
+    color: #121d52;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+    -moz-border-radius-bottomLeft: 8px;
+}
+.ztabs{
+    background: #bdeaff;
+
+    border-top: 3px solid #121d52;
+    border-right: 3px solid #121d52;
+    border-bottom: 3px solid #bdeaff;
+    border-left: 3px solid #121d52;
+    
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+}
+.ztabs a{
+    background: #1d687a;
+    color: #ffffff;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+}
+.ztabs a:hover{
+    background: #f8f8ff;
+    color: #121d52;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+}
+.ztabsLast{
+    background: #bdeaff;
+
+    border-top: 3px solid #121d52;
+    border-right: 3px solid #121d52;
+    border-bottom: 3px solid #bdeaff;
+    border-left: 3px solid #121d52;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+
+}
+.ztabsLast a {
+    background: #1d687a;
+    color: #ffffff;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+}
+.ztabsLast a:hover {
+    background: #f8f8ff;
+    color: #121d52;
+
+    -moz-border-radius-topLeft: 8px;
+    -moz-border-radius-topRight: 8px;
+}
+</style>
+<br /><br /><br />
+<div class="tabsWrapper" id="outter">
+    <div class="tabsMain" id="inner">
+        <ul id="CreateEditTabLinks" class="tabNav">
+            <li id="CreateEditNavLI_CreateList" class="ztabsFirst"><a href="javascript:switchCreateEdit('CreateList')">Create List</a></li> 
+            <li id="CreateEditNavLI_ListGroups" class="ztabs"><a href="javascript:switchCreateEdit('ListGroups')">List Groups</a></li> 
+            <li id="CreateEditNavLI_ListGroup" class="ztabs"><a href="javascript:switchCreateEdit('ListGroups')">Somthing</a></li> 
+            <li id="CreateEditNavLI_StatusSets" class="ztabsLast"><a href="javascript:switchCreateEdit('StatusSets')">Status Sets</a></li>  
+        </ul> 
+        <div class="tabsNavUnderline"></div>
+    </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<script type="text/javascript">
+window.addEvent('domready', function() {
+	var dragElement = $('drag_me');
+	var dragContainer = $('drag_cont');
+	var dragHandle = $('drag_me_handle');
+	var dropElement = $$('.draggable');
+	var startEl = $('start');
+	var completeEl = $('complete');
+	var dragIndicatorEl = $('drag_ind');
+	var enterDrop = $('enter');
+	var leaveDrop = $('leave');
+	var dropDrop = $('drop_in_droppable'); 
+ 
+	var myDrag = new Drag.Move(dragElement, {
+	    // Drag.Move options
+		droppables: dropElement,
+		container: dragContainer,
+		// Drag options
+		handle: dragHandle,
+		// Drag.Move Events
+		onDrop: function(el, dr) {
+			if (!dr) { }
+ 
+        	        else {
+				dropDrop.highlight('#FB911C'); //flashes orange
+				el.highlight('#fff'); //flashes white
+				dr.highlight('#667C4A'); //flashes green
+			};
+		},
+		onLeave: function(el, dr) {
+			leaveDrop.highlight('#FB911C'); //flashes orange
+		},
+		onEnter: function(el, dr) {
+			enterDrop.highlight('#FB911C'); //flashes orange
+		},
+		// Drag Events
+		onStart: function(el) {
+			startEl.highlight('#FB911C'); //flashes orange
+		},
+		onDrag: function(el) {
+			dragIndicatorEl.highlight('#FB911C'); //flashes orange
+		},
+		onComplete: function(el) {
+			completeEl.highlight('#FB911C'); //flashes orange
+		}
+	});
+});
+</script>
+<style>
+/* this is generally a good idea */
+body {
+	margin: 0;
+	padding: 0;
+}
+ 
+/* make sure the draggable element has "position: absolute" 
+and then top and left are set for the start position
+*/ 
+#drag_me {
+	width: 100px;
+	height: 100px;
+	background-color: #333;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ 
+ 
+#drop_here {
+	width: 200px;
+	height: 200px;
+	background-color: #eee;
+}
+ 
+/* make sure the drag container is set with position relative */
+#drag_cont {
+	background-color: #ccc  ;
+	height: 600px ;
+	width: 500px;
+	position: relative;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+ 
+ 
+#drag_me_handle {
+	width: 100%;
+	height: auto;
+	background-color: #666;
+}
+ 
+#drag_me_handle span {
+	display: block;
+	padding: 5px;
+}
+ 
+ 
+.indicator {
+	width: 100%;
+	height: auto;
+	background-color: #0066FF;
+	border-bottom: 1px solid #eee;
+}
+ 
+.indicator span {
+	padding: 10px;
+	display: block;
+}
+ 
+.draggable {
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+    }
+</style>
+
+<div id="drag_cont">
+    <div id="start" class="indicator"><span>Start</span></div>
+    <div id="drag_ind" class="indicator"><span>Drag</span></div>
+    <div id="complete" class="indicator"><span>Complete</span></div>
+    <div id="enter" class="indicator"><span>Enter Droppable Element</span></div>
+    <div id="leave" class="indicator"><span>Leave Droppable Element</span></div>
+    <div id="drop_in_droppable" class="indicator"><span>Dropped in Droppable Element</span></div>
+    <div id="drag_me">
+        <div id="drag_me_handle"><span>handle</span></div>
+    </div>
+ 
+    <div id="drop_here" class="draggable"></div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+<style>
+.ListItemIcons{
+        list-style-type: none;
+        margin: 8px 0 30px -40px;
+}
+.ListItemIcons li{
+        cursor:pointer;
+        float: left;
+        margin: 0 5px 0 0;
+}
+.ListItemIcons li a{
+        background:url(/images/icons/listItemSprite.png) no-repeat;
+        margin:0 -3px;
+        padding:5px 11px;
+        color: transparent;
+}
+#EditLinkButton a{
+    background-position: 0px 0px;
+}
+#EditLinkButton a:hover{
+    background-position: -60px 0px;
+}
+#EditDescriptionButton a{
+    background-position: 0px -30px;
+}
+#EditDescriptionButton a:hover{
+    background-position: -60px -30px;
+}
+#EditDateButton a{
+    background-position: 0px -60px;
+}
+#EditDateButton a:hover{
+    background-position: -60px -60px;
+}
+#EditAmazonButton a{
+    background-position: 0px -90px;
+}
+#EditAmazonButton a:hover{
+    background-position: -60px -90px;
+}
+#EditImageButton a{
+    background-position: 0px -120px;
+}
+#EditImageButton a:hover{
+    background-position: -60px -120px;
+}
+#EditEmButton a{
+    background-position: 0px -150px;
+}
+#EditEmButton a:hover{
+    background-position: -60px -150px;
+}
+#EditCCImageButton a{
+    background-position: 0px -180px;
+}
+#EditCCImageButton a:hover{
+    background-position: -60px -180px;
+}
+
+
+#EditListItemIcons{
+        float:left;
+}
+#EditListItemExtrasIcons{
+        float:right;
+}
+
+</style>
+<ul id="EditListItemIcons" class="ListItemIcons">
+    <li id="EditLinkButton" title="Edit link"><a>1</a></li>
+    <li id="EditDescriptionButton" title="Edit description"><a>1</a></li> 
+    <li id="EditDateButton" title="Edit date & email notifications"><a>1</a></li> 
+</ul>
+<ul id="EditListItemExtrasIcons" class="ListItemIcons">
+    <li id="EditAmazonButton" title="Edit Amazon link"><a class="ama" href="/Utilities/Amazon/send_request.html?ajax=1">1</a></li> 
+    <li id="EditImageButton" title="Edit image"><a>1</a></li> 
+    <li id="EditEmButton" title="Edit embedded content"><a>1</a></li> 
+    <li id="EditCCImageButton"  title="Edit Creative Commons image"><a class="cci" href="/Utilities/CCImage/send_request.html?ajax=1"></a></li> 
+ </ul>
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<style>
+#HeaderIcons{
+        -moz-border-radius:5px;
+        -webkit-border-radius: 5px;
+        background:white;
+        float:right;
+        height:17px;
+        list-style-position:outside;
+        list-style-type:none;
+        margin-right:0;
+        margin-top:5px;
+        padding-left:4px;
+        padding-right:0;
+        padding-top:0;
+        width:108px;
+}
+#HeaderIcons li{
+        cursor:pointer;
+        float:left;
+        
+        margin:2px 3px 0 0;
+       
+        
+}
+#HeaderIcons a{
+        background:url(/images/icons/actionSprite.png)no-repeat;
+        margin:0 -1px;
+        padding:0 5px;
+        color: transparent;
+}
+#HeaderIcons a span{
+        display: none;
+}
+
+#AddListItemButton a{
+    background-position: 0px 0px;
+}
+#AddListItemButton a:hover{
+    background-position: -18px 0px;
+}
+#CommentsButton a{
+    background-position: 0px -36px;
+}
+#CommentsButton a:hover{
+    background-position: -18px -36px;
+}
+#TagsButton a{
+    background-position: 0px -108px;
+}
+#TagsButton a:hover{
+    background-position: -18px -108px;
+}
+#EditListButton a{
+    background-position:  0px -54px;
+}
+#EditListButton a:hover{
+    background-position: -18px -54px;
+}
+#EmailButton a{
+    background-position: 0px -72px;
+}
+#EmailButton a:hover{
+    background-position: -18px -72px;
+}
+#DeleteButton a{
+    background-position: 0px -18px;
+}
+#DeleteButton a:hover{
+    background-position: -18px -18px;
+}
+</style>
+<ul id="HeaderIcons">
+     <li title="Add list item" id="AddListItemButton"><a>1</a></li>
+     <li title="Comments" id="CommentsButton"><a>1</a></li> 
+     <li title="Add tags" id="TagsButton"><a>1</a></li> 
+     <li title="Edit list" id="EditListButton"><a>1</a></li> 
+     <li title="Email list" id="EmailButton"><a>1</a></li> 
+     <li title="Delete list" id="DeleteButton"><a href="/?todo=DeleteList&ListID=232">1</a></li> 
+ </ul>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<style>
+#notify{
+    float: right;
+}
+</style>
+<div class="FloatingBox">
+    <div id="login" class="FloatingBoxInner">
+        <form method="post" name="login" onsubmit="return validateForm(this);" action="/login.html">
+          <h3>Login to List Central</h3>
+          <input type="hidden" name="todo" value="Login" />
+          <!--Self.LoginErrorMessages-->
+          <label for ="Users.Username">Username:</label><br /><input type="text" name="Users.Username" value="" class="TextInput" id="Username"  /><br /> 
+          <label for ="Users.Password">Password:</label><br /><input type="password" name="Users.Password" value="" class="TextInput" id="Password"  />
+          <br />
+          <input type="checkbox" name="RememberMe" id="rememberme" tabindex="3" />Remember me<br />
+          <input type="submit" name="Submit" value="Login" class="Button" id="loginsubmit" tabindex="4" />  
+          <input type="button" name="Cancel" value="Cancel" id="logincancel" class="Button" onclick="javascript:hideLogin()" /><br />    
+        
+          <a href="/forgotpassword.html">Forgot Password?</a>
+        </form>
+    </div>
+</div>
+
+
+<p>Most power connectors are damaged by accident:  falling, tripping over a wire, etc.  If the DC-IN power connector is no longer connected to the motherboard, the power adaptor can no longer supply power to the laptop, so the battery supplies power until it dies.</p>
+
+<p>When the DC power jack is loose, the most important step is to stop wiggling it and get it replaced.  Most laptops draw quite a lot of power, typically 3.5 to 6A.  If the DC power connector is loose under these conditions, the harder it is to fix, making it impossible in some cases.</p>
+
+<p>We service laptops with bad/broken DC power connectors by replacing them.  This is much cheaper than replacing the laptop's mainboard.  Our current success rate for this repair is over 95%.  However, there are rare cases when the mainboard is damaged beyond repair.  Unfortunately it is impossible to estimate that before disassembling the laptop and removing the DC connector.</p
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<style>
+.RoundAvatarLarge{
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: #ffffff;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #121d52;
+}
+</style>
+<div class="RoundAvatarLarge" style="background:url(http://www.gravatar.com/avatar.php?gravatar_id=717b42c329d4d3405994e64f0bed2187&default=&size=100) no-repeat;"/>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<style>
+.HeaderTopContainer{
+    width: 794px;
+}
+.HeaderLongTop{
+    background: #1d687a;
+    border-left: #121d52 10px solid;
+    border-right: #bdeaff 10px solid;
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-topright:5px;
+
+    color: #ffffff;
+    font-size: 18px;
+    padding:0 5px;
+
+    width: 100%;
+    min-height: 24px;
+}
+.ListDetailsTopBorder{
+    background:#121d52;
+    height: 3px;
+    width: 100%;
+
+    border-left:20px solid #121D52;
+    border-right:10px solid #BDEAFF;
+}
+.ListPointsOutter{
+    background: #121d52;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+
+    width: 77px;
+    height: 67px;
+    
+}
+.ListPointsMiddle{
+    background: #1d687a;
+    -moz-border-radius:4px;
+
+    margin-left:9px;
+
+    width: 65px;
+    height: 63px;
+}
+.ListPointsInner{
+    background: #f8f8ff;
+    -moz-border-radius:3px;
+
+    margin-left:4px;
+
+    width: 58px;
+    height: 58px;
+
+    float:left;    
+}
+.ListPointsInner p{
+    color:#121D52;
+    font-size:18px;
+    text-align:center;
+    margin:6px 0;
+}
+</style>
+<div class="HeaderTopContainer">
+
+    <div class="ListHeaderContainer">
+        <div class="HeaderLongTop">
+            <a class="ListNameList" href="/list/blogs/music_blogs/77/236/lists.html">  Music Blogs </a>
+        </div>
+    </div>
+    <div class="ListDetails">
+        <div class="ListDetailsTopBorder"></div>
+        <div class="ListPointsOutter">
+            <div class="ListPointsMiddle">
+                <div class="ListPointsInner">
+                     <p>14 points</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br /><br /><br />
+<object width="420"><param name="movie" value="http://www.youtube.com/v/_ZSbC09qgLI&hl=en_GB&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/_ZSbC09qgLI&hl=en_GB&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="420"></embed></object>
+
+<div>
+    %20setTimeout(%20function()%7Bdocument.open()%3Bdocument.write(%20window.parent%5B%20%22_cke_htmlToLoad_DescriptionWYSIWYG%22%20%5D%20)%3Bdocument.close()%3Bwindow.parent%5B%20%22_cke_htmlToLoad_DescriptionWYSIWYG%22%20%5D%20%3D%20null%3B%7D%2C%200%20)%20)
+</div>
+
+<script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+var ckedit;
+
+function getthedata(){
+    
+    var data = CKEDITOR.instances["DescriptionWYSIWYG"].getData();
+    alert("data: " + data);
+}
+
+
+</script>
+
+<div id='AddDescriptionDiv'><div class='ListItemExtraLabel'>Description:</div>
+<a href='javascript:removeListItemExtra(\"Add\", \"Description\")' class='lildelete' title='Remove'><img src='/images/icons/lildelete.png' alt='Remove' /></a><br />
+<textarea id='DescriptionWYSIWYG'></textarea>
+<div class='clear'></div><div>
+
+<br />
+<input type="button" onclick="javascript:getthedata();" value="Get it"/>
+
+<script type="text/javascript">
+ckedit = CKEDITOR.replace( 'DescriptionWYSIWYG',    
+
+{
+    uiColor: '#1d687a',
+    resize_enabled: false,
+    toolbarCanCollapse: false,
+    width: "292px",
+    toolbar :
+    [
+        [ 'Bold','Italic','Underline','Strike','-','Subscript','Superscript', '-', 
+          'NumberedList', 'BulletedList', '-', 'Link', 'Unlink', '-',
+           'TextColor', 'SpecialChar', '-', 'Undo','Redo' ]
+    ]
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>        
+.FloatingBoxTopLeft {
+    /* Define width of box here - Minimum 291px */
+        background: url(/images/1/tl.png) no-repeat top left;
+        width:291px;
+        
+}
+.FloatingBoxTopRight {
+        background:transparent url(/images/1/tr.png) no-repeat scroll right top;        
+}
+.FloatingBoxBottomLeft {
+        background:transparent url(/images/1/bl.png) no-repeat scroll left bottom;
+
+}
+.FloatingBoxBottomRight {
+    /* Define height of box here - Minimum 293px */
+        background:transparent url(/images/1/br.png) no-repeat scroll right bottom;
+        height: 293px;
+}
+
+#login{
+        background:red none repeat scroll 0 0;
+        color:#121D52;
+        display:block;
+        left:31px;
+        min-height:230px;
+        position:relative;
+        text-decoration:none;
+        top:25px;
+        width:227px;
+}
+#login  p {
+        margin: 10px;
+}
+#login form {
+    margin-bottom:20px;
+    margin-left:24px;
+    width:250px;
+}
+
+</style>
+<br /><br />        
+        <div class="FloatingBoxTopLeft">
+            <div class="FloatingBoxTopRight">
+                <div class="FloatingBoxBottomLeft">
+                    <div class="FloatingBoxBottomRight">
+                        <div id="login">
+                            stuff
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>

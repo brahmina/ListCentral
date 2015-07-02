@@ -1,0 +1,172 @@
+<div id="SettingsFormContainer">
+    <span class="tabLetters" id="SettingsTabLetters">edit settings</span>
+    <div class="tabTop">
+        <ul class="tabLinks">
+            <li class="tabsFirst<!--NavOnSettingsTab.BasicInfo-->" id="SettingsNavLI_BasicInfo"><a href="javascript:switchSettings('BasicInfo')">basic info</a></li> 
+            <li class="tabs<!--NavOnSettingsTab.AboutMe-->" id="SettingsNavLI_AboutMe"><a href="javascript:switchSettings('AboutMe')">about me</a></li> 
+            <li class="tabs<!--NavOnSettingsTab.Avatar-->" id="SettingsNavLI_Avatar"><a href="javascript:switchSettings('Avatar')">avatar</a></li>  
+            <li class="tabs<!--NavOnSettingsTab.Theme-->" id="SettingsNavLI_Theme"><a href="javascript:switchSettings('Theme')">theme</a></li> 
+            <li class="tabs<!--NavOnSettingsTab.Emailing-->" id="SettingsNavLI_Emailing"><a href="javascript:switchSettings('Emailing')">emailing</a></li>
+            <li class="tabsLast<!--NavOnSettingsTab.Privacy-->" id="SettingsNavLI_Privacy"><a href="javascript:switchSettings('Privacy')">privacy</a></li>
+        </ul> 
+        <div class="tabMiddle" id="SettingsTabWindow">
+           <div class="clear"></div>
+ 
+<!------------------------------------------------>
+
+        <div id="BasicInfo" style="<!--DisplaySettingsTab.BasicInfo-->">
+            <form id="EditBasicInfo" method="post" action="/settings.html">
+        
+            <input type="hidden" name="todo" id="todoBI" value="EditBasicInfo" />
+            <!--Self.ErrorMessagesEBI-->
+            <p>To edit your basic information, password, or to deactivate your account, we require that you <b>re-enter your current password</b>.</p>
+            <label for="PasswordVerify" id="PasswordVerifyLabel">Verify password</label><input type="password" id="PasswordVerify" name="PasswordVerify" class="TextInput" value="" /><br /><br >
+            <div id="BasicInfoLeft">
+                <p>Edit your account information:</p>
+                <label for="UsernameEdit">Username</label><input type="text" id="UsernameEdit" name="User.Username" value="<!--ThisUser.Username-->" class="TextInput" /><br />
+                <label for="Email">Email</label><input type="text" id="Email" name="User.Email" value="<!--ThisUser.Email-->" class="TextInput" /><br />
+                <label for="Name">Name</label><input type="text" id="Name" name="User.Name" value="<!--ThisUser.Name-->" class="TextInput" /><br />
+            </div>
+            <div id="BasicInfoRight">
+                <p>Change your password:</p>
+                <label for="Password1">Password</label><input type="password" id="Password1" name="User.Password1" value="" class="TextInput" /><br />
+                <label for="Password2">Re-enter Password</label><input type="password" id="Password2" name="User.Password2" value="" class="TextInput" /><br />
+            </div>         
+            <div class="clear"></div>
+            <input type="submit" value="Edit" id="basicinfoedit" class="Button" />
+            </form>
+            <form method="post" id="DeactivateAccount" action="/deactivate.html" onsubmit="return confirmDeactivate();">
+                <input type="hidden" name="todo" id="todo" value="DeactivateAccount" />
+                <input type="hidden" name="PasswordVerifyHidden" id="PasswordVerifyHidden" value="" />
+                <input type="submit" value="Deactivate" id="deactivateaccount" class="Button" name="DeactivateAccount" />
+            </form>            
+    	</div> 
+
+
+        <div id="AboutMe" style="<!--DisplaySettingsTab.AboutMe-->">
+            <form method="post" id="EditAboutMe" action="/settings.html" onsubmit="return processForm(this, 'List')">
+            <input type="hidden" name="todo" id="todoAM" value="EditAboutMe" />
+            <p id="AboutMeParag">Tell the List Central community about yourself. Everything on this tab is completely optional!</p><br />
+            <!--Self.ErrorMessagesEAM-->
+            <table><tr><td valign="top" class="AboutMeLeft">
+                <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('bioTipButton', 'bioTipWrapper');" id="bioTipButton" />
+                <label for="Bio" id="bioLabel">Bio</label><textarea id="Bio" name="UserSettings.Bio" rows="4" cols="40"><!--ThisUser.Bio--></textarea><br />
+                <label for="Websites">Website(s)</label><textarea id="Websites" name="UserSettings.Websites" rows="4" cols="40"><!--ThisUser.Websites--></textarea><br />
+            </td><td valign="top" class="AboutMeRight">
+                <label for="Gender">Gender</label><!--ThisUser.Select.Gender--><br />
+                <label for="Country">Country</label><!--ThisUser.Select.Country--><br />
+                <label for="Region">Region</label><div id="Regions"><!--ThisUser.Select.Region--></div>
+                <label for="City" style="width:58px">City</label><input type="text" id="City" name="UserSettings.City" value="<!--ThisUser.City-->" class="TextInput" /><br />
+            </td></tr></table>
+            <input type="submit" value="Edit" id="aboutmeedit" class="Button" />
+    		</form>
+    	</div>
+
+
+        <div id="Avatar" style="<!--DisplaySettingsTab.Avatar-->">
+    		<form method="post" id="EditAvatar" action="/settings.html" onsubmit="return processForm(this, 'List')">
+    	    <input type="hidden" name="todo" id="todoA" value="EditAvatar" />
+            <p>Specify the avatar you would like to use on List Central, you have two options:</p>
+            <h3 id="AvatarUseLabel">Use my:</h3>
+            <!--Self.ErrorMessagesEA-->
+            <div id="EditGravatarDiv">
+                <input type="radio" name="GravatarOrAvatar" id="UseAvatar1" value="G" <!--ThisUser.GravatarSelected--> />
+                <b>Gravatar: </b><a href="http://www.gravatar.com/">What's this?</a><br />
+                <img src="<!--ThisUser.Gravatar-->" class="FormAvatar" id="FormGravatar" />
+                <span id="GravatarEmailLabel">Gravatar Email:</span><br /><br >
+                <input type="text" id="GravatarEmail" name="GravatarEmail" value="<!--ThisUser.GravatarEmail-->" class="TextInput" /><br />
+            </div>
+            <div id="AvatarOr">
+                <img src="/images/<!--Self.ThemeID-->/or.png" alt="Or" height="200" />
+            </div>
+            <div id="EditAvatarDiv">
+                <script type="text/javascript">
+                LCAvatar = '<!--ThisUser.AvatarLink-->'; 
+                </script>
+                <input type="radio" name="GravatarOrAvatar" id="UseAvatar2" value="A" <!--ThisUser.AvatarSelected--> />
+                <b>List Central Avatar:</b><br />
+                <img src="<!--ThisUser.AvatarLink-->" class="FormAvatar" id="AvatarImage" />
+                <div id="AvatarImageImage" style="display:none">
+                    <input type='hidden' name='ImageID' id="UploadedImageID" value="" />
+                    <a href="javascript:cancelImageUploaded(0)" id="RemoveImageLink">Remove Image</a><br />
+                </div>
+                <div id="ImageFormElement">
+                    <div id="AvatarImageForm" style="display:block">
+                        <input type="button" name="OpenFileUploader" value="Upload Avatar" class="Button" id="uploadimagesubmit" onclick="javascript:openWindow('upload_image.html?isAvatar=1', 'UploadImage','height=486,width=430,status=yes,toolbar=no,scrollbars=yes');" />
+                    </div>                    
+                </div>
+            </div>
+            <div id="EditAvatarSubmitDiv">
+                <input type="submit" value="Edit" id="avataredit" class="Button" />
+            </div>
+    		</form>
+    	</div>
+
+
+        <div id="Theme" style="<!--DisplaySettingsTab.Theme-->">
+    		<form method="post" action="/settings.html">
+            <!--Self.ErrorMessagesET-->
+            <input type="hidden" name="todo" id="todoT" value="EditTheme" />
+            <p>Change your List Central theme:</p>
+            <label for="ThemeSelect">Theme:</label><!--ThisUser.Select.Theme--><br />
+            <label for="ThemeVisualization">Preview:</label>
+            <div id="ThemeVisualization">
+            
+            </div>
+            <div class="clear"></div>
+            <input type="submit" value="Update" class="Button" id="editsitesettings" />
+    		</form>
+            <script type="text/javascript">
+            <!--DBObj.Theme.getThemeVisuals-->
+            setThemeVisuals(<!--Self.ThemeID-->);
+            </script>
+    	</div>
+
+
+        <div id="Emailing" style="<!--DisplaySettingsTab.Emailing-->">
+    		<form  method="post" action="settings.html" onsubmit="return processForm(this, 'List')">
+            <!--Self.ErrorMessagesEE-->
+            <input type="hidden" name="todo" id="todoES" value="EditEmailing" />
+            <p>We don't want to bother you with all sorts of emails that you don't ask for! We may on occasion have
+               a List Central newsletter to let our users know what's new on List Central. Please indicate your email
+               preferrences below:</p>
+                <br />
+            <label for="ReceiveUpdateEmailsSelect">Send me occasional emails with List Central news and promotions:</label><!--ThisUser.Select.ReceiveUpdateEmails--><br />
+            <label for="ReceiveNotificationsSelect">Send me notification emails when other members comment on my lists or post on my board:</label><!--ThisUser.Select.ReceiveNotifications--><br />
+            
+            <input type="submit" value="Update" id="editemialsettings" class="Button" />
+    		</form>
+    	</div>
+
+        <div id="Privacy" style="<!--DisplaySettingsTab.Privacy-->">
+            <p id="PrivacyBlurb">We at List Central value your privacy highly, because we value our own privacy. We will never willingly 
+            disclose your information without your express permission. For more about privacy at List Central, please 
+            see our <a href="privacy.html">Privacy Policy</a>. <p>
+    		<form method="post" onsubmit="return processForm(this, 'List')">
+			<!--Self.ErrorMessagesEP-->
+            <input type="hidden" name="todo" id="todoPS" value="EditPrivacy" />
+            <p>Edit your List Central privacy settings:</p>
+            <label for="PrivacyFullName">Display my full name:</label><!--ThisUser.Select.PrivacyFullName--><br />
+            <label for="PrivacyGender">Display my gender:</label><!--ThisUser.Select.PrivacyGender--><br />
+            <label for="PrivacyAge">Display my age:</label><!--ThisUser.Select.PrivacyAge--><br />
+            <label for="PrivacyLocation">Display my location:</label><!--ThisUser.Select.PrivacyLocation--><br />
+            <input type="submit" value="Edit" id="editsitesettings" class="Button" />
+    		</form>
+    	</div>
+
+<!------------------------------------------------>
+
+
+        </div> <!-- tabMiddle-->
+    <div class="tabBottom"></div>
+    </div><!-- tabTop -->
+</div>
+<div id="SettingsAd">
+    <!--Adserver.getAdvert.21_page-->
+</div>
+<div id="bioTipWrapper" style="display:none">
+    <h3>User biography</h3>
+    <p>You may use the folowing html tags within your bio:</p>
+    <!--Display.Page.allowedhtml.html-->
+    <input type="button" class="Button" name="Close" value="Close" id="closeBioTip" onClick='doNothing()' />
+</div>

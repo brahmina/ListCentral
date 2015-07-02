@@ -1,0 +1,50 @@
+    <form id="CCImageChoiceSelect" onsubmit="return false">
+    <input type="hidden" name="todo" id="todoSet" value="SetCCImageChoice" />
+    <input type="hidden" name="ListItem.ListID" id="ChooseListID" value="<!--CGI.ListItem.ListID-->" />
+    <input type="hidden" name="action" id="ChooseAction" value="<!--CGI.action-->" />
+    <div id="CCImageChoices">
+        <!--ErrorMessages-->
+        <h4>Creative Commons image choices</h4>
+        <p>List Central gives to the ability to easily include images in your lists from the <a href="http://creativecommons.org/" target="_blank">Creative Commons</a> 
+        pool at Flickr via the <a href="http://www.flickr.com/services/api/" target="_blank">Flickr API</a>. </p>
+        <p>Please select one from the following choices to go with the item "<!--CGI.ListItem.Name-->" 
+        in the list "<!--Self.ListName-->":</p>
+        <!--Self.CCImageChoices-->
+    </div>
+    <div class="clear"></div>
+    <div id="CCImageButtonDiv">
+        <p>Use the selected option:</p> 
+        <input type="submit" name="CCImageChoiceSubmit" value="Choose" id="CCImageChoiceSubmit" class='Button' onclick="chooseCCImage(this.form, '<!--CGI.action-->')" />
+    </div>    
+    </form>
+    <div id="Or">
+       <img src="/images/<!--Self.ThemeID-->/or.png" id="AmazonOr" />
+    </div>
+    <form id="CCImageGetMore" action="return false">
+        <input type="hidden" name="page" id="thePage" value="<!--CGI.page-->" />
+        <input type="hidden" name="ListID" id="GetMoreListID" value="<!--CGI.ListID-->" />
+        <input type="hidden" name="ListItem.Name" id="GetMoreListItemName" value="<!--CGI.ListItem.Name-->" />
+        <input type="hidden" name="ajax" id="MoreAjax" value="1" />
+        <input type="hidden" name="action" id="MoreAction" value="<!--CGI.action-->" />
+        <input type="hidden" name="todo" id="todoMore" value="GetCCImageChoices" />
+    <div id="CCImageButtonDiv">
+        <p>Get more choices:</p> 
+        <input type="button" name="CCImageGetMoreSubmit" value="Get More" id="CCImageGetMoreSubmit" class="Button" onclick="processForm(this.form, 'CCImageChoicesDiv');" />
+    </div>    
+    </form>
+    <div id="Or">
+       <img src="/images/<!--Self.ThemeID-->/or.png" id="AmazonOr" />
+    </div>
+    <form id="CCImageRetry" action="return false">
+        <input type="hidden" name="page" id="thePage" value="1" />
+        <input type="hidden" name="ListID" id="TryAgainListID" value="<!--CGI.ListID-->" />
+        <input type="hidden" name="ajax" id="RetyAjax" value="1" />
+        <input type="hidden" name="action" id="RetryAction" value="<!--CGI.action-->" />
+        <input type="hidden" name="todo" id="todoRetry" value="GetCCImageChoices" />
+        <div id="CCImageFormDiv">
+            <p>Try again with the following:</p> 
+            <label for="ListItemNameRetry">Query: </label><input type="text" name="ListItem.Name" id="ListItemName" value="<!--CGI.ListItem.Name-->" class="TextInput" /><br />
+            <input type="button" name="CCImageChoiceMoreChoices" value="Try Again" id="CCImageChoiceMoreChoices" class="Button" onclick="processForm(this.form, 'CCImageChoicesDiv');" />
+        </div>
+        <div class="clear"></div>
+    </form>

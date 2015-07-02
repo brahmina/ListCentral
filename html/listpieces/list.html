@@ -1,0 +1,38 @@
+<script type="text/javascript" language="JavaScript">
+    thisListID = <!--Self.ListID-->;
+    ListCreator = '<!--Self.ListCreator-->';
+    ListName = '<!--Self.ListNameQ-->';
+
+    window.addEvent('domready', function() {
+        initGuest();
+
+        imagesMultibox = new multiBox('imgs', {
+            overlay: new overlay()
+        });
+    });
+</script>                                
+               
+                <div id="ListNormalView" <!--ListDivDisplay.ListNormalView-->>      
+                    <div class="HeaderTopContainer">
+                        <div class="ListHeaderContainer">
+                            <div class="HeaderLongTop">                               
+                                 <ul id="HeaderIconsGuest" class="HeaderIcons">
+                                     <li title="Comments" id="CommentsButton"><a>&nbsp;</a></li>  
+                                     <li title="Email list" id="EmailButton"><a>&nbsp;</a></li> 
+                                 </ul>
+                                 <a href="<!--Self.ListURL-->" class="ListNameList">
+                                    <!--Self.Name--> 
+                                </a>
+                            </div>
+                        </div>
+                        <!--Self.ListForm-->
+                        <!--Display.ListElement.listdetails.html-->
+                    </div>
+                                       
+                    <div style="clear: left"></div>
+                
+                    <div class="ListContainer">
+                        <!--Self.ListsNormal-->                            
+                    </div>                   
+                </div>
+

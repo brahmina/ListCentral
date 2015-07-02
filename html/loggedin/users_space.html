@@ -1,0 +1,39 @@
+<script>
+function clearBoardMessage(){
+    boardmessage = document.getElementById("BoardMessageInput");
+    if(boardmessage.value == "Write Something..."){
+        boardmessage.value = "";
+    }else if(boardmessage.value == ""){
+        boardmessage.value = "Write Something...";
+    }
+}
+function setBoardMessage(){
+    document.getElementById("BoardMessageInput").value = "Write Something...";
+}
+</script>
+
+<div id="UserSpaceAd">
+    <!--Adserver.getAdvert.8_page-->
+</div>
+<div id="UserSpace">
+    <div id="UserSpaceTop">
+        <div class="RoundAvatarLarge" style="background:url(<!--ListOwner.AvatarDisplay-->) no-repeat;" ></div>
+        <div id="AboutUser">
+            <b><!--ListOwner.NameDisplay--></b>
+            <p><!--ListOwner.Bio--></p>
+        </div>
+        <div id="UserWebPresence">
+             <!--ListOwner.WebsitesWithLinks-->
+        </div>
+        <div class="clear"></div>
+        <div id="UserStats">
+            <b>Member Since</b>: <!--ListOwner.MemberSince--><br />
+            <!--ListOwner.Location-->
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    
+    <!--GetOutputFromFunc.getUsersBoard-->
+</div>
+

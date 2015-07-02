@@ -1,0 +1,12 @@
+#AmazonChoices label {
+        height: expression( this.scrollHeight < 42 ? "42px" : "auto" );
+}
+.AmazonChoice a img {
+        width: expression( document.body.clientWidth > 220 ? "220px" : "auto" );
+        height: expression( this.scrollHeight < 190 ? "190px" : "auto" );
+}
+.CCImageChoice a img {
+        width: expression( document.body.clientWidth > 220 ? "220px" : "auto" );
+        height: expression( this.scrollHeight < 190 ? "190px" : "auto" );
+}
+

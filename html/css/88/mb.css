@@ -1,0 +1,316 @@
+html, body {
+        background-color: #7AE4FF;
+        font-family: Arial; 
+        font-size: 12px;
+         
+        color: #2F3827; 
+        width: 100%;
+        height: 100%;
+}
+
+.MultiBoxInner{
+        background: #7AE4FF;
+        padding:20px;
+        height:500px;
+        width: 743px;
+}
+.Loading{
+        background:#FFFFFF none repeat scroll 0 0;
+        height:130px;
+        padding:20px;
+        width:320px;
+        -moz-border-radius:5px;
+        -webkit-border-radius: 5px;
+        margin-top:50px;
+}
+.Loading p{
+        font-size:18px;
+        left:10px;
+        position:relative;
+        top:10px;
+}
+.LoadingLogo{
+        float: left;
+        margin: 10px;
+}
+.AjaxLoader{
+        position: relative;
+        left: 10px;
+        top: 10px;
+}
+
+input[type="button"], input[type="submit"] {
+        background: transparent url(/images/88/themeSprite.png) no-repeat scroll -223px -124px;
+        width: 110px;
+        height: 24px;
+        color: #D8FF86;
+        border: 0px;
+        padding: 0px;
+	margin-bottom:15px;
+        margin-top: 15px;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+        background:#FFFFFF none repeat scroll 0 0;
+        border:1px solid #121D52;
+        color:#121D52;
+        font-size:12px;
+        margin:0 0 15px;
+        text-align:left;
+        width:200px;
+}
+.clear {
+        clear: both;
+        margin: 0;
+        padding:0;
+        height: 0;
+}
+
+label {
+        clear:both;
+        color:#121D52;
+        display:block;
+        float:left;
+        margin:0 5px;
+        text-align:right;
+        width:38%;
+}
+a img {
+        border:0 solid #FFFFFF;
+}
+
+h4{
+        font-size: 18px;
+}
+b {
+        font-size: 12px;
+        font-weight: bold;
+}
+p {
+        font-size: 12px;
+        margin: 12px 0;
+}
+a{
+        color:#3B5921;
+        text-decoration: none;
+        font-weight: bold;
+
+}
+a:hover{
+        color:#3B5921;
+        text-decoration: underline;
+        font-weight: bold;
+}
+.error {
+        color: red;
+}       
+.error a {
+        color: red;
+        text-decoration: underline;
+}
+
+
+* {
+        margin:0;
+}
+
+/* Amazon */
+
+#AmazonChoiceSelect{
+        background: #7AE4FF;
+}
+#AmazonChoicesDiv label{
+        width: auto;
+        margin: 3px 4px 0 0;
+}
+#AmazonChoices label {
+        width: 221px;
+        text-align:left;
+        margin-bottom:5px;
+        max-height:42px;
+        overflow:hidden;
+}
+.AmazonChoice {
+        border:1px solid #2F3827;
+        float:left;
+        height:250px;
+        margin:10px 5px;
+        overflow:hidden;
+        padding:2px;
+        width:230px;
+        background:#D8FF86 none repeat scroll 0 0;
+}
+
+#AmazonChooseButton{
+        float: left;
+        margin: 20px 40px 30px 30px;
+        background: #7AE4FF;
+        width:282px;
+}
+#AmazonRetry{
+        background: #7AE4FF;
+}
+#Or {
+        float: left;
+        height:80px;
+        margin:60px 10px;
+}
+#AmazonTryAgainForm {
+        float:left;
+        margin:24px 25px;
+        width:300px;
+}
+#AmazonTryAgainForm label{
+        width: 70px;
+        text-align: right;
+}
+.AmazonRadio{
+        float:left;
+        margin-right:5px;
+        margin-bottom:15px;
+}
+#AmazonOr{
+        width: 20px;
+}
+#AmazonChoiceMoreChoices{
+        top:-15px;
+        position:relative;
+}
+.AmazonChoiceTable{
+        background: #D8FF86;
+        margin: 0em;
+        padding: 1em;
+}
+.AmazonChoiceTable td {
+        padding: 0.5em;
+}
+.AmazonImage{
+        
+}
+.AmazonImageCell{
+        text-align: center;
+}
+#AmazonTryAgainForm select{
+        width: 120px;
+}
+
+#AmazonButtonDiv{
+        float: left;
+        margin: 60px 38px 30px;
+        background: #7AE4FF;
+        width:135px;
+}
+#AmazonFormDiv{
+        float: left;
+        margin: 50px 35px 30px;
+        background: #7AE4FF;
+        width:170px;
+}
+#AmazonNoneDiv{
+        margin: 30px 40px;
+        width:335px;
+}
+.AmazonChoice a img {
+        max-height:190px;
+        max-width:220px;
+}
+
+#AmazonMode{
+        width: 130px; 
+}
+
+
+/* Creative Commons Images */ 
+
+#CCImageChoiceSelect{
+        background: #7AE4FF;
+}
+#CCImageChoicesDiv label{
+        width: auto;
+        margin: 3px 4px 0 0;
+}
+#CCImageChoices label {
+        width: 221px;
+        text-align:left;
+        margin-bottom:5px;
+}
+.CCImageChoice {
+        border:1px solid #2F3827;
+        float:left;
+        height:250px;
+        margin:10px 5px;
+        overflow:hidden;
+        padding:2px;
+        width:230px;
+        background:#D8FF86 none repeat scroll 0 0;
+}
+
+#CCImageButtonDiv{
+        float: left;
+        margin: 60px 38px 30px;
+        background: #7AE4FF;
+        width:135px;
+}
+
+#CCImageNoneDiv{
+        margin: 30px 40px;
+        width:335px;
+}
+#CCImageFormDiv{
+        float: left;
+        margin: 50px 35px 30px;
+        background: #7AE4FF;
+        width:170px;
+}
+#CCImageRetry{
+        background: #7AE4FF;
+}
+#Or {
+        float: left;
+        height:80px;
+        margin:60px 10px;
+}
+#CCImageTryAgainForm {
+        float:left;
+        margin:24px 25px;
+        width:170px;
+}
+#CCImageTryAgainForm label{
+        width: 70px;
+        text-align: right;
+}
+#ListItemName{
+        width: 126px;
+}
+.CCImageRadio{
+        float:left;
+        margin-right:5px;
+        margin-bottom:15px;
+}
+#CCImageOr{
+        width: 20px;
+}
+#CCImageChoiceMoreChoices{
+        top:-15px;
+        position:relative;
+}
+.CCImageChoiceTable{
+        background: #D8FF86;
+        margin: 0em;
+        padding: 1em;
+}
+.CCImageChoiceTable td {
+        padding: 0.5em;
+}
+.CCImageImage{
+        
+}
+.CCImageImageCell{
+        text-align: center;
+}
+
+.CCImageChoice a img {
+        max-width: 220px;
+        max-height: 190px;
+}
+

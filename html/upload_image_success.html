@@ -1,0 +1,15 @@
+<h2>Upload File</h2>
+<p>
+    Thank you! You have successfully uploaded <!--Self.ImageName-->
+</p>
+<p>
+    If you are creating or editing a list item, or changing your avatar, you still have to click "Submit" on the main page to make your changes.
+</p>
+<img src="<!--Self.ImageSRC-->" id="UploadedImage" /><br /><br />
+
+<input type="button" name="button" value="Close Window" id="CloseImage" class="Button" onclick="window.close()" />
+
+<script type="text/javascript">
+DynamicFormID = <!--CGI.DynamicFormID-->;
+imageUploaded(<!--Self.ImageJSParams-->);
+</script>  

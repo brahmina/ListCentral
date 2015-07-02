@@ -1,0 +1,7 @@
+A List Central user sent some feedback!
+
+User: <!--Data.User-->
+Email: <!--Data.Email-->
+
+<!--Data.Message-->
+

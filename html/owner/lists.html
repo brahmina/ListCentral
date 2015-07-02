@@ -1,0 +1,71 @@
+<script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" language="JavaScript">
+    // <![CDATA[    
+        window.addEvent('domready', function() {
+
+            <!--Self.SliderJS-->
+
+            Fx.Morph = Fx.Morph.extend({ 
+            	start: function(className){
+            		var to = {};             
+            		$each(document.styleSheets, function(style){
+            			var rules = style.rules || style.cssRules;
+            			$each(rules, function(rule){
+            				if (!rule.selectorText.test('\.' + className + '$')) return;
+            				Fx.CSS.Styles.each(function(style){
+            					if (!rule.style || !rule.style[style]) return;
+            					var ruleStyle = rule.style[style];
+            					to[style] = (style.test(/color/i) && ruleStyle.test(/^rgb/)) ? ruleStyle.rgbToHex() : ruleStyle;
+            				});
+            			});
+            		});
+            		return this.parent(to);
+            	}             
+            });
+             
+            Fx.CSS.Styles = ["backgroundColor", "backgroundPosition", "color", "width", "height", "left", "top", "bottom", "right", "fontSize", "letterSpacing", "lineHeight", "textIndent", "opacity"];
+     
+            Fx.CSS.Styles.extend(Element.Styles.padding);
+            Fx.CSS.Styles.extend(Element.Styles.margin);
+             
+            var myMorph = new Fx.Morph('morpher', {wait: false});
+                     
+        });
+        // ]]>
+        </script>        
+        
+    <div id="Nav">
+        <fieldset class="NavFieldset">
+		<legend><a href="javascript:loadNonListElement('getUsersSpace', <!--CGI.UserID-->);">
+        <!--Self.ListsNavHeader--></a></legend>
+		<ul>
+			<!--Self.ListsNavigation-->            
+			<li class="NavSpacer">&nbsp;</li>
+            <li class="NavHeader" onmouseout="changeClass('NavHeader', this)" onmouseover="changeClass('NavHeaderOver', this)" 
+            onclick="location.href='/create_and_edit.html'">
+            <a href="/create_and_edit.html">Create &amp; Edit</a></li>
+            
+            <li class="NavHeader" onmouseout="changeClass('NavHeader', this)" onmouseover="changeClass('NavHeaderOver', this)" 
+            onclick="location.href='/settings.html'">
+            <a href="/settings.html">Settings</a></li>
+
+            <li class="NavHeader" onmouseout="changeClass('NavHeader', this)" onmouseover="changeClass('NavHeaderOver', this)" 
+            onclick="location.href='/messages.html'">
+            <a href="/messages.html">Messages (<!--ThisUser.MessagesCount-->)</a></li>
+		</ul>
+		</fieldset>
+    </div>
+    <div id="List">
+        <!--Self.ListsContent-->
+    </div>  
+    <div id="ckAddLinkWrapper"></div>
+
+
+
+
+
+
+
+
+
+

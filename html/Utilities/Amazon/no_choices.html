@@ -1,0 +1,17 @@
+<h4>Amazon link & image choices</h4>
+<br />
+<p><h3>No results found.</h3></p>
+<form id="AmazonRetry" action="return false">
+    <input type="hidden" name="page" id="thePage" value="1" />
+    <input type="hidden" name="ListID" id="TryAgainListID" value="<!--CGI.ListID-->" />
+    <input type="hidden" name="ajax" id="ajax" value="1" />
+    <input type="hidden" name="action" id="RetryAction" value="<!--CGI.action-->" />
+    <input type="hidden" name="todo" id="todoRetry" value="GetAmazonChoices" />
+    <div id="AmazonFormDiv">
+        <p>Try again with the following:</p> 
+        <label for="ListItemNameRetry">Query: </label><input type="text" name="ListItem.Name" id="ListItemName" value="<!--CGI.ListItem.Name-->" class="TextInput" /><br />
+        <label for="AmazonMode">Mode: </label><!--Self.AmazonModeSelect--><br />
+        <input type="button" name="AmazonChoiceMoreChoices" value="Try Again" id="AmazonChoiceMoreChoices" class="Button" onclick="processForm(this.form, 'AmazonChoicesDiv');" />
+    </div>
+    <div class="clear"></div>
+</form>

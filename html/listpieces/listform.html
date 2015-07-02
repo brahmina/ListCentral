@@ -1,0 +1,32 @@
+                    <div class="ListFormWrapper" id="ListFormGuest">
+                     <div class="ListItemFormContainer" id="FormSlider">
+                        <div class="ListForm" id="SliderContent">
+                            <div id="CommentsContent" class="InsideSlider" style="display: none"> 
+                                <br />                                    
+                                <h4>Comments:</h4>
+                                <br />
+                                <div id="ListComments">    
+                                    <!--GetOutputFromFunc.getListComments-->
+                                </div>
+                            </div>
+                            <div id="EmailContent" class="InsideSlider" style="display: none"> 
+                                <br />
+                                <h4>Email List</h4>
+                                <div id="EmailList">
+                                    <p>
+                                    Send the List "<!--Data.List_Name-->" to the address below:
+                                    </p><br />
+                                    <!--ErrorMessages-->
+                                    <form name="EmailList" method="post" action="<!--Data.List_ListURL-->" onsubmit="return processForm(this, 'EmailList')">        
+                                        <input type="hidden" name="todo" id="EmailTodo" value="EmailList" /> 
+                                        <input type="hidden" name="ListID" id="EmailListID" value="<!--Data.List_ID-->" /> 
+                                        <label for="ToEmail">Email:</label><input type="text" name="ToEmail" id="ToEmail" class="TextInput" value="<!--ThisUser.Email-->" /><br /><br />
+                                            <label for="EmailMessage">Message (optional):</label><textarea name="EmailMessage" id="EmailMessage" rows="5" cols="40"></textarea><br />
+                                        <input type="submit" name="submit" id="EmailListSubmit" class="Button" value="Send" />
+                                    </form>    
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+

@@ -1,0 +1,46 @@
+<script language="JavaScript" type="text/javascript">             
+    thisListID = <!--Self.ListID-->;
+    ListCreator = '<!--Self.ListCreator-->';                    
+    ListHasImages = '<!--Self.Images-->';
+    ListHasLinks = '<!--Self.Links-->';
+    ListName = '<!--Self.ListNameQ-->';                    
+    <!--Self.ListItemStatusSetJSArray-->
+    
+    window.addEvent('domready', function() {
+        initOwner();
+    });
+</script> 
+                <div id="ListNormalView" <!--ListDivDisplay.ListNormalView-->>      
+                    <div class="HeaderTopContainer">
+                        <div class="ListHeaderContainer">
+                            <div class="HeaderLongTop">                               
+                                 <ul id="HeaderIconsOwner" class="HeaderIcons">
+                                     <li title="Add list item" id="AddListItemButton"><a>&nbsp;</a></li>
+                                     <li title="Comments" id="CommentsButton"><a>&nbsp;</a></li> 
+                                     <li title="Add tags" id="TagsButton"><a>&nbsp;</a></li> 
+                                     <li title="Edit list" id="EditListButton"><a>&nbsp;</a></li> 
+                                     <li title="Email list" id="EmailButton"><a>&nbsp;</a></li> 
+                                     <li title="Delete list" id="DeleteButton"><a href="/?todo=DeleteList&ListID=<!--Self.ListID-->">&nbsp;</a></li> 
+                                 </ul>
+                                 <a href="<!--Self.ListURL-->" class="ListNameList">
+                                    <!--Self.Name--> 
+                                </a>
+                            </div>
+                        </div>
+                        <!--Self.ListForm-->
+                        <!--Display.ListElement.listdetails.html-->
+                    </div>
+                   
+                    <div style="clear: left"></div>
+                    </div>
+                    <div class="ListContainer">
+                        <h2>&nbsp;</h2>
+                        <span>Add list items via the <i>Add list item</i> form via the '+' button above.</span>
+                    </div>           
+                </div>               
+
+                <div id="ListReorderView" <!--ListDivDisplay.ListReorderView-->>      
+                    
+                </div> 
+
+

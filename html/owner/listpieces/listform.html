@@ -1,0 +1,133 @@
+                    <div class="ListFormWrapper" id="ListFormOwner">
+                     <div class="ListItemFormContainer" id="FormSlider">
+                        <div class="ListForm" id="SliderContent">
+                            <div id="AddListItemContent" class="InsideSlider" style="display: none"> 
+                                <form id="AddListItem" name="AddListItem" action="<!--Data.List_ListURL-->" onsubmit="return processAddListItem(this);">
+                                <br />
+                                <h4>Add list item:</h4>
+                                <br />
+                                    <input type="hidden" name="todo" id="todo" value="AddListItem" />
+                                    <input type="hidden" name="ListDivDisplay" id="ListDivDisplay1" value="ListNormalView" />
+                                    <input type="hidden" name="ListItem.ListID" id="ListItemListID" value="<!--Data.List_ID-->" />
+                                    <input type="hidden" name="ListItem.Description" id="AddListItemHiddenDescription" value="" />
+                                    <!--Data.ExtraHiddenFields-->
+                                    
+                                    <div id="AddListItemFormElements">
+                                        <!--Self.ErrorMessagesALI-->
+                                        <label for="ListItem">List Item:</label><input type="text" id="AddListItemName" name="ListItem.Name" maxlength="200" class="TextInput" value="" />
+                                        <!--Data.ListItemStatusSelect-->
+                                    </div>                             
+                        
+                                    <ul id="AddListItemIcons" class="ListItemIcons">
+                                        <li id="AddLinkButton" class="active" title="Add link"><a id="AddLinkLink" >&nbsp;</a></li>
+                                        <li id="AddDescriptionButton" class="active" title="Add description"><a id="AddDescriptionLink">&nbsp;</a></li> 
+                                    </ul>
+                                    <ul id="AddListItemExtrasIcons" class="ListItemIcons">
+                                        <li id="AddAmazonButton" class="active" title="Add Amazon link"><a id="AddAmazonLink" class="AddAmazon" href="/Utilities/Amazon/send_request.html?ajax=1&amp;action=Add" rel="width:800,height:500">&nbsp;</a></li> 
+                                        <li id="AddImageButton" class="active" title="Add image"><a id="AddImageLink">&nbsp;</a></li> 
+                                        <li id="AddEmButton" class="active" title="Add embedded content"><a id="AddEmLink">&nbsp;</a></li> 
+                                        <li id="AddCCImageButton" class="active" title="Add Creative Commons image"><a id="AddCCImageLink" class="AddCCImage" href="/Utilities/CCImage/send_request.html?ajax=1&amp;action=Add" rel="width:800,height:500">&nbsp;</a></li> 
+                                     </ul>
+                                    <div class="clear" style="width:300px;"></div>
+                                    <div id="AddListItemFormAdditions">
+                                    </div>
+                                    <!--Data.ExtraElement-->
+                                    <input type="submit" class="Button" value="Create" id="listitemsubmit" name="CreateListItem" />
+                                </form>
+                            </div>
+                            <div id="CommentsContent" class="InsideSlider" style="display: none"> 
+                                <form id="AddListComment" action="<!--Data.List_ListURL-->" onsubmit="return AddListComment(this);">                                
+                                    <br />                                    
+                                    <h4>Comments:</h4>
+                                    <br />
+                                    <!--Self.ErrorMessagesAC-->
+                                    <div id="ListComments">    
+                                        <!--GetOutputFromFunc.getListComments-->
+                                    </div>
+                                    <input type="hidden" name="todo" id="todoLC" value="AddListComment" />
+                                    <input type="hidden" name="ListID" id="ListCommentsListID" value="<!--Data.List_ID-->" />
+                                    <br />
+                                    <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('commentTipButton', 'commentTipWrapper');" id="commentTipButton" />
+                                    <label for="Comment" id="CommentLabel">Comment:</label><textarea id="Comment" name="Comment" rows="5" cols="40"></textarea>
+                            
+                                    <input type="submit" class="Button" value="Add Comment" name="ListCommentSubmit" id="commentsubmit" />
+                                </form>
+                            </div>
+                            <div id="TagsContent" class="InsideSlider" style="display: none"> 
+                                    <form id="AddListTag" action="<!--Data.List_ListURL-->" onsubmit="return AddListTag(this, 'ListTagsContent')">
+                                        <br />
+                                        <h4>Tags</h4>
+                                        <br />
+                                        <div class="ListTags" id="ListTagsContent">    
+                                            <p><!--Data.List_Tags--></p>
+                                        </div>
+                                        <input type="hidden" name="todo" id="todoLT" value="AddListTag" />
+                                        <input type="hidden" name="ListID" id="ListTagsListID" value="<!--Data.List_ID-->" />
+        				                <br />
+                                        <!--Self.ErrorMessagesAT-->
+        			
+                                        <label for="Tag">Tag:</label><input type="text" id="Tag" name="Tag" class="TextInput" /><br />
+                                        <p id="TagInstructions">* Comma separate to add multiple tags</p>
+                                        <input type="submit" value="Add Tag" name="ListTagSubmit" class="Button" id="tagsubmit" />
+                                    </form>
+        							<form id="DeleteListTags" action="" onsubmit="return DeleteListTags(this, 'ListTagsContent')">
+        								<input type="hidden" name="todo" id="todoDLT" value="DeleteListTags" />
+                                        <input type="hidden" name="ListID" id="LTListID" value="<!--Data.List_ID-->" />
+        								<input type="submit" value="Delete Tags" class="Button" name="DelteTagsSubmit" id="deletetagsubmit"  />
+        							</form>
+                            </div>
+                            <div id="EditListContent" class="InsideSlider" style="display: none"> 
+                                <form method="post" id="EditListDetailsForm" action="<!--Data.List_ListURL-->" onsubmit="return validateEditList(this)">
+                                    <br />
+                                    <h4>Edit list details</h4>
+                                    <input type="hidden" name="todo" id="todoedit" value="EditListDetails" />
+                                    <input type="hidden" name="ListDivDisplay" id="ListDivDisplay2" value="ListEditView" />
+                                    <input type="hidden" name="ListID" id="ListID" value="<!--Data.List_ID-->" />
+                                    <br />
+                                    <!--ErrorMessages-->
+                                    <label for="ListName">List Name:</label><input type="text" id="EditListName" name="List.Name" value="<!--Data.List_Name-->" maxlength="100"  class="TextInput" /><br />
+                                    <div class="LeftInput"><label for="ListGroup">List Group:</label><br /><!--Select.ListGroup--></div>
+                                    <div class="RightInput"><label for="Public">Privacy:</label><br /><!--Select.Public--></div>
+                                    <div class="LeftInput"><label for="Type" id="EditListTypeLabel">Type:</label><br /><!--Select.ListType--></div>
+                                    <div class="RightInput"><label for="Order" id="EditOrderLabel">Order:</label><br /><!--Select.ListOrder--></div>
+                                    <div class="clear"></div>
+                                    <img src="/images/<!--Self.ThemeID-->/info.png" alt="Help" onclick="showTip('descriptionTipWrapper', 'editDescriptionTipWrapper');" id="editDescriptionTipButton" />
+                                    <label for="ListItemDescriptionEdit" id="DescriptionLabelEdit">Description:</label><textarea name="List.Description" id="ListItemDescriptionEdit" rows="5" cols="40"><!--Data.List_Description--></textarea>
+                                    <!--Select.ListItemStatus-->
+                                    <input type="submit" value="Submit" id="editlistsubmit" name="EditListDetails"class="Button" />
+                                  </form>
+                            </div>
+                            <div id="EmailContent" class="InsideSlider" style="display: none"> 
+                                <br />
+                                <h4>Email List</h4>
+                                <div id="EmailList">
+                                    <p>
+                                    Send the List "<!--Data.List_Name-->" to the address below:
+                                    </p><br />
+                                    <!--ErrorMessages-->
+                                    <form name="EmailList" method="post" action="<!--Data.List_ListURL-->" onsubmit="return processForm(this, 'EmailList')">        
+                                        <input type="hidden" name="todo" id="EmailTodo" value="EmailList" /> 
+                                        <input type="hidden" name="ListID" id="EmailListID" value="<!--Data.List_ID-->" /> 
+                                        <label for="ToEmail">Email:</label><input type="text" name="ToEmail" id="ToEmail" class="TextInput" value="<!--ThisUser.Email-->" /><br /><br />
+                                            <label for="EmailMessage">Message (optional):</label><textarea name="EmailMessage" id="EmailMessage" rows="5" cols="40"></textarea><br />
+                                        <input type="submit" name="submit" id="EmailListSubmit" class="Button" value="Send" />
+                                    </form>    
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                <div id="descriptionTipWrapper" style="display:none">
+                    <h3>List item descriptions</h3>
+                    <p>You may use the folowing html tags within the list item descrption:</p>
+                    <!--Display.Page.allowedhtml.html-->
+                    <input type="button" name="Close" value="Close" id="closeDescriptionTip" class="Button" onclick="doNothing()" />
+                </div>
+
+                <div id="commentTipWrapper" style="display:none">
+                    <h3>List Comment</h3>
+                    <p>You may use the folowing html tags within the comments:</p>
+                    <!--Display.Page.allowedhtml.html-->
+                    <input type="button" name="Close" value="Close" id="closeCommentTip" class="Button" onclick="doNothing()" />
+                </div>

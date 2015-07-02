@@ -1,0 +1,74 @@
+#Nav legend {
+        margin-top: -15px;
+	margin-bottom: 5px;
+	width: 186px;
+}
+#Nav {
+        margin-top: 10px;
+}
+
+#Nav ul li.NavCurrent a{
+	color: #490a3d;
+}
+
+#searchsubmit {
+        top:21px;
+}
+.tabMiddle{
+        left:0px;
+}
+
+
+.ListItemTable {
+        position: relative;
+        top: -15px;
+        width: 360px;
+}
+.ListNormalView li {
+        width: 365px;
+}
+#TLOLRows{
+        top:-20px;
+}
+.editable {
+	cursor: hand;
+}
+.ListItemsSummaryImages li { 
+        margin-right: 2px;
+}
+.FloatingBoxInner{
+        text-align: left;
+}
+#bioLabel{
+	margin-top:-28px;
+	position: relative;
+	top: 14px;
+}
+
+.themeColourVisual {
+	margin-top: -1px; 
+}
+#editableListGroups input[type="text"]{
+	background-color:#FFFFD3;
+	border:0 solid #121D52;
+	color:#121D52;
+	font-size:12px;
+	font-weight:normal;
+	width:90%;
+}
+#EditStatusSets input[type="text"]{
+        background-color:#FFFFD3;
+        border:0 solid #121D52;
+        color:#121D52;
+        font-size:12px;
+        font-weight:normal;
+        width:90%;
+}
+#avataredit{
+        position: relative;
+        top: -10px;
+}
+
+.ListingsListPoints  {
+        background: #BDEAFF;
+}

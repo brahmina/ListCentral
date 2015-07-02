@@ -1,0 +1,42 @@
+                <form id="EditListItem" name="EditListItem" onsubmit="return false">
+                <br />
+                <h4>Edit list item:</h4>
+                <br />
+                    <input type="hidden" name="todo" id="EditListItemTodo" value="EditListItem" />
+                    <input type="hidden" name="ListDivDisplay" id="EditListDivDisplay" value="ListNormalView" />
+                    <input type="hidden" name="ListItem.ID" id="EditListItemListItemID" value="<!--Data.ListItem_ID-->" />
+                    <input type="hidden" name="ListItem.Description" id="EditListItemHiddenDescription" value="" />
+                    <!--Data.ExtraHiddenFields-->
+                    <div id="EditListItemFormElements">
+                        <div id="EditListItemFormElements">
+                            <!--Self.ErrorMessages-->
+                            <label for="ListItem">List Item:</label><br />
+                            <input type="text" id="EditListItemName" name="ListItem.Name" maxlength="100" class="TextInput" value="<!--Data.ListItem_Name-->" />
+                            <!--Data.ListItemStatusSelect-->
+                        </div>                             
+            
+                        <ul id="EditListItemIcons" class="ListItemIcons">
+                            <li id="EditLinkButton" title="Edit link"><a>&nbsp;</a></li>
+                            <li id="EditDescriptionButton" title="Edit description"><a>&nbsp;</a></li> 
+                        </ul>
+                        <ul id="EditListItemExtrasIcons" class="ListItemIcons">
+                            <li id="EditAmazonButton" title="Edit Amazon link"><a id="EditAmazonLink" class="EditAmazon" href="/Utilities/Amazon/send_request.html?ajax=1&action=Edit" rel="width:800,height:500">&nbsp;</a></li> 
+                            <li id="EditImageButton" title="Edit image"><a  id="EditImageLink">&nbsp;</a></li> 
+                            <li id="EditEmButton" title="Edit embedded content"><a id="EditEmLink">&nbsp;</a></li> 
+                            <li id="EditCCImageButton"  title="Edit Creative Commons image"><a id="EditCCImageLink" class="EditCCImage" href="/Utilities/CCImage/send_request.html?ajax=1&action=Edit" rel="width:800,height:500">&nbsp;</a></li> 
+                         </ul>
+                        <div class="clear" style="width:300px;"></div>
+                        <div id="EditListItemFormAdditions">
+                            <!--Data.ListItemAdditions-->
+                        </div>
+                        <!--Data.ExtraElement-->
+                    </div>
+                    <input type="button" class="Button" value="Edit" id="listitemsubmit" name="CreateListItem" onclick="submitEditListItem(this.form)" />
+                    <input type='button' name='Cancel' value='Cancel' id='editlistitemcancel' class='Button' onClick='cancelEditListItem()' />
+                </form>
+        
+        <script type="text/javascript">
+        initListItemForm("Edit");
+
+        <!--Data.JSCalls-->
+        </script>

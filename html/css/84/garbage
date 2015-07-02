@@ -1,0 +1,261 @@
+
+.FloatingBoxTopLeft {
+    /* Define width of box here - Minimum 291px */
+        background: url(/images/84/tl.png) no-repeat top left;
+        min-width:300px;
+        
+}
+.FloatingBoxTopRight {
+        background:transparent url(/images/84/tr.png) no-repeat scroll right top;        
+}
+.FloatingBoxBottomLeft {
+        background:transparent url(/images/84/bl.png) no-repeat scroll left bottom;
+
+}
+.FloatingBoxBottomRight {
+    /* Define height of box here - Minimum 293px */
+        background:transparent url(/images/84/br.png) no-repeat scroll right bottom;
+        min-height: 293px;
+}
+
+
+.ListFormGuest{
+        background: url(/images/84/list_form_middle.png) repeat-y;
+        width: 336px;
+        min-height:83px;
+        margin-top:-14px;
+        margin-left:2px;
+}
+
+#ListPointsList{
+	background:transparent url(/images/84/ListPoints.png) no-repeat scroll 0 0;
+	color:#490a3d;
+	float:left;
+	font-size:18px;
+	height:49px;
+        margin-bottom:10px;
+        margin-right:5px;
+        margin-top:-7px;
+	padding:9px 2px;
+	text-align:center;
+	width:70px;
+}
+
+/*
+.FloatingDivTop {
+        background: url(/images/84/float_box_top.png) no-repeat top;
+        padding:13px;
+        width: 321px;
+}
+.FloatingDivBottom {
+        background: url(/images/84/float_box_bottom.png) no-repeat bottom;
+        padding: 0 0 13px;
+        width: 321px;
+}
+
+.FloatingDiv {
+        background: url(/images/84/float_box_middle.png) repeat-y;
+        color: #490a3d;
+        display: block;
+        padding: 5px 20px 0px;
+        width: 290px;
+        text-decoration: none;
+}
+.FloatingDiv  p {
+        margin: 10px;
+}*/
+
+function getEditListItemFormContent(id, link, status, imageid, imagesrc){
+    //alert("in getEditListItemFormContent with id " + id);
+    DynamicFormID = DynamicFormID + 1;
+
+    var name = document.getElementById("ListItem" + id + "Span").innerHTML;
+    name = name.replace(/'/g, "&#39;");
+    var StatusOptions = getStatusOptions(status);
+    var editListItemFormContent = "<form method='post' id='EditListItem" + id + "'>" + 
+                                  "<div class='FloatingDivTop'>" +
+                                  "<div class='FloatingDivBottom'>" +
+                                  "<div class='FloatingDiv' id='EditListItem'>" +
+                                  "         <h3>Edit List Item Details</h3>" + 
+                                  "         <input type='hidden' name='todo' value='ListsManager.EditListItemDetails' id='todo" + DynamicFormID + "'>" + 
+                                  "         <input type='hidden' name='ListItem.ID' value='" + id + "' id='ListItemID" + DynamicFormID + "'>" + 
+                                  "         <input type='hidden' name='ListDivDisplay' id='ListDivDisplay" + DynamicFormID + "' value='ListEditView'>" +
+                                  "         <label>Name:</label><input type='text' name='ListItem.Name' id='Name" + DynamicFormID + "' value='" + name + "' class='TextInput' />" + 
+                                  "         <label>Status:</label>" + StatusOptions;
+    if(link != ""){
+        if(link == "1"){
+            link = "";
+        }
+        editListItemFormContent = editListItemFormContent + 
+                                  "         <label>Link:</label><input type='text' name='ListItem.Link' id='Link" + DynamicFormID + "' value='" + link + "' class='TextInput' />";
+    }   
+
+    if(imageid != ""){
+        var jsOpenWindow = 'javascript:openWindow("upload_image.html?Edit=1&DynamicFormID=' + DynamicFormID + '", "UploadImage", "height=486,width=430,status=yes,toolbar=no,scrollbars=yes");';
+        if(imageid == "0"){
+            // There is no image but list has images
+            editListItemFormContent = editListItemFormContent +
+                                  "<div id='EditImageFormElement'>" +
+                                  "    <div id='EditImageForm" + DynamicFormID + "' style='display:block'>" +
+                                  "        <label for='edituploadimagesubmit' id='EditImageLabel'>Upload an Image:</label>" +
+                                  "            <input type='button' name='OpenFileUploader' value='Upload Image' id='edituploadimagesubmit' class='Button' onclick='" + jsOpenWindow + "' />" +
+                                  "    </div>" +
+                                  "    <div id='EditImageImage" + DynamicFormID + "' style='display:none'>" +
+                                  "        <input type='hidden' name='ListItem.ImageID' id='EditUploadedImageID" + DynamicFormID + "' value='' />" +
+                                  "        <label for=''EditUploadedImage2>Image:</label><img src='' id='EditUploadedImage2" + DynamicFormID + "' class='EditUploadedImage2' />" +
+                                  "        <a href='javascript:cancelImageUploaded(1)' id='RemoveEditImageLink'>Remove Image</a><br /><div class='clear'></div>" +
+                                  "    </div>" +
+                                  "</div>";
+        }else{
+            // There is an image
+            editListItemFormContent = editListItemFormContent +
+                                  "<div id='EditImageFormElement'>" +
+                                  "    <div id='EditImageForm" + DynamicFormID + "' style='display:none'>" +
+                                  "        <label for='edituploadimagesubmit' id='EditImageLabel'>Upload an Image:</label>" +
+                                  "            <input type='button' name='OpenFileUploader' value='Upload Image' id='edituploadimagesubmit' class='Button' onclick='" + jsOpenWindow + "' />" +
+                                  "    </div>" +
+                                  "    <div id='EditImageImage" + DynamicFormID + "' style='display:block'>" +
+                                  "        <input type='hidden' name='ListItem.ImageID' id='EditUploadedImageID" + DynamicFormID + "' value='" + imageid + "' />" +
+                                  "        <label>Image:</label><img src='" + imagesrc + "' id='EditUploadedImage2" + DynamicFormID + "' class='EditUploadedImage2' />" +
+                                  "        <a href='javascript:cancelImageUploaded(1)' id='RemoveEditImageLink'>Remove Image</a><br /><div class='clear'></div>" +
+                                  "    </div>" +
+                                  "</div>";
+        }
+    }
+
+    var descElement = "ListItem" + id +"DescriptionSpan";
+    var description = "";
+    if(checkobject(descElement)){
+        description = document.getElementById(descElement).innerHTML;
+        description = description.replace(/<br>/g, "\n");
+        description = description.replace(/^\s+/, "");
+        if(description != null ){
+            editListItemFormContent = editListItemFormContent + 
+                                  "         <label>Description:</label><textarea name='ListItem.Description' id='ListItemDescription" + DynamicFormID + "'>" + description + "</textarea>";
+        }
+    }else{
+        editListItemFormContent = editListItemFormContent + 
+                                  "         <label>Description:</label><textarea name='ListItem.Description' id='ListItemDescription" + DynamicFormID + "'></textarea>";
+    }
+    editListItemFormContent = editListItemFormContent + 
+                               "            <input type='button' name='Submit' value='Submit' id='editlistitemsubmit'" + DynamicFormID + "' class='Button' onClick='processDynamicForm(this.form)' />" +
+                               "            <input type='button' name='Cancel' value='Cancel' id='editlistitemcancel'" + DynamicFormID + "' class='Button' onClick='doNothing()' />" + 
+                               "</div></div></div>" +
+                               "</form> ";
+
+    var returnform = editListItemFormContent;
+    editListItemFormContent = "";
+
+    return returnform;
+}
+
+/*
+.ListFormLinks{
+        bottom:7px;
+        position:relative;
+        right:47px;
+        width:330px;
+
+        margin-bottom:35px;
+}
+.ListFormLinks li{
+        float:left;
+        height:25px;
+        list-style-type:none;
+        padding-top:4px;
+        text-align:center;
+        width:104px;
+}
+
+.ListFormTabLink {
+        background: url(/images/84/ListTab.png) no-repeat;        
+}
+.ListFormTabLink a{
+        color:#ffffff;
+        font-weight: bold;
+}
+.ListFormTabLink a:hover{
+        color:#ffffff;
+        font-weight: bold;
+        text-decoration: none;
+}
+.ListFormTabLinkOn {
+        background: url(/images/84/ListTabOn.png) no-repeat;
+}
+.ListFormTabLinkOn a{
+        color:#490a3d;
+        font-weight: bold;
+}
+.ListFormTabLinkOn a:hover{
+        color:#490a3d;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+
+.ListFormLinksGuest{
+	position:relative;
+	right:28px;
+	width:330px;
+        margin-left: 0px;
+}
+.ListFormLinksGuest li{
+        float:left;
+        height:25px;
+        list-style-type:none;
+        padding-top:4px;
+        text-align:center;
+        width:156px;
+}
+
+.ListFormTabLinkGuest {
+        background: url(/images/84/ListTabOut.png) no-repeat;        
+}
+.ListFormTabLinkGuest a{
+        color:#ffffff;
+        font-weight: bold;
+}
+.ListFormTabLinkGuest a:hover{
+        color:#ffffff;
+        font-weight: bold;
+        text-decoration: none;
+}
+.ListFormTabLinkGuestOn {
+        background: url(/images/84/ListTabOutOn.png) no-repeat;
+}
+.ListFormTabLinkGuestOn a{
+        color:#490a3d;
+        font-weight: bold;
+}
+.ListFormTabLinkGuestOn a:hover{
+        color:#490a3d;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+
+.ListFormLinksOne{
+        position:relative;
+        right:40px;
+        width:330px;
+}
+.ListFormLinksOne li{
+        background: url(/images/84/ListTabOneOn.png) no-repeat;
+        float:left;
+        height:25px;
+        list-style-type:none;
+        padding-top:4px;
+        text-align:center;
+        width:312px;
+}
+
+.ListFormLinksOne a{
+        color:#490a3d;
+        font-weight: bold;
+}
+.ListFormLinksOne a:hover{
+        color:#490a3d;
+        font-weight: bold;
+        text-decoration: none;
+}
+*/

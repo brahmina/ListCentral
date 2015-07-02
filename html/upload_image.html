@@ -1,0 +1,12 @@
+<div id="UploadForm">
+    <h2>Upload Image</h2>
+    <!--ErrorMessages-->
+    <form name="UploadImage" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="todo" value="UploadImage" />
+        <input type="hidden" name="ListID" value="<!--List.ID-->" />
+        <input type="hidden" name="action" value="<!--CGI.action-->" />
+        <label for="iamgeFile">File to Upload:</label> <input type="file" name="imageFile" id="imagefile" /><br /><br />
+        <input type="submit" name="submit" value="Upload" class="Button" id="UploadImageSubmit" />
+    </form>
+</div>
+

@@ -1,0 +1,50 @@
+    <script type="text/javascript">
+    // <![CDATA[    
+        window.addEvent('domready', function() {
+
+            <!--Self.SliderJS-->
+
+            Fx.Morph = Fx.Morph.extend({ 
+            	start: function(className){
+            		var to = {};             
+            		$each(document.styleSheets, function(style){
+            			var rules = style.rules || style.cssRules;
+            			$each(rules, function(rule){
+            				if (!rule.selectorText.test('\.' + className + '$')) return;
+            				Fx.CSS.Styles.each(function(style){
+            					if (!rule.style || !rule.style[style]) return;
+            					var ruleStyle = rule.style[style];
+            					to[style] = (style.test(/color/i) && ruleStyle.test(/^rgb/)) ? ruleStyle.rgbToHex() : ruleStyle;
+            				});
+            			});
+            		});
+            		return this.parent(to);
+            	}             
+            });
+             
+            Fx.CSS.Styles = ["backgroundColor", "backgroundPosition", "color", "width", "height", "left", "top", "bottom", "right", "fontSize", "letterSpacing", "lineHeight", "textIndent", "opacity"];
+     
+            Fx.CSS.Styles.extend(Element.Styles.padding);
+            Fx.CSS.Styles.extend(Element.Styles.margin);
+             
+            var myMorph = new Fx.Morph('morpher', {wait: false});
+                     
+        });
+        // ]]>
+        </script>        
+        
+    <div id="Nav">
+        <fieldset class="NavFieldset">
+		<legend><a href="javascript:loadNonListElement('getUsersSpace', <!--CGI.UserID-->)">
+		<!--Self.ListsNavHeader--></a></legend>
+		<ul>
+			<!--Self.ListsNavigation-->            
+        </ul>
+        </fieldset>
+        <!--GetOutputFromFunc.getUnderAboutImage-->
+    </div>
+    <div id="ListMember">
+        <div id="List">
+            <!--Self.ListsContent-->            
+        </div>
+    </div>

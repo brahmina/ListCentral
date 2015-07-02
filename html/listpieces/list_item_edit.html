@@ -1,0 +1,26 @@
+<li id="Row<!--ListItem.ID-->">
+    <table class="ListItemTable">
+        <tr><td class="ListItemEditImageTD">
+            <img src="<!--SETUP.EDIT_LIST_ITEM_GRAPHIC-->" 
+                onclick="showEditListItemForm(<!--ListItem.ID-->, 
+                                              '<!--ListItem.Linkhref-->', 
+                                              '<!--ListItem.ListItemStatusID-->', 
+                        					  '<!--ListItem.ImageID-->',
+                        					  '<!--ListItem.ImagePath-->', this);", 
+                                              class="EditListItemIcon" alt="Edit" id="EditButton<!--ListItem.ID-->" />
+        </td>
+	<td class="ListItemEditImageTD">
+	<a class="DeleteButton" href="javascript:deleteListItem(<!--ListItem.ID-->);"  alt="Delete" />
+	</td>
+        <td id="<!--ListItem.divID-->" class="noneditable">
+            <!--ListItem.ListItemName-->
+        </td>
+        </tr>
+	<tr><td colspan="2"></td>
+	<td id="<!--ListItem.divID-->Description" class="noneditable">
+	    <!--ListItem.ListItemDescription-->
+	</td>
+	</tr>
+    </table>
+</li>
+
